@@ -10,7 +10,7 @@ const Footer = () => {
           href="http://kadet.dev"
           target="_blank"
           rel="noreferrer noopener external"
-          className="text-white tracking-[1px]"
+          className="text-white tracking-[1px] ml-1"
         >
           Collins Enebeli
         </a>
