@@ -86,6 +86,7 @@ const Navbar = () => {
               {" "}
               <FaTwitter />
             </a>
+
             <a
               href="mailto:maverickoluwatomisin@gmail.com"
               target="_blank"
@@ -95,6 +96,7 @@ const Navbar = () => {
               {" "}
               <MdEmail />
             </a>
+
             <a
               href="https://wa.link/wxl5hi"
               target="_blank"
