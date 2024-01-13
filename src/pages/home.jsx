@@ -1,7 +1,13 @@
+import Navbar from "../components/navbar";
+import Static from "../components/static";
+
 const Home = () => {
   return (
-    <main className="w-screen h-screen bg-slate-500 flex place-items-center justify-center">
-      <h1 className="text-white">Hello World</h1>
+    <main className="w-screen h-screen bg-[color:var(--dark-bg-primary)] flex place-items-center justify-center relative">
+      <Navbar />
+      <div className="container mx-auto px-4">
+        <Static />
+      </div>
     </main>
   );
 };
