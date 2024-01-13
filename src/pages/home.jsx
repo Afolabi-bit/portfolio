@@ -1,3 +1,4 @@
+import Footer from "../components/footer";
 import Navbar from "../components/navbar";
 import Static from "../components/static";
 
@@ -8,6 +9,7 @@ const Home = () => {
       <div className="container mx-auto px-4">
         <Static />
       </div>
+      <Footer />
     </main>
   );
 };

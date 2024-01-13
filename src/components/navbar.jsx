@@ -1,9 +1,8 @@
 import { useState } from "react";
 import { CgMenuRight } from "react-icons/cg";
 import { IoClose } from "react-icons/io5";
-import { FaGithub, FaTwitter, FaWhatsapp } from "react-icons/fa";
-import { MdEmail } from "react-icons/md";
 import { Link } from "react-router-dom";
+import { Socials } from "./utilities";
 
 const Navbar = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -67,46 +66,7 @@ const Navbar = () => {
         {/* Social links */}
         <div className="flex flex-col items-center pt-[50px]">
           <p className="text-white text-[20px] font-[600]">Reach Out to Me</p>
-          <div className="flex w-[160px] justify-between pt-[20px]">
-            <a
-              href="https://github.com/Afolabi-bit"
-              target="_blank"
-              rel="noopener noreferrer external"
-              className="size-[35px] text-[25px] text-[var(--dark-text)]"
-            >
-              {" "}
-              <FaGithub />
-            </a>
-            <a
-              href="https://twitter.com/0xFola"
-              target="_blank"
-              rel="noopener noreferrer external"
-              className="size-[35px] text-[25px] text-[var(--dark-text)]"
-            >
-              {" "}
-              <FaTwitter />
-            </a>
-
-            <a
-              href="mailto:maverickoluwatomisin@gmail.com"
-              target="_blank"
-              rel="noopener noreferrer external"
-              className="size-[35px] text-[25px] text-[var(--dark-text)]"
-            >
-              {" "}
-              <MdEmail />
-            </a>
-
-            <a
-              href="https://wa.link/wxl5hi"
-              target="_blank"
-              rel="noopener noreferrer external"
-              className="size-[35px] text-[25px] text-[var(--dark-text)]"
-            >
-              {" "}
-              <FaWhatsapp />
-            </a>
-          </div>
+          <Socials width={"190px"} />
         </div>
       </div>
     </nav>
