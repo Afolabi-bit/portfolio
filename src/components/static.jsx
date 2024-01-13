@@ -4,8 +4,8 @@ import { MdArrowRight } from "react-icons/md";
 const Static = () => {
   return (
     <section className="w-full h-screen flex flex-col justify-center">
-      <div className="text-center">
-        <div className="flex justify-center items-center relative z-10">
+      <div className="text-center flex justify-center flex-col items-center">
+        <div className="flex justify-center w-[250px] items-center relative z-10 ">
           <h1 className="text-[1.5rem] text-white text-left font-semibold jakarta leading-[2.6rem] ">
             <span>Hey there,</span> <br />
             <span>I'm Afolabi Joseph</span>
@@ -14,7 +14,7 @@ const Static = () => {
             src="https://res.cloudinary.com/dkpoealta/image/upload/v1705073703/wave_wqkqvu.webp"
             alt="a waving hand"
             id="waving-hand"
-            className="w-[80px] h-[80px] translate-y-[5px] absolute top-[-20px] right-[80px]"
+            className="w-[80px] h-[80px] translate-y-[5px] absolute top-[-20px] right-[15px]"
           />
         </div>
         <div className="pt-[2px] px-[7px]">
