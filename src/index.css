@@ -33,6 +33,40 @@ body {
   font-style: normal;
 }
 
+@keyframes hello {
+  0% {
+    transform: rotate(0deg);
+  }
+  8% {
+    transform: rotate(18deg) translateY(-7px) translateX(4px) scale(1.2);
+  } /* The following five values can be played with to make the waving more or less extreme */
+  16% {
+    transform: rotate(-5deg) translateY(-4px) translateX(-9px) scale(1.2);
+  }
+  24% {
+    transform: rotate(18deg) translateY(-7px) translateX(4px) scale(1.2);
+  }
+  32% {
+    transform: rotate(-5deg) translateY(-4px) translateX(-9px) scale(1.2);
+  }
+  40% {
+    transform: rotate(12deg) translateY(-5px) translateX(2px) scale(1.2);
+  }
+  48% {
+    transform: rotate(0deg) scale(1);
+  } /* Reset for the last half to pause */
+  100% {
+    transform: rotate(0deg);
+  }
+}
+
+#waving-hand {
+  animation-name: hello;
+  animation-duration: 6s;
+  animation-timing-function: ease-in-out;
+  animation-iteration-count: infinite;
+}
+
 .accent {
   font-weight: 500;
   color: #fff;

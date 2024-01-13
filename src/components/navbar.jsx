@@ -19,7 +19,7 @@ const Navbar = () => {
     >
       {/* Logo and menu toggle button */}
       <div className="w-full h-[70px] flex items-center justify-between px-[10px]">
-        <h2s className="jakarta text-white font-[500] text-[20px] tracking-[4px]">
+        <h2s className="jakarta text-white font-[600] text-[20px] tracking-[4px]">
           <span className="letter">F</span>
           <span className="letter">E</span>
           <span className="letter">N</span>

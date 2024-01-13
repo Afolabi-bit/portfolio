@@ -13,6 +13,7 @@ const Static = () => {
           <img
             src="https://res.cloudinary.com/dkpoealta/image/upload/v1705073703/wave_wqkqvu.webp"
             alt="a waving hand"
+            id="waving-hand"
             className="w-[80px] h-[80px] translate-y-[5px] absolute top-[-20px] right-[80px]"
           />
         </div>
