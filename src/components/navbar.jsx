@@ -18,7 +18,7 @@ const Navbar = () => {
     >
       {/* Logo and menu toggle button */}
       <div className="w-full h-[70px] flex items-center justify-between px-[10px]">
-        <h2s className="jakarta text-white font-[600] text-[20px] tracking-[4px]">
+        <h2 className="jakarta text-white font-[600] text-[20px] tracking-[4px]">
           <span className="letter">F</span>
           <span className="letter">E</span>
           <span className="letter">N</span>
@@ -26,20 +26,18 @@ const Navbar = () => {
           <span className="letter">G</span>
           <span className="letter">M</span>
           <span className="letter">A</span>
-        </h2s>
+        </h2>
 
-        <div>
-          <button
-            onClick={toggleMenu}
-            className=" cursor-pointer pl-[15px] py-[3px]"
-          >
-            {isMenuOpen ? (
-              <IoClose className="text-white size-[35px]" />
-            ) : (
-              <CgMenuRight className="text-white size-[35px]" />
-            )}
-          </button>
-        </div>
+        <button
+          onClick={toggleMenu}
+          className=" cursor-pointer pl-[25px]  h-[70px]"
+        >
+          {isMenuOpen ? (
+            <IoClose className="text-white size-[35px] pointer-events-none" />
+          ) : (
+            <CgMenuRight className="text-white size-[35px] pointer-events-none" />
+          )}
+        </button>
       </div>
 
       {/* Nav Links */}
@@ -49,16 +47,28 @@ const Navbar = () => {
       >
         {/* Route links for pages */}
         <div className="flex flex-col items-center h-1/3 justify-between">
-          <Link to={"/"} className="text-[18px]">
+          <Link
+            to={"/"}
+            className="text-[18px] transition-all hover:text-white hover:tracking-[1px]"
+          >
             Home
           </Link>
-          <Link to={"/projects"} className="text-[18px]">
+          <Link
+            to={"/projects"}
+            className="text-[18px] transition-all hover:text-white hover:tracking-[1px]"
+          >
             Projects
           </Link>
-          <Link to={"/articles"} className="text-[18px]">
+          <Link
+            to={"/articles"}
+            className="text-[18px] transition-all hover:text-white hover:tracking-[1px]"
+          >
             Technical Articles
           </Link>
-          <a href="#" className="text-[18px]">
+          <a
+            href="#"
+            className="text-[18px] transition-all hover:text-white hover:tracking-[1px]"
+          >
             LinkedIn
           </a>
         </div>

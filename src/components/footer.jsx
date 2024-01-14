@@ -4,7 +4,7 @@ const Footer = () => {
   return (
     <footer className="fixed bottom-0 left-0 w-screen pb-[30px] flex flex-col justify-center items-center">
       <Socials width={"200px"} />
-      <p className="text-[var(--dark-text)] text-[12px]">
+      <p className="text-[var(--dark-text)] text-[11px] pt-[5px]">
         Inspired by{" "}
         <a
           href="http://kadet.dev"
