@@ -1,5 +1,6 @@
 import { FaGithub, FaTwitter, FaWhatsapp, FaCode, FaEye } from "react-icons/fa";
 import { MdEmail } from "react-icons/md";
+import { Link } from "react-router-dom";
 
 export const Socials = ({ width }) => {
   return (
@@ -85,6 +86,37 @@ export const Card = ({ data }) => {
           <FaEye /> <span className="text-[12px]">Live</span>
         </a>
       </div>
+    </div>
+  );
+};
+
+export const PageNavigationButtons = ({ page }) => {
+  return (
+    <div className="w-full  flex justify-center gap-[10px] mt-[50px] ">
+      {page != "home" && (
+        <Link
+          to={"/"}
+          className="w-[130px] text-white text-center text-[12px] py-[10px] bg-[var(--dark-bg-minimal)] "
+        >
+          Home
+        </Link>
+      )}
+      {page != "projects" && (
+        <Link
+          to={"/projects"}
+          className="w-[130px] text-white text-center text-[12px] py-[10px] bg-[var(--dark-bg-minimal)] "
+        >
+          Projects
+        </Link>
+      )}
+      {page != "blog" && (
+        <Link
+          to={"/blog"}
+          className="w-[130px] text-white text-center text-[12px] py-[10px] bg-[var(--dark-bg-minimal)] "
+        >
+          Articles
+        </Link>
+      )}
     </div>
   );
 };
