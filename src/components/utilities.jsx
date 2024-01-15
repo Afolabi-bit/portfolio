@@ -56,23 +56,23 @@ export const Card = ({ data }) => {
         <h4 className="text-white text-[23px] font-[600] jakarta">
           {data.name}
         </h4>
-        <h5 className="flex">
+        <h5 className="flex my-[5px] text-[var(--dark-text)]">
           {data.stack.map((tool, index) => {
             if (index === data.stack.length - 1) {
               return (
-                <span className="text-[var(--dark-text-alt)] text-[13px] font-[700] tracking-wide">
+                <span className=" text-[13px] font-[700] tracking-wide">
                   {tool}
                 </span>
               );
             }
             return (
-              <span className="text-[12px] text-[var(--dark-text-alt)] font-[700] tracking-wide mr-[5px]">
+              <span className="text-[12px]  font-[700] tracking-wide mr-[5px]">
                 {tool},
               </span>
             );
           })}
         </h5>
-        <p className="text-[var(--dark-text)] text-[12px]">
+        <p className="text-[var(--dark-text-alt)] text-[12px]">
           {data.description}
         </p>
       </div>
