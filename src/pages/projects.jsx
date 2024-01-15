@@ -1,10 +1,14 @@
 import Navbar from "../components/navbar";
+import Footer from "../components/footer";
 import { Card } from "../components/utilities";
 import data from "../data";
 
 const Projects = () => {
   return (
-    <main className="bg-[var(--dark-bg-primary)] w-full min-h-screen pt-[100px] pb-[50px] ">
+    <main
+      id="projects-page"
+      className="bg-[var(--dark-bg-primary)] w-full min-h-screen pt-[100px]  "
+    >
       <Navbar />
       <section className="px-[30px]">
         <h5 className="text-[var(--dark-text)] font-[800]  text-[13px] jakart"></h5>
@@ -14,6 +18,7 @@ const Projects = () => {
           })}
         </div>
       </section>
+      <Footer />
     </main>
   );
 };

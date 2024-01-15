@@ -2,7 +2,10 @@ import { Socials } from "./utilities";
 
 const Footer = () => {
   return (
-    <footer className="fixed bottom-0 left-0 w-screen pb-[30px] flex flex-col justify-center items-center">
+    <footer
+      id="footer"
+      className="fixed bg-[var(--dark-bg-primary)] bottom-0 left-0 w-screen pb-[20px] flex flex-col justify-center items-center"
+    >
       <Socials width={"200px"} />
       <p className="text-[var(--dark-text)] text-[11px] pt-[5px]">
         Inspired by{" "}

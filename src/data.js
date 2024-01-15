@@ -25,7 +25,7 @@ const projects = [
     description: "Information about the 250 countries on earth",
     code: "https://github.com/Afolabi-bit/REST-Countries_API",
     live: "",
-    stack: [],
+    stack: ["HTML", "CSS", "JS"],
   },
 ];
 

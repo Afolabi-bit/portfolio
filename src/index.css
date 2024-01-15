@@ -34,6 +34,8 @@ body {
   font-style: normal;
 }
 
+/* hand waving animation */
+
 @keyframes hello {
   0% {
     transform: rotate(0deg);
@@ -68,12 +70,14 @@ body {
   animation-iteration-count: infinite;
 }
 
+/* Highlight color for keyword in the Hero paragraph on home page */
 .accent {
   font-weight: 500;
   color: #e2e2e2;
 }
 
-#nav-links {
+/* Navigation bar styling */
+#nav-links-wrapper {
   transition: all 0.5s ease-out;
 }
 
@@ -83,6 +87,14 @@ body {
 }
 
 .open-menu #nav-links {
-  transform: translateY(0);
   opacity: 1;
+  pointer-events: all;
+}
+
+.open-menu #nav-links-wrapper {
+  transform: translateY(0);
+}
+
+#projects-page #footer {
+  position: unset;
 }
