@@ -18,7 +18,7 @@ const projects = [
     description: "Marketplace for food services",
     code: "https://github.com/Afolabi-bit/food-app",
     live: "fenigmafood.vercel.app",
-    stack: ["ReactJS"],
+    stack: ["ReactJS", "Clerk SDK"],
   },
   {
     name: "Countries",
