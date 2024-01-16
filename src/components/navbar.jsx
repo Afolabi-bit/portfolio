@@ -17,25 +17,42 @@ const Navbar = () => {
       className="w-screen h-[70px] overflow-hidden fixed top-0 left-0 right-0 z-30 bg-[var(--dark-bg-primary)]"
     >
       {/* Logo and menu toggle button */}
-      <div className="w-full h-[70px] flex items-center justify-between px-[10px]">
-        <h2 className="jakarta text-white font-[600] text-[20px] tracking-[4px]">
-          <span className="letter">F</span>
-          <span className="letter">E</span>
-          <span className="letter">N</span>
-          <span className="letter">I</span>
-          <span className="letter">G</span>
-          <span className="letter">M</span>
-          <span className="letter">A</span>
-        </h2>
+      <div className="w-full h-[70px] flex items-center justify-between px-[10px] md:pl-[20px] md:pr-0">
+        <Link
+          to={"/"}
+          className="jakarta text-white font-[600] text-[20px] tracking-[4px]"
+        >
+          <span className="letter hover:text-[var(--dark-text)] transition-colors">
+            F
+          </span>
+          <span className="letter hover:text-[var(--dark-text)] transition-colors">
+            E
+          </span>
+          <span className="letter hover:text-[var(--dark-text)] transition-colors">
+            N
+          </span>
+          <span className="letter hover:text-[var(--dark-text)] transition-colors">
+            I
+          </span>
+          <span className="letter hover:text-[var(--dark-text)] transition-colors">
+            G
+          </span>
+          <span className="letter hover:text-[var(--dark-text)] transition-colors">
+            M
+          </span>
+          <span className="letter hover:text-[var(--dark-text)] transition-colors">
+            A
+          </span>
+        </Link>
 
         <button
           onClick={toggleMenu}
-          className="cursor-pointer pl-[25px] h-[70px] "
+          className="cursor-pointer pl-[25px] h-[70px] md:px-[20px]"
         >
           {isMenuOpen ? (
-            <IoClose className="text-white size-[35px] pointer-events-none" />
+            <IoClose className=" size-[35px] pointer-events-none text-[gray]" />
           ) : (
-            <CgMenuRight className="text-white size-[35px] pointer-events-none" />
+            <CgMenuRight className=" size-[35px] pointer-events-none text-[gray]" />
           )}
         </button>
       </div>

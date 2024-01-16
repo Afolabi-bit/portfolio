@@ -96,7 +96,7 @@ export const PageNavigationButtons = ({ page }) => {
       {page != "home" && (
         <Link
           to={"/"}
-          className="w-[130px] text-white text-center text-[12px] py-[10px] bg-[var(--dark-bg-minimal)] "
+          className="w-[130px] text-white text-center text-[12px] py-[10px] bg-[var(--dark-bg-minimal)]  border border-[var(--dark-bg-minimal)] transition-colors hover:border-white"
         >
           Home
         </Link>
@@ -104,7 +104,7 @@ export const PageNavigationButtons = ({ page }) => {
       {page != "projects" && (
         <Link
           to={"/projects"}
-          className="w-[130px] text-white text-center text-[12px] py-[10px] bg-[var(--dark-bg-minimal)] "
+          className="w-[130px] text-white text-center text-[12px] py-[10px] bg-[var(--dark-bg-minimal)]  border border-[var(--dark-bg-minimal)] transition-colors hover:border-white"
         >
           Projects
         </Link>
@@ -112,7 +112,7 @@ export const PageNavigationButtons = ({ page }) => {
       {page != "blog" && (
         <Link
           to={"/blog"}
-          className="w-[130px] text-white text-center text-[12px] py-[10px] bg-[var(--dark-bg-minimal)] "
+          className="w-[130px] text-white text-center text-[12px] py-[10px] bg-[var(--dark-bg-minimal)]  border border-[var(--dark-bg-minimal)] transition-colors hover:border-white"
         >
           Articles
         </Link>

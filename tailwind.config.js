@@ -11,7 +11,11 @@ export default {
         "2xl": "6rem",
       },
     },
-    extend: {},
+    extend: {
+      screens: {
+        lg: "850px",
+      },
+    },
   },
   plugins: [],
   darkMode: "class",

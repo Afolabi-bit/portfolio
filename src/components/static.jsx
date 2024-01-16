@@ -5,20 +5,20 @@ const Static = () => {
   return (
     <section className="w-full h-screen flex flex-col justify-center">
       <div className="text-center flex justify-center flex-col items-center">
-        <div className="flex justify-center w-[250px] items-center relative z-10 ">
-          <h1 className="text-[1.5rem] text-white text-left font-semibold jakarta leading-[2.6rem] ">
-            <span>Hey there,</span> <br />
+        <div className="flex justify-center w-[250px] items-center relative z-10 md:w-[600px]  md:mb-[10px] ">
+          <h1 className="text-[1.5rem] text-white text-left font-semibold jakarta leading-[2.6rem] md:text-[1.8rem] md:translate-x-[-20px]">
+            <span>Hey there,</span> <br className="md:hidden" />
             <span>I'm Afolabi Joseph</span>
           </h1>
           <img
             src="https://res.cloudinary.com/dkpoealta/image/upload/v1705073703/wave_wqkqvu.webp"
             alt="a waving hand"
             id="waving-hand"
-            className="w-[80px] h-[80px] translate-y-[5px] absolute top-[-20px] right-[15px]"
+            className="w-[80px] h-[80px] translate-y-[5px] absolute top-[-20px] right-[15px] md:w-[120px] md:h-[120px] md:top-[-50px] md:right-[00px]"
           />
         </div>
         <div className="pt-[2px] px-[7px]">
-          <p className="text-[14px] text-[var(--dark-text)]">
+          <p className="text-[14px] text-[var(--dark-text)] md:text-[16px]">
             I'm a <span className="accent">junior software engineer </span>
             that is keen on <span className="accent">providing solutions </span>
             using <span className="accent">frontend technologies</span>. I am

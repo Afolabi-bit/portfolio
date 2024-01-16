@@ -12,6 +12,7 @@
   --dark-bg-optimal: #1b1b1b;
   --dark-text: #868686;
   --dark-text-alt: #575656;
+  --cursor-color: rgb(223, 97, 13);
 }
 
 body {
