@@ -64,13 +64,20 @@ export const Card = ({ data }) => {
           {data.stack.map((tool, index) => {
             if (index === data.stack.length - 1) {
               return (
-                <span className=" text-[13px] font-[700] tracking-wide lg:text-[15px]">
+                <span
+                  key={index}
+                  className=" text-[13px] font-[700] tracking-wide lg:text-[15px]"
+                >
+                  {" "}
                   {tool}
                 </span>
               );
             }
             return (
-              <span className="text-[12px]  font-[700] tracking-wide mr-[5px] lg:text-[15px]">
+              <span
+                key={index}
+                className="text-[12px]  font-[700] tracking-wide mr-[5px] lg:text-[15px]"
+              >
                 {tool},
               </span>
             );

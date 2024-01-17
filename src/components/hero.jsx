@@ -1,7 +1,7 @@
 import { Link } from "react-router-dom";
 import { MdArrowRight } from "react-icons/md";
 
-const Static = () => {
+const Hero = () => {
   return (
     <section className="w-full h-screen flex flex-col justify-center">
       <div className="text-center flex justify-center flex-col items-center">
@@ -43,4 +43,4 @@ const Static = () => {
   );
 };
 
-export default Static;
+export default Hero;
