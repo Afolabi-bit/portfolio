@@ -54,30 +54,30 @@ export const Card = ({ data }) => {
   return (
     <div
       id="card"
-      className="bg-[var(--dark-bg-minimal)]  w-full h-[220px]  px-[20px] pt-[30px] pb-[50px] flex flex-col justify-between"
+      className="bg-[var(--dark-bg-minimal)]  w-full h-[220px]  px-[20px] pt-[30px] pb-[50px] flex flex-col justify-between lg:h-[260px] lg:px-[30px]"
     >
       <div>
-        <h4 className="text-white text-[23px] font-[600] jakarta">
+        <h4 className="text-white text-[23px] font-[600] jakarta lg:text-[26px]">
           {data.name}
         </h4>
         <h5 className="flex my-[5px] text-[var(--dark-text)]">
           {data.stack.map((tool, index) => {
             if (index === data.stack.length - 1) {
               return (
-                <span className=" text-[13px] font-[700] tracking-wide">
+                <span className=" text-[13px] font-[700] tracking-wide lg:text-[15px]">
                   {tool}
                 </span>
               );
             }
             return (
-              <span className="text-[12px]  font-[700] tracking-wide mr-[5px]">
+              <span className="text-[12px]  font-[700] tracking-wide mr-[5px] lg:text-[15px]">
                 {tool},
               </span>
             );
           })}
         </h5>
         {data.description && (
-          <p className="text-[var(--dark-text-alt)] text-[12px]">
+          <p className="text-[var(--dark-text-alt)] text-[12px] lg:text-[15px]">
             {data.description}
           </p>
         )}
@@ -86,12 +86,14 @@ export const Card = ({ data }) => {
       <div className="text-white flex gap-[20px]">
         {data.code && (
           <a href={data.code} className="flex items-center gap-2">
-            <FaCode /> <span className="text-[12px]">Code</span>
+            <FaCode className="lg:scale-[1.2]" />{" "}
+            <span className="text-[12px] lg:text-[15px]">Code</span>
           </a>
         )}
         {data.live && (
           <a href={data.live} className="flex items-center gap-2">
-            <FaEye /> <span className="text-[12px]">Live</span>
+            <FaEye className="lg:scale-[1.2]" />{" "}
+            <span className="text-[12px] lg:text-[15px]">Live</span>
           </a>
         )}
       </div>

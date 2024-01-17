@@ -4,9 +4,9 @@ const Footer = () => {
   return (
     <footer
       id="footer"
-      className="fixed bg-[var(--dark-bg-primary)] bottom-0 left-0 w-screen pb-[20px] flex flex-col justify-center items-center"
+      className="fixed bg-[var(--dark-bg-primary)] bottom-0 left-0 w-screen pb-[20px] flex flex-col justify-center items-center lg:pb-[40px]"
     >
-      <Socials width={"200px"} />
+      <Socials width={"250px"} />
       <p className="text-[var(--dark-text)] text-[11px] pt-[5px]">
         Inspired by{" "}
         <a

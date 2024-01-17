@@ -14,7 +14,7 @@ const Projects = () => {
         <h5 className="text-[var(--dark-text)] font-[800]  text-[13px] jakart"></h5>
         <div
           id="cards-wrapper"
-          className="flex flex-col gap-[30px] md:grid md:grid-cols-2 md:gap-2"
+          className="flex flex-col gap-[30px] md:grid md:grid-cols-2 md:gap-1 lg:gap-2"
         >
           {data.map((project, index) => {
             return <Card key={index} data={project} />;

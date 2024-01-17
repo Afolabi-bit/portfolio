@@ -4,7 +4,10 @@ import Static from "../components/static";
 
 const Home = () => {
   return (
-    <main className="w-screen h-[100svh] bg-[color:var(--dark-bg-primary)] flex place-items-center justify-center relative">
+    <main
+      id="mobile-container"
+      className="w-screen h-[100svh] bg-[color:var(--dark-bg-primary)] flex place-items-center justify-center relative xl:hidden"
+    >
       <Navbar />
       <div className="container mx-auto px-4">
         <Static />
