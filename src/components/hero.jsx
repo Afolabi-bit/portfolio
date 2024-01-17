@@ -1,5 +1,6 @@
 import { Link } from "react-router-dom";
 import { MdArrowRight } from "react-icons/md";
+import { HeroParagraph } from "./utilities";
 
 const Hero = () => {
   return (
@@ -18,15 +19,7 @@ const Hero = () => {
           />
         </div>
         <div className="pt-[2px] px-[7px]">
-          <p className="text-[14px] text-[var(--dark-text)] md:text-[16px] md:w-[85%] md:mx-auto lg:text-[18px]">
-            I'm a <span className="accent">junior software engineer </span>
-            that is keen on <span className="accent">providing solutions </span>
-            using <span className="accent">frontend technologies</span>. I am
-            fascinated by <span className="accent">functionality</span>,
-            accessibity, <span className="accent">minimalist design</span>, user
-            experience,
-            <span className="accent"> web animations</span>, and python.
-          </p>
+          <HeroParagraph />
         </div>
       </div>
 

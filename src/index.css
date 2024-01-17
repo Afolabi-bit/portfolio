@@ -36,8 +36,8 @@ body {
 }
 
 #mobile-container {
-  max-height: 100vh;
-  max-height: 100svh !important;
+  height: 100vh;
+  height: 100svh !important;
 }
 
 /* hand waving animation */
@@ -103,4 +103,29 @@ body {
 
 #projects-page #footer {
   position: unset;
+}
+
+#desktop-container {
+  height: 100vh;
+}
+
+.git {
+  transform: rotate(-45deg);
+}
+
+#link-group a {
+  transition: color 0.3s;
+}
+
+#link-group a:hover {
+  color: #fff;
+}
+
+#link-group a > span.rounded-md {
+  transition: width 0.3s;
+}
+
+#link-group a:hover > span.rounded-md {
+  background-color: #fff;
+  width: 70px;
 }

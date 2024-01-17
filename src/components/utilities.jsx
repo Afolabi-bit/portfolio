@@ -1,4 +1,9 @@
 import { FaGithub, FaTwitter, FaWhatsapp, FaCode, FaEye } from "react-icons/fa";
+import {
+  PiGitCommitDuotone,
+  PiArticleMediumThin,
+  PiLinkedinLogoLight,
+} from "react-icons/pi";
 import { MdEmail } from "react-icons/md";
 import { Link } from "react-router-dom";
 
@@ -136,5 +141,88 @@ export const PageNavigationButtons = ({ page }) => {
         </Link>
       )}
     </div>
+  );
+};
+
+export const HeroParagraph = () => {
+  return (
+    <p className="text-[14px] text-[var(--dark-text)] md:text-[16px] md:w-[85%] md:mx-auto xl:w-[80%]  xl:mx-0">
+      I'm a <span className="accent">junior software engineer </span>
+      that is keen on <span className="accent">providing solutions </span>
+      using <span className="accent">frontend technologies</span>. I am
+      fascinated by <span className="accent">functionality</span>, accessibity,{" "}
+      <span className="accent">minimalist design</span>, user experience,
+      <span className="accent"> web animations</span>, and python.
+    </p>
+  );
+};
+
+export const LinkGroup = ({ page }) => {
+  return (
+    <div>
+      <div id="link-group" className="flex flex-col gap-[15px] cursor-pointer">
+        {page == "home" ? (
+          <div className="text-white flex items-center gap-[20px] w-fit">
+            <PiGitCommitDuotone className="git w-[30px] h-[30px]" />
+            <span className="w-[70px] h-[2px] bg-white rounded-md"></span>
+            <span className="text-[16px]">Projects</span>
+          </div>
+        ) : (
+          <Link
+            to={"/"}
+            className="text-[var(--dark-text)] flex items-center gap-[20px] w-fit "
+          >
+            <PiGitCommitDuotone className="git w-[30px] h-[30px]" />
+            <span className="w-[50px] h-[2px] bg-[var(--dark-text)] rounded-md items-center gap-[20px] "></span>
+            <span className="text-[16px]">Projects</span>
+          </Link>
+        )}
+        {/*  */}
+        {/*  */}
+        {page == "blog" ? (
+          <div className="text-[var(--dark-text)] flex items-center gap-[20px] w-fit ml-[30px] cursor-pointer">
+            <PiArticleMediumThin className=" w-[30px] h-[30px]" />
+            <span className="w-[70px] h-[2px] bg-[var(--dark-text)] rounded-md"></span>
+            <span className="text-[16px]">Blog</span>
+          </div>
+        ) : (
+          <Link
+            to={"/"}
+            className="text-[var(--dark-text)] flex items-center gap-[20px] w-fit ml-[30px]"
+          >
+            <PiArticleMediumThin className=" w-[30px] h-[30px]" />
+            <span className="w-[50px] h-[2px] bg-[var(--dark-text)] rounded-md items-center gap-[20px] "></span>
+            <span className="text-[16px]">Blog</span>
+          </Link>
+        )}
+        {/*  */}
+        {/*  */}
+
+        <a
+          href="#"
+          className="text-[var(--dark-text)] flex items-center gap-[20px] w-fit"
+        >
+          <PiLinkedinLogoLight className=" w-[30px] h-[30px]" />
+          <span className="w-[50px] h-[2px] bg-[var(--dark-text)] rounded-md items-center gap-[20px] "></span>
+          <span className="text-[16px]">LinkedIn</span>
+        </a>
+      </div>
+    </div>
+  );
+};
+
+export const Citation = () => {
+  return (
+    <p className="text-[var(--dark-text)] text-[11px] pt-[5px]">
+      Inspired by{" "}
+      <a
+        href="http://kadet.dev"
+        target="_blank"
+        rel="noreferrer noopener external"
+        className="text-white tracking-[1px] ml-1"
+      >
+        Collins Enebeli
+      </a>
+    </p>
   );
 };

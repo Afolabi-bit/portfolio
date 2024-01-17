@@ -14,10 +14,9 @@ export default {
     extend: {
       screens: {
         lg: "850px",
-        xl: "1024px",
+        xl: "1280px",
       },
     },
   },
-  plugins: [],
-  darkMode: "class",
+  plugins: [require("tailwind-scrollbar")],
 };

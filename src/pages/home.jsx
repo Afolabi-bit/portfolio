@@ -2,6 +2,7 @@ import { Link } from "react-router-dom";
 import Footer from "../components/footer";
 import Navbar from "../components/navbar";
 import Hero from "../components/hero";
+import Static from "../components/static";
 
 const Home = () => {
   return (
@@ -17,9 +18,13 @@ const Home = () => {
         <Footer />
       </main>
 
-      <main className="hidden xl:bg-emerald-500 xl:block">
-        <h1>Desktop</h1>
-        <Link to={"/projects"}>Explore</Link>
+      <main
+        id="desktop-container"
+        className="hidden overflow-hidden h-full bg-[var(--dark-bg-primary)] xl:block"
+      >
+        <div className="width-container w-[1280px] mx-auto h-full  relative">
+          <Static />
+        </div>
       </main>
     </>
   );
