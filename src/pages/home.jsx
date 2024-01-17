@@ -8,7 +8,7 @@ const Home = () => {
     <>
       <main
         id="mobile-container"
-        className="w-screen max-h-[100svh] bg-[color:var(--dark-bg-primary)] flex place-items-center justify-center relative xl:hidden"
+        className="w-screen bg-[color:var(--dark-bg-primary)] flex place-items-center justify-center relative xl:hidden"
       >
         <Navbar />
         <div className="container mx-auto px-4">

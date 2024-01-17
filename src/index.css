@@ -35,6 +35,11 @@ body {
   font-style: normal;
 }
 
+#mobile-container {
+  max-height: 100vh;
+  max-height: 100svh !important;
+}
+
 /* hand waving animation */
 
 @keyframes hello {
