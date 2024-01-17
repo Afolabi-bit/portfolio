@@ -14,6 +14,7 @@ export default {
     extend: {
       screens: {
         lg: "850px",
+        xl: "1024px",
       },
     },
   },

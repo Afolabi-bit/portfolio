@@ -18,7 +18,7 @@ const Static = () => {
           />
         </div>
         <div className="pt-[2px] px-[7px]">
-          <p className="text-[14px] text-[var(--dark-text)] md:text-[16px]">
+          <p className="text-[14px] text-[var(--dark-text)] md:text-[16px] md:w-[85%] md:mx-auto">
             I'm a <span className="accent">junior software engineer </span>
             that is keen on <span className="accent">providing solutions </span>
             using <span className="accent">frontend technologies</span>. I am

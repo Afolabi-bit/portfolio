@@ -12,7 +12,10 @@ const Projects = () => {
       <Navbar />
       <section className="px-[30px] mb-[50px]">
         <h5 className="text-[var(--dark-text)] font-[800]  text-[13px] jakart"></h5>
-        <div className="flex flex-col gap-[30px]">
+        <div
+          id="cards-wrapper"
+          className="flex flex-col gap-[30px] md:grid md:grid-cols-2 md:gap-2"
+        >
           {data.map((project, index) => {
             return <Card key={index} data={project} />;
           })}

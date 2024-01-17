@@ -52,7 +52,10 @@ export const Socials = ({ width }) => {
 
 export const Card = ({ data }) => {
   return (
-    <div className="bg-[var(--dark-bg-minimal)]  w-full h-[220px]  px-[20px] pt-[30px] pb-[50px] flex flex-col justify-between ">
+    <div
+      id="card"
+      className="bg-[var(--dark-bg-minimal)]  w-full h-[220px]  px-[20px] pt-[30px] pb-[50px] flex flex-col justify-between"
+    >
       <div>
         <h4 className="text-white text-[23px] font-[600] jakarta">
           {data.name}
@@ -73,18 +76,24 @@ export const Card = ({ data }) => {
             );
           })}
         </h5>
-        <p className="text-[var(--dark-text-alt)] text-[12px]">
-          {data.description}
-        </p>
+        {data.description && (
+          <p className="text-[var(--dark-text-alt)] text-[12px]">
+            {data.description}
+          </p>
+        )}
       </div>
 
       <div className="text-white flex gap-[20px]">
-        <a href={data.code} className="flex items-center gap-2">
-          <FaCode /> <span className="text-[12px]">Code</span>
-        </a>
-        <a href={data.live} className="flex items-center gap-2">
-          <FaEye /> <span className="text-[12px]">Live</span>
-        </a>
+        {data.code && (
+          <a href={data.code} className="flex items-center gap-2">
+            <FaCode /> <span className="text-[12px]">Code</span>
+          </a>
+        )}
+        {data.live && (
+          <a href={data.live} className="flex items-center gap-2">
+            <FaEye /> <span className="text-[12px]">Live</span>
+          </a>
+        )}
       </div>
     </div>
   );
