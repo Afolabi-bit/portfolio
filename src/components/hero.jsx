@@ -36,7 +36,7 @@ const Hero = () => {
           className="bg-[--dark-bg-optimal] text-white py-[7px] pl-[37px] pr-[28px] inline-flex items-center border border-[--dark-bg-optimal] transition hover:border-white lg:pl-[47px] lg:pr-[38px] lg:py-[10px]"
         >
           <span className="text-[14px] lg:text-[16px]">Explore</span>
-          <MdArrowRight size={"30px"} />
+          {/* <MdArrowRight size={"30px"} /> */}
         </Link>
       </div>
     </section>
