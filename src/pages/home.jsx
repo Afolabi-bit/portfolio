@@ -3,6 +3,7 @@ import Footer from "../components/footer";
 import Navbar from "../components/navbar";
 import Hero from "../components/hero";
 import Static from "../components/static";
+import { DesktopProjects } from "./projects";
 
 const Home = () => {
   return (
@@ -20,10 +21,15 @@ const Home = () => {
 
       <main
         id="desktop-container"
-        className="hidden overflow-hidden h-full bg-[var(--dark-bg-primary)] xl:block"
+        className="hidden overflow-hidden bg-[var(--dark-bg-primary)] h-screen w-full  justify-center xl:flex"
       >
-        <div className="width-container w-[1280px] mx-auto h-full  relative">
-          <Static />
+        <div className="width-container  h-screen w-[1280px]">
+          <div className="relative w-full mx-auto h-full">
+            <Static />
+            <div className="w-[50%] h-full absolute right-0 top-0 overflow-y-scroll scrollbar">
+              <DesktopProjects />
+            </div>
+          </div>
         </div>
       </main>
     </>

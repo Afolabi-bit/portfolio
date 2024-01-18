@@ -3,7 +3,7 @@ import { HeroParagraph, LinkGroup } from "./utilities";
 
 const Static = () => {
   return (
-    <section className="w-1/2 h-screen left-0 top-0 z-50 fixed overflow-hidden py-[60px] pl-[85px] flex flex-col justify-between">
+    <section className="w-[50%] h-screen bg-[var(--dark-bg-primary)] left-0 top-0 z-50 absolute overflow-hidden py-[60px] pl-[85px] flex flex-col justify-between">
       {/* Hero section */}
       <div>
         <div className=" relative">
@@ -15,7 +15,7 @@ const Static = () => {
             src="https://res.cloudinary.com/dkpoealta/image/upload/v1705073703/wave_wqkqvu.webp"
             alt="a waving hand"
             id="waving-hand"
-            className="w-[120px] h-[120px]  absolute top-0 right-[90px]"
+            className="w-[120px] h-[120px]  absolute top-0 right-[0px] 2xl:top-[-15px] 2xl:right-[120px]"
           />
         </div>
         <div>

@@ -5,6 +5,7 @@ const projects = [
     code: "https://github.com/Afolabi-bit/getlinked",
     live: "https://fenigmagetlinked.vercel.app/",
     stack: ["ReactJS", "NPM", "TailwindCSS"],
+    time: "old",
   },
   {
     name: "MovieTrailer",
@@ -12,6 +13,7 @@ const projects = [
     code: "https://github.com/Afolabi-bit/movie-api/tree/master/client",
     live: "https://fenigmamovieapi.vercel.app/",
     stack: ["ReactJS", "Firebase"],
+    time: "recent",
   },
   {
     name: "Food App",
@@ -19,6 +21,7 @@ const projects = [
     code: "https://github.com/Afolabi-bit/food-app",
     live: "fenigmafood.vercel.app",
     stack: ["ReactJS", "Clerk SDK"],
+    time: "old",
   },
   {
     name: "Countries",
@@ -26,6 +29,7 @@ const projects = [
     code: "https://github.com/Afolabi-bit/REST-Countries_API",
     live: "",
     stack: ["HTML", "CSS", "JS"],
+    time: "old",
   },
 ];
 
