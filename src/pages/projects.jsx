@@ -98,21 +98,26 @@ export const DesktopProjects = () => {
 
       <div
         id="other-projects"
-        className="h-fit flex gap-[4px] w-full bg-[var(--dark-bg-primary)] overflow-auto mt-[70px] "
+        className="h-fit  bg-[var(--dark-bg-primary)] mt-[70px] "
       >
-        <div className="w-1/2 flex flex-col gap-[4px]">
-          {otherProjects.map((project, index) => {
-            if (!(index % 2)) {
-              return <Card data={project} screen={"desktop"} key={index} />;
-            }
-          })}
-        </div>
-        <div className="w-1/2 flex flex-col gap-[4px] mt-[40px]">
-          {otherProjects.map((project, index) => {
-            if (index % 2) {
-              return <Card data={project} screen={"desktop"} key={index} />;
-            }
-          })}
+        <h3 className="text-[--dark-text-alt] jakarta uppercase font-[800] text-[13px] mb-[30px]">
+          other projects
+        </h3>
+        <div className="flex gap-[4px] w-full">
+          <div className="w-1/2 flex flex-col gap-[4px]">
+            {otherProjects.map((project, index) => {
+              if (!(index % 2)) {
+                return <Card data={project} screen={"desktop"} key={index} />;
+              }
+            })}
+          </div>
+          <div className="w-1/2 flex flex-col gap-[4px] mt-[40px]">
+            {otherProjects.map((project, index) => {
+              if (index % 2) {
+                return <Card data={project} screen={"desktop"} key={index} />;
+              }
+            })}
+          </div>
         </div>
       </div>
     </section>
