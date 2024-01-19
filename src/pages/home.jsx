@@ -1,9 +1,9 @@
-import { Link } from "react-router-dom";
 import Footer from "../components/footer";
 import Navbar from "../components/navbar";
 import Hero from "../components/hero";
 import Static from "../components/static";
 import { DesktopProjects } from "./projects";
+import AnimatedCursor from "react-animated-cursor";
 
 const Home = () => {
   return (
@@ -23,10 +23,24 @@ const Home = () => {
         id="desktop-container"
         className="hidden overflow-hidden bg-[var(--dark-bg-primary)] h-screen w-full  justify-center xl:flex"
       >
+        <AnimatedCursor
+          innerSize={8}
+          outerSize={35}
+          innerScale={1}
+          outerScale={2}
+          outerAlpha={0}
+          hasBlendMode={true}
+          innerStyle={{
+            backgroundColor: "var(--cursor-color)",
+          }}
+          outerStyle={{
+            border: "3px solid var(--cursor-color)",
+          }}
+        />
         <div className="width-container  h-screen w-[1280px]">
           <div className="relative w-full mx-auto h-full">
             <Static />
-            <div className="w-[50%] h-full absolute right-0 top-0 overflow-y-scroll scrollbar">
+            <div className="w-[50%] h-full absolute right-0 top-0 overflow-y-scroll overflow-x-visible scrollbar">
               <DesktopProjects />
             </div>
           </div>

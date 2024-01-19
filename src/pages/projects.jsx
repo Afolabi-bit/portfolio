@@ -38,24 +38,26 @@ const Projects = () => {
 
 export const DesktopProjects = () => {
   const mostRecent = data.filter((project) => project.time == "recent")[0];
+  const otherProjects = data.filter((project) => project.time != "recent");
+
   return (
     <section className="bg-[var(--dark-bg-primary)] w-full pt-[80px] pb-[60px] pr-[85px]">
       <div id="most-recent">
-        <h3 className="text-[--dark-text-alt] jakarta uppercase font-[800] text-[14px] mb-[30px]">
+        <h3 className="text-[--dark-text-alt] jakarta uppercase font-[800] text-[13px] mb-[30px]">
           most recent
         </h3>
-        <div className="bg-[var(--dark-bg-minimal)] h-[240px] pt-[30px] pb-[50px] px-[20px] flex flex-col justify-between">
-          <div>
-            <h2 className="text-[30px] text-white font-[700] jakarta ">
+        <div className="bg-[var(--dark-bg-minimal)] h-[180px] pt-[20px] pb-[30px] px-[20px] flex flex-col justify-between hover:scale-105 transition-all">
+          <div className="pointer-events-none">
+            <h2 className="text-[25px] text-white font-[700] ">
               {mostRecent.name}
             </h2>
-            <h5 className="flex my-[5px] text-[var(--dark-text)]">
+            <h5 className="flex jakarta my-[5px] text-[var(--dark-text)]">
               {mostRecent.stack.map((tool, index) => {
                 if (index === mostRecent.stack.length - 1) {
                   return (
                     <span
                       key={index}
-                      className=" text-[15px] font-[700] tracking-wide 2xl:text-[16px]"
+                      className=" text-[12px] font-[700] tracking-wide "
                     >
                       {" "}
                       {tool}
@@ -65,14 +67,14 @@ export const DesktopProjects = () => {
                 return (
                   <span
                     key={index}
-                    className="text-[15px]  font-[700] tracking-wide mr-[5px] 2xl:text-[16px]"
+                    className="text-[12px]  font-[700] tracking-wide mr-[5px] "
                   >
                     {tool},
                   </span>
                 );
               })}
             </h5>
-            <p className="text-[var(--dark-text-alt)] text-[16px]">
+            <p className="text-[var(--dark-text-alt)] text-[12px]">
               {mostRecent.description}
             </p>
           </div>
@@ -80,21 +82,39 @@ export const DesktopProjects = () => {
           <div className="text-white flex gap-[30px]">
             {mostRecent.code && (
               <a href={mostRecent.code} className="flex items-center gap-2">
-                <FaCode className="lg:scale-[1.5]" />{" "}
-                <span className="text-[14px] 2xl:text-[16px]">Code</span>
+                <FaCode className="lg:scale-[1.2]" />{" "}
+                <span className="text-[12px]">Code</span>
               </a>
             )}
             {mostRecent.live && (
               <a href={mostRecent.live} className="flex items-center gap-2">
-                <FaEye className="lg:scale-[1.5]" />{" "}
-                <span className="text-[14px] 2xl:text-[16px]">Live</span>
+                <FaEye className="lg:scale-[1.2]" />{" "}
+                <span className="text-[12px]">Live</span>
               </a>
             )}
           </div>
         </div>
       </div>
 
-      <div id="other-projects" className="h-[400vh] w-full bg-slate-500"></div>
+      <div
+        id="other-projects"
+        className="h-fit flex gap-[4px] w-full bg-[var(--dark-bg-primary)] overflow-auto mt-[70px] "
+      >
+        <div className="w-1/2 flex flex-col gap-[4px]">
+          {otherProjects.map((project, index) => {
+            if (!(index % 2)) {
+              return <Card data={project} screen={"desktop"} key={index} />;
+            }
+          })}
+        </div>
+        <div className="w-1/2 flex flex-col gap-[4px] mt-[40px]">
+          {otherProjects.map((project, index) => {
+            if (index % 2) {
+              return <Card data={project} screen={"desktop"} key={index} />;
+            }
+          })}
+        </div>
+      </div>
     </section>
   );
 };

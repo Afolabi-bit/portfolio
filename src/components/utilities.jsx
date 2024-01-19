@@ -55,13 +55,17 @@ export const Socials = ({ width }) => {
   );
 };
 
-export const Card = ({ data }) => {
+export const Card = ({ data, screen }) => {
   return (
     <div
       id="card"
-      className="bg-[var(--dark-bg-minimal)]  w-full h-[220px]  px-[20px] pt-[30px] pb-[50px] flex flex-col justify-between lg:h-[260px] lg:px-[30px]"
+      className={
+        screen != "desktop"
+          ? `bg-[var(--dark-bg-minimal)]  w-full h-[220px]  px-[20px] pt-[30px] pb-[50px] flex flex-col justify-between lg:h-[260px] lg:px-[30px]`
+          : "bg-[var(--dark-bg-minimal)]  w-full  px-[20px] pt-[30px] pb-[50px] flex flex-col justify-between h-[270px] hover:scale-105 transition-all"
+      }
     >
-      <div>
+      <div className="pointer-events-none">
         <h4 className="text-white text-[23px] font-[600] jakarta lg:text-[26px]">
           {data.name}
         </h4>
@@ -193,7 +197,7 @@ export const LinkGroup = ({ page }) => {
             to={"/"}
             className="text-[var(--dark-text)] flex items-center gap-[20px] w-fit ml-[30px]"
           >
-            <PiArticleMediumThin className=" w-[30px] h-[30px]" />
+            <PiArticleMediumThin className=" w-[20px] h-[20px]" />
             <span className="w-[50px] h-[2px] bg-[var(--dark-text)] rounded-md items-center gap-[20px] "></span>
             <span className="text-[12px] 2xl:text-[13px]">Blog</span>
           </Link>
@@ -205,7 +209,7 @@ export const LinkGroup = ({ page }) => {
           href="#"
           className="text-[var(--dark-text)] flex items-center gap-[20px] w-fit"
         >
-          <PiLinkedinLogoLight className=" w-[30px] h-[30px]" />
+          <PiLinkedinLogoLight className=" w-[20px] h-[20px]" />
           <span className="w-[50px] h-[2px] bg-[var(--dark-text)] rounded-md items-center gap-[20px] "></span>
           <span className="text-[12px] 2xl:text-[13px]">LinkedIn</span>
         </a>
