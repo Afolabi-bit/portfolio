@@ -40,7 +40,12 @@ const Home = () => {
         <div className="width-container  h-screen w-[1280px]">
           <div className="relative w-full mx-auto h-full">
             <Static />
-            <div className="w-[50%] h-full absolute right-0 top-0 overflow-y-scroll overflow-x-visible scrollbar">
+            <div
+              style={{
+                width: "calc(50% + 20px)",
+              }}
+              className="pl-[25px] h-full absolute right-0 top-0 overflow-y-scroll overflow-x-visible scrollbar"
+            >
               <DesktopProjects />
             </div>
           </div>

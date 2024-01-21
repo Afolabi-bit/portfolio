@@ -58,15 +58,14 @@ export const Socials = ({ width }) => {
 export const Card = ({ data, screen }) => {
   return (
     <div
-      id="card"
       className={
         screen != "desktop"
-          ? `bg-[var(--dark-bg-minimal)]  w-full h-[220px]  px-[20px] pt-[30px] pb-[50px] flex flex-col justify-between lg:h-[260px] lg:px-[30px]`
-          : "bg-[var(--dark-bg-minimal)]  w-full  px-[20px] pt-[30px] pb-[50px] flex flex-col justify-between h-[270px] hover:scale-105 transition-all"
+          ? `card bg-[var(--dark-bg-minimal)]  w-full h-[220px]  px-[20px] pt-[30px] pb-[50px] flex flex-col justify-between lg:h-[260px] lg:px-[30px]`
+          : "card bg-[var(--dark-bg-minimal)]  w-full  px-[40px] pt-[40px] pb-[50px] flex flex-col justify-between h-[270px] hover:scale-105 transition-all"
       }
     >
       <div className="pointer-events-none">
-        <h4 className="text-white text-[23px] font-[600] jakarta lg:text-[26px]">
+        <h4 className="text-white text-[23px] font-[600] jakarta lg:text-[20px] lg:font-[700]">
           {data.name}
         </h4>
         <h5 className="flex my-[5px] text-[var(--dark-text)]">
@@ -75,7 +74,7 @@ export const Card = ({ data, screen }) => {
               return (
                 <span
                   key={index}
-                  className=" text-[13px] font-[700] tracking-wide lg:text-[15px]"
+                  className=" text-[12px] font-[700] tracking-wide "
                 >
                   {" "}
                   {tool}
@@ -85,7 +84,7 @@ export const Card = ({ data, screen }) => {
             return (
               <span
                 key={index}
-                className="text-[12px]  font-[700] tracking-wide mr-[5px] lg:text-[15px]"
+                className="text-[12px]  font-[700] tracking-wide mr-[5px] "
               >
                 {tool},
               </span>
@@ -93,7 +92,7 @@ export const Card = ({ data, screen }) => {
           })}
         </h5>
         {data.description && (
-          <p className="text-[var(--dark-text-alt)] text-[12px] lg:text-[15px]">
+          <p className="text-[var(--dark-text-alt)] text-[12px] lg:text-[12px]">
             {data.description}
           </p>
         )}
@@ -103,13 +102,13 @@ export const Card = ({ data, screen }) => {
         {data.code && (
           <a href={data.code} className="flex items-center gap-2">
             <FaCode className="lg:scale-[1.2]" />{" "}
-            <span className="text-[12px] lg:text-[15px]">Code</span>
+            <span className="text-[12px] lg:text-[13px]">Code</span>
           </a>
         )}
         {data.live && (
           <a href={data.live} className="flex items-center gap-2">
             <FaEye className="lg:scale-[1.2]" />{" "}
-            <span className="text-[12px] lg:text-[15px]">Live</span>
+            <span className="text-[12px] lg:text-[13px]">Live</span>
           </a>
         )}
       </div>

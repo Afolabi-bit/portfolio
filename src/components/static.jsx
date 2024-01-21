@@ -3,7 +3,12 @@ import { HeroParagraph, LinkGroup } from "./utilities";
 
 const Static = () => {
   return (
-    <section className="w-[50%] h-screen bg-[var(--dark-bg-primary)] left-0 top-0 z-50 absolute overflow-hidden py-[60px] pl-[85px] flex flex-col justify-between">
+    <section
+      style={{
+        width: "calc(50% - 20px)",
+      }}
+      className=" h-screen bg-[var(--dark-bg-primary)] left-0 top-0 z-50 absolute overflow-hidden py-[60px] pl-[85px] flex flex-col justify-between"
+    >
       {/* Hero section */}
       <div>
         <div className=" relative">

@@ -40,15 +40,35 @@ export const DesktopProjects = () => {
   const mostRecent = data.filter((project) => project.time == "recent")[0];
   const otherProjects = data.filter((project) => project.time != "recent");
 
+  // OVERLAY ON HOVER FUNCTIONALITY
+  // let otherProjectsElement = document.getElementById("other-projects");
+  // let otherProjectsWrapper = document.getElementById("other-projects-wrapper");
+  // let cards = document.querySelectorAll(".card");
+  // console.log(cards);
+
+  // otherProjectsWrapper.addEventListener("mouseover", (e) => {
+  //   let currentElement = e.target;
+  //   otherProjectsElement.classList.add("overlay");
+  //   currentElement.style.zIndex = "10";
+  // });
+
+  // otherProjectsWrapper.addEventListener("mouseleave", () => {
+  //   otherProjectsElement.classList.remove("overlay");
+  //   cards.forEach((card) => (card.style.zIndex = "unset"));
+  // });
+
   return (
     <section className="bg-[var(--dark-bg-primary)] w-full pt-[80px] pb-[60px] pr-[85px]">
       <div id="most-recent">
         <h3 className="text-[--dark-text-alt] jakarta uppercase font-[800] text-[13px] mb-[30px]">
           most recent
         </h3>
-        <div className="bg-[var(--dark-bg-minimal)] h-[180px] pt-[20px] pb-[30px] px-[20px] flex flex-col justify-between hover:scale-105 transition-all">
+        <div
+          id="most-recent-wrapper"
+          className="bg-[var(--dark-bg-minimal)] h-[230px] p-[40px] flex flex-col justify-between hover:scale-105 transition-all relative"
+        >
           <div className="pointer-events-none">
-            <h2 className="text-[25px] text-white font-[700] ">
+            <h2 className="text-[20px] text-white font-[700] ">
               {mostRecent.name}
             </h2>
             <h5 className="flex jakarta my-[5px] text-[var(--dark-text)]">
@@ -103,7 +123,8 @@ export const DesktopProjects = () => {
         <h3 className="text-[--dark-text-alt] jakarta uppercase font-[800] text-[13px] mb-[30px]">
           other projects
         </h3>
-        <div className="flex gap-[4px] w-full">
+        <div id="other-projects-wrapper" className="flex gap-[4px] w-full">
+          {/* left column */}
           <div className="w-1/2 flex flex-col gap-[4px]">
             {otherProjects.map((project, index) => {
               if (!(index % 2)) {
@@ -111,6 +132,8 @@ export const DesktopProjects = () => {
               }
             })}
           </div>
+
+          {/* right column */}
           <div className="w-1/2 flex flex-col gap-[4px] mt-[40px]">
             {otherProjects.map((project, index) => {
               if (index % 2) {

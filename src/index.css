@@ -10,6 +10,7 @@
   --dark-bg-primary: #121212;
   --dark-bg-minimal: #1a1a1c;
   --dark-bg-optimal: #1b1b1b;
+  --dark-bg-transparent: #121212b2;
   --dark-text: #868686;
   --dark-text-alt: #575656;
   --cursor-color: rgb(223, 97, 13);
@@ -129,3 +130,20 @@ body {
   background-color: #fff;
   width: 70px;
 }
+
+/* Overlay on hover styles */
+/* #most-recent-wrapper::after,
+#other-projects-wrapper:after {
+  position: absolute;
+  content: "";
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  z-index: 0;
+} */
+
+/* 
+#other-projects.overlay #other-projects-wrapper:after {
+  z-index: 0;
+} */
