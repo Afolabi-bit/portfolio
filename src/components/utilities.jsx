@@ -56,21 +56,27 @@ export const Socials = ({ width }) => {
 };
 
 export const Card = ({ data, screen }) => {
-  function overlay(e, section) {
-    const wrapper = document.getElementById("other-projects-wrapper");
+  function overlay(e) {
+    let screenWidth = window.innerWidth;
+    if (screenWidth >= "1024") {
+      const wrapper = document.getElementById("other-projects-wrapper");
 
-    wrapper.classList.add("overlay");
-    if (e.target.classList.contains("card")) {
-      e.target.classList.add("hover");
+      wrapper.classList.add("overlay");
+      if (e.target.classList.contains("card")) {
+        e.target.classList.add("hover");
+      }
     }
   }
 
-  function removeOverlay(e, section) {
-    const wrapper = document.getElementById("other-projects-wrapper");
+  function removeOverlay(e) {
+    let screenWidth = window.innerWidth;
+    if (screenWidth >= "1024") {
+      const wrapper = document.getElementById("other-projects-wrapper");
 
-    wrapper.classList.remove("overlay");
-    if (e.target.classList.contains("card")) {
-      e.target.classList.remove("hover");
+      wrapper.classList.remove("overlay");
+      if (e.target.classList.contains("card")) {
+        e.target.classList.remove("hover");
+      }
     }
   }
 

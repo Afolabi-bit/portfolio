@@ -2,11 +2,17 @@ import Navbar from "../components/navbar";
 import Footer from "../components/footer";
 import { Card, PageNavigationButtons } from "../components/utilities";
 import data from "../data";
-import { Link } from "react-router-dom";
 import { FaCode, FaEye } from "react-icons/fa";
-import { useRef } from "react";
+import { redirect, useNavigate } from "react-router-dom";
 
 const Projects = () => {
+  const navigateTo = useNavigate();
+  const screen = window.innerWidth;
+
+  if (screen > "1024") {
+    navigateTo("/");
+  }
+
   return (
     <>
       <main
@@ -29,10 +35,6 @@ const Projects = () => {
         </section>
         <Footer />
       </main>
-      <main className="hidden xl:block">
-        <h1>projects page</h1>
-        <Link to={"/"}>Home</Link>
-      </main>
     </>
   );
 };
@@ -42,6 +44,30 @@ export default Projects;
 export const DesktopProjects = () => {
   const mostRecent = data.filter((project) => project.time == "recent");
   const otherProjects = data.filter((project) => project.time != "recent");
+
+  function overlay(e) {
+    let screenWidth = window.innerWidth;
+    if (screenWidth >= "1024") {
+      const wrapper = document.getElementById("most-recent-wrapper");
+
+      wrapper.classList.add("overlay");
+      if (e.target.classList.contains("big-card")) {
+        e.target.classList.add("hover");
+      }
+    }
+  }
+
+  function removeOverlay(e) {
+    let screenWidth = window.innerWidth;
+    if (screenWidth >= "1024") {
+      const wrapper = document.getElementById("most-recent-wrapper");
+
+      wrapper.classList.remove("overlay");
+      if (e.target.classList.contains("big-card")) {
+        e.target.classList.remove("hover");
+      }
+    }
+  }
 
   return (
     <section className="bg-[var(--dark-bg-primary)] w-full pt-[80px] pb-[60px] pr-[85px]">
@@ -58,8 +84,10 @@ export const DesktopProjects = () => {
           {mostRecent.map((card, index) => {
             return (
               <div
+                onMouseOver={(e) => overlay(e)}
+                onMouseLeave={(e) => removeOverlay(e)}
                 key={index}
-                className="bg-[var(--dark-bg-minimal)] h-[200px] p-[40px] flex flex-col justify-between hover:scale-105 transition-all relative"
+                className="big-card bg-[var(--dark-bg-minimal)] h-[200px] p-[40px] flex flex-col justify-between hover:scale-105 transition-all relative"
               >
                 <div className="pointer-events-none">
                   <h2 className="text-[20px] text-white font-[700] ">

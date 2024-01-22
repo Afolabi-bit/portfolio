@@ -10,7 +10,7 @@
   --dark-bg-primary: #121212;
   --dark-bg-minimal: #1a1a1c;
   --dark-bg-optimal: #1b1b1b;
-  --dark-bg-transparent: #1a1a1c7c;
+  --dark-bg-transparent: #1a1a1c8e;
   --dark-text: #868686;
   --dark-text-alt: #575656;
   --cursor-color: rgb(223, 97, 13);
@@ -135,11 +135,15 @@ body {
 .card {
   background-color: var(--dark-bg-minimal);
 }
-.overlay .card {
+.overlay .card,
+.overlay .big-card {
   background-color: var(--dark-bg-transparent);
+  opacity: 0.4;
 }
 
-.overlay .card.hover {
+.overlay .card.hover,
+.overlay .big-card.hover {
   background-color: var(--dark-bg-minimal);
   box-shadow: 0 0 25px 3px #121212a4;
+  opacity: 1;
 }
