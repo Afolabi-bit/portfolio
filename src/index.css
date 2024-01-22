@@ -10,7 +10,7 @@
   --dark-bg-primary: #121212;
   --dark-bg-minimal: #1a1a1c;
   --dark-bg-optimal: #1b1b1b;
-  --dark-bg-transparent: #121212b2;
+  --dark-bg-transparent: #1a1a1c7c;
   --dark-text: #868686;
   --dark-text-alt: #575656;
   --cursor-color: rgb(223, 97, 13);
@@ -132,18 +132,14 @@ body {
 }
 
 /* Overlay on hover styles */
-/* #most-recent-wrapper::after,
-#other-projects-wrapper:after {
-  position: absolute;
-  content: "";
-  width: 100%;
-  height: 100%;
-  top: 0;
-  left: 0;
-  z-index: 0;
-} */
+.card {
+  background-color: var(--dark-bg-minimal);
+}
+.overlay .card {
+  background-color: var(--dark-bg-transparent);
+}
 
-/* 
-#other-projects.overlay #other-projects-wrapper:after {
-  z-index: 0;
-} */
+.overlay .card.hover {
+  background-color: var(--dark-bg-minimal);
+  box-shadow: 0 0 25px 3px #121212a4;
+}

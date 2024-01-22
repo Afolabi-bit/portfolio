@@ -56,8 +56,28 @@ export const Socials = ({ width }) => {
 };
 
 export const Card = ({ data, screen }) => {
+  function overlay(e, section) {
+    const wrapper = document.getElementById("other-projects-wrapper");
+
+    wrapper.classList.add("overlay");
+    if (e.target.classList.contains("card")) {
+      e.target.classList.add("hover");
+    }
+  }
+
+  function removeOverlay(e, section) {
+    const wrapper = document.getElementById("other-projects-wrapper");
+
+    wrapper.classList.remove("overlay");
+    if (e.target.classList.contains("card")) {
+      e.target.classList.remove("hover");
+    }
+  }
+
   return (
     <div
+      onMouseOver={(e) => overlay(e, "other-projects")}
+      onMouseLeave={(e) => removeOverlay(e, "other-projects")}
       className={
         screen != "desktop"
           ? `card bg-[var(--dark-bg-minimal)]  w-full h-[220px]  px-[20px] pt-[30px] pb-[50px] flex flex-col justify-between lg:h-[260px] lg:px-[30px]`
