@@ -1,5 +1,13 @@
 const projects = [
   {
+    name: "Sales Company Dashboard",
+    description: "Charts and order-tracking information",
+    code: "https://github.com/Afolabi-bit/sales_company_dashboard",
+    live: "https://sales-company-dashboard.vercel.app/",
+    stack: ["ReactJS", "TailwindCSS"],
+    time: "recent",
+  },
+  {
     name: "MovieTrailer",
     description: "Watch movie trailers of  most popular movies and shows",
     code: "https://github.com/Afolabi-bit/movie-api/tree/master/client",
@@ -13,7 +21,7 @@ const projects = [
     code: "https://github.com/Afolabi-bit/getlinked",
     live: "https://fenigmagetlinked.vercel.app/",
     stack: ["ReactJS", "NPM", "TailwindCSS"],
-    time: "recent",
+    time: "old",
   },
 
   {
