@@ -1,5 +1,13 @@
 const projects = [
   {
+    name: "Space",
+    description: "",
+    code: "https://github.com/Afolabi-bit/space/tree/main",
+    live: "https://fenigmaspace.vercel.app/",
+    stack: ["ReactJS", "TailwindCSS"],
+    time: "recent",
+  },
+  {
     name: "Sales Company Dashboard",
     description: "Charts and order-tracking information",
     code: "https://github.com/Afolabi-bit/sales_company_dashboard",
@@ -13,7 +21,7 @@ const projects = [
     code: "https://github.com/Afolabi-bit/movie-api/tree/master/client",
     live: "https://fenigmamovieapi.vercel.app/",
     stack: ["ReactJS", "Firebase"],
-    time: "recent",
+    time: "old",
   },
   {
     name: "Getlinked",

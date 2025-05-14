@@ -13,7 +13,7 @@ const Navbar = () => {
   }
   return (
     <nav
-      id="navbar"
+      id="navbar" 
       className="w-[100%] h-[70px] overflow-hidden fixed top-0 left-0 right-0 z-30 bg-[var(--dark-bg-primary)]"
     >
       {/* Logo and menu toggle button */}
