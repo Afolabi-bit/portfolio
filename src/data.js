@@ -1,5 +1,13 @@
 const projects = [
 	{
+		name: "Shortly",
+		description: "Live Shortening service",
+		code: "https://github.com/Afolabi-bit/url-shortener",
+		live: "https://fenigma-url-shortener.vercel.app/",
+		stack: ["ReactJS", "TailwindCSS", "Render"],
+		time: "recent",
+	},
+	{
 		name: "Wrds",
 		description: "",
 		code: "https://github.com/Afolabi-bit/wrds",
@@ -13,7 +21,7 @@ const projects = [
 		code: "https://github.com/Afolabi-bit/space/tree/main",
 		live: "https://fenigmaspace.vercel.app/",
 		stack: ["ReactJS", "TailwindCSS"],
-		time: "recent",
+		time: "old",
 	},
 	{
 		name: "Sales Company Dashboard",
