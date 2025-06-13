@@ -9,7 +9,7 @@ const projects = [
 	},
 	{
 		name: "Wrds",
-		description: "",
+		description: "Online dictionary. Uses the openDictionary API",
 		code: "https://github.com/Afolabi-bit/wrds",
 		live: "https://wrds-beryl.vercel.app/",
 		stack: ["ReactJS", "TailwindCSS"],
@@ -17,7 +17,7 @@ const projects = [
 	},
 	{
 		name: "Space",
-		description: "",
+		description: "An exploration of planets in our solar system.",
 		code: "https://github.com/Afolabi-bit/space/tree/main",
 		live: "https://fenigmaspace.vercel.app/",
 		stack: ["ReactJS", "TailwindCSS"],
