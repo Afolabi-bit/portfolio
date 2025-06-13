@@ -9,7 +9,7 @@ const projects = [
 	},
 	{
 		name: "Wrds",
-		description: "Online dictionary. Uses the openDictionary API",
+		description: "Online dictionary. Uses the Dictionary API",
 		code: "https://github.com/Afolabi-bit/wrds",
 		live: "https://wrds-beryl.vercel.app/",
 		stack: ["ReactJS", "TailwindCSS"],
