@@ -21,7 +21,7 @@ const projects = [
 		code: "https://github.com/Afolabi-bit/wrds",
 		live: "https://wrds-beryl.vercel.app/",
 		stack: ["ReactJS", "TailwindCSS"],
-		time: "recent",
+		time: "old",
 	},
 	{
 		name: "Space",
