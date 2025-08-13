@@ -1,13 +1,5 @@
 const projects = [
 	{
-		name: "CyberTrace",
-		description: "IP address tracking system",
-		code: "https://github.com/Afolabi-bit/cybertrace",
-		live: "https://cyber-trace.vercel.app/",
-		stack: ["ReactJS", "TailwindCSS", "LeafLet"],
-		time: "recent",
-	},
-	{
 		name: "Shortly",
 		description: "Live Shortening service",
 		code: "https://github.com/Afolabi-bit/url-shortener",
@@ -21,6 +13,14 @@ const projects = [
 		code: "https://github.com/Afolabi-bit/getlinked",
 		live: "https://fenigmagetlinked.vercel.app/",
 		stack: ["ReactJS", "NPM", "TailwindCSS"],
+		time: "recent",
+	},
+	{
+		name: "CyberTrace",
+		description: "IP address tracking system",
+		code: "https://github.com/Afolabi-bit/cybertrace",
+		live: "https://cyber-trace.vercel.app/",
+		stack: ["ReactJS", "TailwindCSS", "LeafLet"],
 		time: "old",
 	},
 	{
