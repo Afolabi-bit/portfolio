@@ -3,53 +3,53 @@
 @tailwind utilities;
 
 :root {
-  font-synthesis: none;
-  text-rendering: optimizeLegibility;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  --dark-bg-primary: #121212;
-  --dark-bg-minimal: #1a1a1c;
-  --dark-bg-optimal: #1b1b1b;
-  --dark-bg-transparent: #1a1a1c8e;
-  --dark-text: #868686;
-  --dark-text-alt: #575656;
-  --cursor-color: rgb(223, 97, 13);
+	font-synthesis: none;
+	text-rendering: optimizeLegibility;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+	--dark-bg-primary: #121212;
+	--dark-bg-minimal: #1a1a1c;
+	--dark-bg-optimal: #1b1b1b;
+	--dark-bg-transparent: #1a1a1c8e;
+	--dark-text: #868686;
+	--dark-text-alt: #575656;
+	--cursor-color: rgb(223, 97, 13);
 }
 
 body {
-  font-family: "Manrope", sans-serif;
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-  font-size: 16px;
+	font-family: "Manrope", sans-serif;
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	font-size: 16px;
 }
 
 .jakarta {
-  font-family: "Plus Jakarta Sans", sans-serif;
-  font-optical-sizing: auto;
-  font-style: normal;
+	font-family: "Plus Jakarta Sans", sans-serif;
+	font-optical-sizing: auto;
+	font-style: normal;
 }
 
 .manrope {
-  font-family: "Manrope", sans-serif;
-  font-optical-sizing: auto;
-  font-style: normal;
+	font-family: "Manrope", sans-serif;
+	font-optical-sizing: auto;
+	font-style: normal;
 }
 
 #mobile-container {
-  height: 100vh;
-  height: 100svh !important;
+	height: 100vh;
+	height: 100svh !important;
 }
 
 /* hand waving animation */
 
-@keyframes hello {
+/* @keyframes hello {
   0% {
     transform: rotate(0deg);
   }
   8% {
     transform: rotate(18deg) translateY(-7px) translateX(4px) scale(1.2);
-  } /* The following five values can be played with to make the waving more or less extreme */
+  } /* The following five values can be played with to make the waving more or less extreme *
   16% {
     transform: rotate(-5deg) translateY(-4px) translateX(-9px) scale(1.2);
   }
@@ -64,7 +64,7 @@ body {
   }
   48% {
     transform: rotate(0deg) scale(1);
-  } /* Reset for the last half to pause */
+  } /* Reset for the last half to pause *
   100% {
     transform: rotate(0deg);
   }
@@ -75,75 +75,75 @@ body {
   animation-duration: 6s;
   animation-timing-function: ease-in-out;
   animation-iteration-count: infinite;
-}
+} */
 
 /* Highlight color for keyword in the Hero paragraph on home page */
 .accent {
-  font-weight: 500;
-  color: #e2e2e2;
+	font-weight: 500;
+	color: #e2e2e2;
 }
 
 /* Navigation bar styling */
 #nav-links-wrapper {
-  transition: all 0.5s ease-out;
+	transition: all 0.5s ease-out;
 }
 
 .open-menu {
-  background-color: var(--dark-bg-optimal);
-  height: 100vh;
+	background-color: var(--dark-bg-optimal);
+	height: 100vh;
 }
 
 .open-menu #nav-links {
-  opacity: 1;
-  pointer-events: all;
+	opacity: 1;
+	pointer-events: all;
 }
 
 .open-menu #nav-links-wrapper {
-  transform: translateY(0);
+	transform: translateY(0);
 }
 
 #projects-page #footer {
-  position: unset;
+	position: unset;
 }
 
 #desktop-container {
-  height: 100vh;
+	height: 100vh;
 }
 
 .git {
-  transform: rotate(-45deg);
+	transform: rotate(-45deg);
 }
 
 #link-group a {
-  transition: color 0.3s;
+	transition: color 0.3s;
 }
 
 #link-group a:hover {
-  color: #fff;
+	color: #fff;
 }
 
 #link-group a > span.rounded-md {
-  transition: width 0.3s;
+	transition: width 0.3s;
 }
 
 #link-group a:hover > span.rounded-md {
-  background-color: #fff;
-  width: 70px;
+	background-color: #fff;
+	width: 70px;
 }
 
 /* Overlay on hover styles */
 .card {
-  background-color: var(--dark-bg-minimal);
+	background-color: var(--dark-bg-minimal);
 }
 .overlay .card,
 .overlay .big-card {
-  background-color: var(--dark-bg-transparent);
-  opacity: 0.4;
+	background-color: var(--dark-bg-transparent);
+	opacity: 0.4;
 }
 
 .overlay .card.hover,
 .overlay .big-card.hover {
-  background-color: var(--dark-bg-minimal);
-  box-shadow: 0 0 25px 3px #121212a4;
-  opacity: 1;
+	background-color: var(--dark-bg-minimal);
+	box-shadow: 0 0 25px 3px #121212a4;
+	opacity: 1;
 }
