@@ -91,16 +91,16 @@ export const Card = ({ data, screen }) => {
 			}
 		>
 			<div className="pointer-events-none">
-				<h4 className="text-white text-[23px] font-[600] jakarta lg:text-[20px] lg:font-[700]">
+				<h4 className="text-white text-[23px] font-[600] jakarta lg:text-[20px] lg:font-[700] 4xl:text-[26px]">
 					{data.name}
 				</h4>
-				<h5 className="flex my-[5px] text-[var(--dark-text)]">
+				<h5 className="flex my-[5px] text-[var(--dark-text)] items-baseline">
 					{data.stack.map((tool, index) => {
 						if (index === data.stack.length - 1) {
 							return (
 								<span
 									key={index}
-									className=" text-[12px] font-[700] tracking-wide "
+									className=" text-[12px] font-[700] tracking-wide 4xl:text-[16px] "
 								>
 									{" "}
 									{tool}
@@ -118,7 +118,7 @@ export const Card = ({ data, screen }) => {
 					})}
 				</h5>
 				{data.description && (
-					<p className="text-[var(--dark-text-alt)] text-[12px] lg:text-[12px]">
+					<p className="text-[var(--dark-text-alt)] text-[12px] lg:text-[12px] 4xl:text-[16px]">
 						{data.description}
 					</p>
 				)}
@@ -130,17 +130,21 @@ export const Card = ({ data, screen }) => {
 						href={data.code}
 						className="flex items-center gap-2"
 					>
-						<FaCode className="lg:scale-[1.2]" />{" "}
-						<span className="text-[12px] lg:text-[13px]">Code</span>
+						<FaCode className="lg:scale-[1.2] 4xl:scale-[1.3]" />{" "}
+						<span className="text-[12px] lg:text-[13px] 4xl:text-[14px]">
+							Code
+						</span>
 					</a>
 				)}
 				{data.live && (
 					<a
 						href={data.live}
-						className="flex items-center gap-2"
+						className="flex items-center gap-2 4xl:scale-[1.2]"
 					>
 						<FaEye className="lg:scale-[1.2]" />{" "}
-						<span className="text-[12px] lg:text-[13px]">Live</span>
+						<span className="text-[12px] lg:text-[13px] 4xl:text-[14px]">
+							Live
+						</span>
 					</a>
 				)}
 			</div>
