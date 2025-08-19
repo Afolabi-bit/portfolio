@@ -181,13 +181,13 @@ export const PageNavigationButtons = ({ page }) => {
 
 export const HeroParagraph = () => {
 	return (
-		<p className="text-[14px] text-[var(--dark-text)] md:text-[16px] md:w-[85%] md:mx-auto xl:w-[90%] xl:text-[14px] xl:mx-0 2xl:w-[75%] 2xl:text-[13px] 2xl:mt-[15px] ">
+		<p className="text-[14px] text-[var(--dark-text)] md:text-[16px] md:w-[85%] md:mx-auto xl:w-[90%] xl:text-[14px] xl:mx-0 2xl:w-[75%] 2xl:text-[13px] 2xl:mt-[15px] 3xl:text-[16px] 4xl:text-[28px]">
 			I'm a <span className="accent">junior software engineer </span>
-			that is keen on <span className="accent">providing solutions </span>
-			using <span className="accent">frontend technologies</span>. I am
+			keen on <span className="accent">providing solutions </span>
+			using <span className="accent">frontend technologies</span>. I'm
 			fascinated by <span className="accent">functionality</span>, accessibity,{" "}
-			<span className="accent">minimalist design</span>, user experience
-			<span className="accent">, and web animations.</span>
+			<span className="accent">minimalist design</span>, optimal user experience
+			<span className="accent">, and intricate web animations.</span>
 		</p>
 	);
 };
@@ -197,21 +197,23 @@ export const LinkGroup = ({ page }) => {
 		<div>
 			<div
 				id="link-group"
-				className="flex flex-col gap-[14px] 2xl:text-[15px] cursor-pointer"
+				className="flex flex-col gap-[14px] 2xl:text-[15px] cursor-pointer 4xl:gap-[25px]"
 			>
 				{page == "home" ? (
 					<div className="text-white flex items-center gap-[20px] w-fit">
-						<PiGitCommitDuotone className="git w-[20px] h-[20px]" />
+						<PiGitCommitDuotone className="git w-[20px] h-[20px] 3xl:w-[25px] 3xl:h-[25px] 4xl:w-[45px] 4xl:h-[45px]" />
 						<span className="w-[70px] h-[2px] bg-white rounded-md"></span>
-						<span className="text-[12px] 2xl:text-[13px]">Projects</span>
+						<span className="text-[12px] 2xl:text-[13px] 4xl:text-[18px]">
+							Projects
+						</span>
 					</div>
 				) : (
 					<Link
 						to={"/"}
 						className="text-[var(--dark-text)] flex items-center gap-[20px] w-fit "
 					>
-						<PiGitCommitDuotone className="git w-[20px] h-[20px]" />
-						<span className="w-[50px] h-[2px] bg-[var(--dark-text)] rounded-md items-center gap-[20px] "></span>
+						<PiGitCommitDuotone className="git w-[20px] h-[20px] 3xl:w-[25px] 3xl:h-[25px] 4xl:w-[45px] 4xl:h-[45px]" />
+						<span className="w-[50px] h-[2px] bg-[var(--dark-text)] rounded-md items-center gap-[20px] 4xl:text-[18px]"></span>
 						<span className="text-[12px] 2xl:text-[13px]">Projects</span>
 					</Link>
 				)}
@@ -219,18 +221,22 @@ export const LinkGroup = ({ page }) => {
 				{/*  */}
 				{page == "blog" ? (
 					<div className="text-[var(--dark-text)] flex items-center gap-[20px] w-fit ml-[30px] cursor-pointer">
-						<PiArticleMediumThin className=" w-[20px] h-[20px]" />
+						<PiArticleMediumThin className=" w-[20px] h-[20px] 3xl:w-[25px] 3xl:h-[25px] 4xl:w-[45px] 4xl:h-[45px]" />
 						<span className="w-[70px] h-[2px] bg-[var(--dark-text)] rounded-md"></span>
-						<span className="text-[12px] 2xl:text-[13px]">Blog</span>
+						<span className="text-[12px] 2xl:text-[13px] 4xl:text-[18px]">
+							Blog
+						</span>
 					</div>
 				) : (
 					<Link
 						to={"/"}
 						className="text-[var(--dark-text)] flex items-center gap-[20px] w-fit ml-[30px]"
 					>
-						<PiArticleMediumThin className=" w-[20px] h-[20px]" />
+						<PiArticleMediumThin className=" w-[20px] h-[20px] 3xl:w-[25px] 3xl:h-[25px] 4xl:w-[45px] 4xl:h-[45px]" />
 						<span className="w-[50px] h-[2px] bg-[var(--dark-text)] rounded-md items-center gap-[20px] "></span>
-						<span className="text-[12px] 2xl:text-[13px]">Blog</span>
+						<span className="text-[12px] 2xl:text-[13px] 4xl:text-[18px]">
+							Blog
+						</span>
 					</Link>
 				)}
 				{/*  */}
@@ -240,9 +246,11 @@ export const LinkGroup = ({ page }) => {
 					href="#"
 					className="text-[var(--dark-text)] flex items-center gap-[20px] w-fit"
 				>
-					<PiLinkedinLogoLight className=" w-[20px] h-[20px]" />
-					<span className="w-[50px] h-[2px] bg-[var(--dark-text)] rounded-md items-center gap-[20px] "></span>
-					<span className="text-[12px] 2xl:text-[13px]">LinkedIn</span>
+					<PiLinkedinLogoLight className=" w-[20px] h-[20px] 3xl:w-[25px] 3xl:h-[25px] 4xl:w-[45px] 4xl:h-[45px]" />
+					<span className="w-[50px] h-[2px] bg-[var(--dark-text)] rounded-md items-center gap-[20px]  "></span>
+					<span className="text-[12px] 2xl:text-[13px] 4xl:text-[18px]">
+						LinkedIn
+					</span>
 				</a>
 			</div>
 		</div>
@@ -251,13 +259,13 @@ export const LinkGroup = ({ page }) => {
 
 export const Citation = () => {
 	return (
-		<p className="text-[var(--dark-text)] text-[10px] pt-[5px]">
+		<p className="text-[var(--dark-text)] text-[10px] pt-[5px] 4xl:text-[14px]">
 			Inspired by{" "}
 			<a
 				href="http://kadet.dev"
 				target="_blank"
 				rel="noreferrer noopener external"
-				className="text-white ml-1"
+				className="text-white ml-1 "
 			>
 				Collins Enebeli
 			</a>
