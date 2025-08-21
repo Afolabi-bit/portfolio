@@ -24,12 +24,12 @@ app.get("/my-articles", async (req, res) => {
 		const data = await response.json();
 		res.json(data);
 	} catch (err) {
-		console.error("❌ Backend Error:", err.message);
+		console.error("Backend Error:", err.message);
 		res.status(500).json({ error: err.message });
 	}
 });
 
 const PORT = 5000;
 app.listen(PORT, () => {
-	console.log(`✅ Backend running at http://localhost:${PORT}`);
+	console.log(`Backend running at http://localhost:${PORT}`);
 });
