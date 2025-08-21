@@ -1,6 +1,7 @@
 import { IoMdHeart } from "react-icons/io";
 import { FaComment } from "react-icons/fa6";
 import { BiSolidBarChartAlt2 } from "react-icons/bi";
+import { IoBook } from "react-icons/io5";
 
 const ArticleCard = ({ article }) => {
 	const {
@@ -16,7 +17,11 @@ const ArticleCard = ({ article }) => {
 	} = article;
 
 	return (
-		<div className="bg-[var(--dark-bg-minimal)] w-full min-h-[300px] rounded-[10px] p-[20px]">
+		<div className="bg-[var(--dark-bg-minimal)] w-full min-h-[300px] rounded-[10px] p-[20px] relative">
+			<span className="absolute right-[30px] top-[30px] w-[100px] h-[25px] bg-black bg-opacity-60 text-white flex items-center gap-[7px] justify-center ">
+				<IoBook />
+				{reading_time} mins
+			</span>
 			<img
 				className="rounded-[10px] object-cover object-center w-full h-[150px]"
 				src={image}
