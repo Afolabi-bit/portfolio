@@ -58,14 +58,6 @@ const projects = [
 	},
 
 	{
-		name: "Food App",
-		description: "Marketplace for food services",
-		code: "https://github.com/Afolabi-bit/food-app",
-		live: "fenigmafood.vercel.app",
-		stack: ["ReactJS", "Clerk SDK"],
-		time: "old",
-	},
-	{
 		name: "Countries",
 		description: "Information about the 250 countries on earth",
 		code: "https://github.com/Afolabi-bit/REST-Countries_API",

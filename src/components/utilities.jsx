@@ -233,7 +233,7 @@ export const LinkGroup = ({ page }) => {
 					</div>
 				) : (
 					<Link
-						to={"/"}
+						to={"/blog"}
 						className="text-[var(--dark-text)] flex items-center gap-[20px] w-fit ml-[30px]"
 					>
 						<PiArticleMediumThin className=" w-[20px] h-[20px] 3xl:w-[25px] 3xl:h-[25px] 4xl:w-[45px] 4xl:h-[45px]" />
