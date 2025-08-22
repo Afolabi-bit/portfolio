@@ -9,7 +9,9 @@ function Blog() {
 	useEffect(() => {
 		const getArticles = async () => {
 			try {
-				const res = await fetch("http://localhost:5000/my-articles");
+				const res = await fetch(
+					"https://portfolio-backend-0e49.onrender.com/my-articles",
+				);
 				const data = await res.json();
 				setArticles(data);
 
