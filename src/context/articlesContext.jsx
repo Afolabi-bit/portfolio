@@ -12,7 +12,6 @@ export function ArticlesProvider({ children }) {
 			);
 
 			const data = await res.json();
-			console.log(data);
 			return data;
 		} catch (err) {
 			console.error("Error fetching articles:", err);

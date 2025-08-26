@@ -4,31 +4,30 @@ import Projects from "./pages/projects";
 import Blog from "./pages/articles";
 import ArticlesDetails from "./pages/ArticlesDetails";
 import { ArticlesProvider } from "./context/articlesContext";
-// import AnimatedCursor from "react-animated-cursor";
 
 function App() {
 	return (
 		<ArticlesProvider>
 			<Router>
-				<div className=" "></div>
 				<Routes>
 					<Route
-						exact
-						path="/"
+						index
 						element={<Home />}
-					></Route>
+					/>
+
 					<Route
-						path="/projects"
+						path="projects"
 						element={<Projects />}
-					></Route>
+					/>
+
 					<Route
-						path="/blog"
+						path="blog"
 						element={<Blog />}
-					></Route>
+					/>
 					<Route
-						path="/blog/:title"
+						path="blog/:title"
 						element={<ArticlesDetails />}
-					></Route>
+					/>
 				</Routes>
 			</Router>
 		</ArticlesProvider>

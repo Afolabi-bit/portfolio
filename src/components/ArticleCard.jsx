@@ -15,12 +15,13 @@ const ArticleCard = ({ article }) => {
 		page_views_count: views,
 		reading_time_minutes: reading_time,
 		title,
+		slug,
 	} = article;
 
 	return (
 		<Link
+			to={`${slug}`}
 			className="bg-[var(--dark-bg-minimal)] w-full min-h-[300px] rounded-[10px] p-[20px] block relative"
-			state={{ article }}
 		>
 			<span className="absolute right-[30px] top-[30px] w-[100px] h-[25px] bg-black bg-opacity-60 text-white flex items-center gap-[7px] justify-center ">
 				<IoBook />
