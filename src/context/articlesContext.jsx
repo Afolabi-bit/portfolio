@@ -4,6 +4,7 @@ const ArticlesContext = createContext({ articles: [] });
 
 export function ArticlesProvider({ children }) {
 	const [articles, setArticles] = useState([]);
+	const [fetching, setFetching] = useState(false);
 
 	const getArticles = async () => {
 		try {
@@ -20,15 +21,17 @@ export function ArticlesProvider({ children }) {
 
 	useEffect(() => {
 		const fetchAndSetArticles = async () => {
+			setFetching(true);
 			const data = await getArticles();
 			setArticles(data);
+			setFetching(false);
 		};
 		fetchAndSetArticles();
 	}, []);
 
 	const values = useMemo(
-		() => ({ articles, refresh: () => getArticles }),
-		[articles],
+		() => ({ fetching, articles, refresh: () => getArticles }),
+		[articles, fetching],
 	);
 
 	return (

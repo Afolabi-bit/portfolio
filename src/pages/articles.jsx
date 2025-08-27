@@ -1,10 +1,13 @@
 import Navbar from "../components/navbar";
 import ArticleCard from "../components/ArticleCard";
-import ArticlesContext, { useArticles } from "../context/articlesContext";
-import { useContext } from "react";
+import { useArticles } from "../context/articlesContext";
 
 function Blog() {
-	const { articles } = useArticles();
+	const { fetching, articles, refresh } = useArticles();
+
+	if (!fetching && !articles) {
+		refresh();
+	}
 
 	return (
 		<main className="bg-[var(--dark-bg-primary)] w-screen min-h-screen">

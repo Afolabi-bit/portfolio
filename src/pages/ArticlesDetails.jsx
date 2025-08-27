@@ -11,7 +11,7 @@ import { FaComment } from "react-icons/fa6";
 import { BiSolidBarChartAlt2 } from "react-icons/bi";
 
 const ArticlesDetails = () => {
-	const { articles } = useArticles();
+	const { articles, refresh } = useArticles();
 	const { title } = useParams();
 
 	const article = Array.isArray(articles)
@@ -19,9 +19,10 @@ const ArticlesDetails = () => {
 		: null;
 
 	if (!article) {
+		refresh();
 		return (
 			<main className="w-screen h-screen bg-[var(--dark-bg-primary)] flex items-center justify-center">
-				<p className="text-white">Article not found or still loading...</p>
+				<p className="text-white">Article loading...</p>
 			</main>
 		);
 	}
@@ -78,12 +79,20 @@ const ArticlesDetails = () => {
 					remarkPlugins={[remarkGfm, remarkBreaks]}
 					rehypePlugins={[rehypePrism]}
 					components={{
-						code({ className, children, ...props }) {
+						code({ className, children, inline, ...props }) {
 							const match = /language-(\w+)/.exec(className || "");
-							return (
-								<pre className="rounded-xl w-full overflow-x-auto bg-[#676666] p-4 my-4">
+
+							return match ? (
+								<code
+									className="bg-gray-200 text-gray-800 px-1.5 py-0.5 rounded text-sm inline-block"
+									{...props}
+								>
+									{children}
+								</code>
+							) : (
+								<pre className="rounded-xl w-full overflow-x-auto bg-gray-200 text-black p-4 my-4">
 									<code
-										className=" text-gray-100 px-1.5 py-0.5 rounded"
+										className=" text-black px-1.5 py-0.5 rounded"
 										{...props}
 									>
 										{children}
