@@ -46,10 +46,14 @@ const ArticlesDetails = () => {
 				<img
 					src={image}
 					alt="article cover image"
-					className="w-full h-[300px] object-fit object-center rounded-[10px] mb-[20px]"
+					className="w-full h-[300px] object-fit object-center rounded-[10px] mb-[20px] md:h-[400px]"
 				/>
-				<h1 className="mb-[10px] font-bold text-[30px]">{heading}</h1>
-				<p>Read time: {reading_time} mins</p>
+				<h1 className="mb-[10px] font-bold text-[30px] md:text-[40px]">
+					{heading}
+				</h1>
+				<p className="text-[16px] md:text-[20px]">
+					Read time: {reading_time} mins
+				</p>
 				<div className="flex justify-between">
 					<div className="flex justify-between h-[30px] mt-[10px] w-full mb-[30px]">
 						<a
