@@ -10,7 +10,7 @@ function Blog() {
 	}
 
 	return (
-		<main className="bg-[var(--dark-bg-primary)] w-screen min-h-screen">
+		<main className="bg-[var(--dark-bg-primary)] w-screen min-h-screen md:px-[70px] lg:px-[100px]">
 			<Navbar />
 			<section className="px-[20px] pt-[130px] pb-[60px]">
 				{articles.length < 1 && (
