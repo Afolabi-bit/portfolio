@@ -14,7 +14,7 @@ const Navbar = () => {
 	return (
 		<nav
 			id="navbar"
-			className="w-[100%] h-[70px] overflow-hidden fixed top-0 left-0 right-0 z-30 bg-[var(--dark-bg-primary)]"
+			className="w-[100%] h-[70px] overflow-hidden fixed top-0 left-0 right-0 z-30 bg-[var(--dark-bg-primary)] md:px-[50px] lg:px-[70px]"
 		>
 			{/* Logo and menu toggle button */}
 			<div className="w-full h-[70px] flex items-center justify-between px-[10px] md:pl-[20px] md:pr-0">
