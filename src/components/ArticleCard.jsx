@@ -21,7 +21,7 @@ const ArticleCard = ({ article }) => {
 	return (
 		<Link
 			to={`${slug}`}
-			className="bg-[var(--dark-bg-minimal)] w-full min-h-[300px] rounded-[10px] p-[20px] block relative"
+			className="bg-[var(--dark-bg-minimal)] w-full min-h-[320px] rounded-[10px] p-[20px] block relative md:w-[375px]"
 		>
 			<span className="absolute right-[30px] top-[30px] w-[100px] h-[25px] bg-black bg-opacity-60 text-white flex items-center gap-[7px] justify-center ">
 				<IoBook />
