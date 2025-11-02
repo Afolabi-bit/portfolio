@@ -1,6 +1,6 @@
 const projects = [
   {
-    name: "Bloggr",
+    name: "Flickrly",
     description: "Full stack movie trailer app",
     code: "https://github.com/Afolabi-bit/flickrly",
     live: "https://flickrly.vercel.app/",
