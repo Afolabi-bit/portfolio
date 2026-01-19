@@ -4,7 +4,14 @@ const projects = [
     description: "Full stack movie trailer app",
     code: "https://github.com/Afolabi-bit/flickrly",
     live: "https://flickrly.vercel.app/",
-    stack: ["NextJs", "TypeScript", "TailwindCSS", "Prisma ORM", "Kinde"],
+    stack: [
+      "NextJs",
+      "TypeScript",
+      "TailwindCSS",
+      "Prisma ORM",
+      "Kinde",
+      "PostgreSQL",
+    ],
     time: "recent",
   },
   {
@@ -12,7 +19,14 @@ const projects = [
     description: "Full stack blog web app",
     code: "https://github.com/Afolabi-bit/blog",
     live: "https://fengma-blog.vercel.app/",
-    stack: ["NextJs", "TypeScript", "TailwindCSS", "Prisma ORM", "Kinde"],
+    stack: [
+      "NextJs",
+      "TypeScript",
+      "TailwindCSS",
+      "Prisma ORM",
+      "Kinde",
+      "PostgreSQL",
+    ],
     time: "recent",
   },
   {
