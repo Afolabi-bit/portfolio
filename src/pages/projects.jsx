@@ -46,30 +46,6 @@ export const DesktopProjects = () => {
   const mostRecent = data.filter((project) => project.time == "recent");
   const otherProjects = data.filter((project) => project.time != "recent");
 
-  function overlay(e) {
-    let screenWidth = window.innerWidth;
-    if (screenWidth >= "1024") {
-      const wrapper = document.getElementById("most-recent-wrapper");
-
-      wrapper.classList.add("overlay");
-      if (e.target.classList.contains("big-card")) {
-        e.target.classList.add("hover");
-      }
-    }
-  }
-
-  function removeOverlay(e) {
-    let screenWidth = window.innerWidth;
-    if (screenWidth >= "1024") {
-      const wrapper = document.getElementById("most-recent-wrapper");
-
-      wrapper.classList.remove("overlay");
-      if (e.target.classList.contains("big-card")) {
-        e.target.classList.remove("hover");
-      }
-    }
-  }
-
   return (
     <section className="w-full pt-[80px] pb-[60px] pr-[85px] 4xl:py-[150px] 4xl:pr-[150px]">
       <div id="most-recent">
@@ -85,8 +61,6 @@ export const DesktopProjects = () => {
           {mostRecent.map((card, index) => {
             return (
               <div
-                onMouseOver={(e) => overlay(e)}
-                onMouseLeave={(e) => removeOverlay(e)}
                 key={index}
                 className="big-card relative bg-transparent border border-[var(--dark-text-alt)] rounded-xl h-[200px] p-[40px] flex flex-col justify-between transition-all 4xl:h-[280px] 4xl:p-[60px]"
               >
@@ -97,7 +71,7 @@ export const DesktopProjects = () => {
                   proximity={80}
                   inactiveZone={0.1}
                   borderWidth={2}
-                  movementDuration={1.5}
+                  movementDuration={0.3}
                 />
                 <div className="pointer-events-none">
                   <h2 className="text-[20px] text-white font-[700] 4xl:text-[30px] 4xl:mb-[10px]">

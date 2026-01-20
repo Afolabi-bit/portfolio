@@ -111,6 +111,14 @@ body {
   height: 100vh;
 }
 
+/* Smooth scrolling for desktop projects section */
+#desktop-container [class*="overflow-y"] {
+  scroll-behavior: smooth;
+  -webkit-overflow-scrolling: touch;
+  scrollbar-width: thin;
+  scrollbar-color: var(--dark-text-alt) transparent;
+}
+
 .git {
   transform: rotate(-45deg);
 }
@@ -132,22 +140,9 @@ body {
   width: 70px;
 }
 
-/* Overlay on hover styles */
+/* Card base styles */
 .card {
   background-color: transparent;
-}
-.overlay .card,
-.overlay .big-card {
-  opacity: 0.5;
-  border-color: var(--dark-text-alt);
-}
-
-.overlay .card.hover,
-.overlay .big-card.hover {
-  opacity: 1;
-  border-color: white;
-  backdrop-filter: blur(8px);
-  background-color: rgba(26, 26, 28, 0.3);
 }
 
 .loader {

@@ -42,7 +42,7 @@ const Home = () => {
               style={{
                 width: "calc(50% + 20px)",
               }}
-              className="pl-[25px] h-full absolute right-0 top-0 overflow-y-scroll overflow-x-visible scrollbar"
+              className="pl-[25px] h-full absolute right-0 top-0 overflow-y-auto overflow-x-hidden"
             >
               <DesktopProjects />
             </div>
