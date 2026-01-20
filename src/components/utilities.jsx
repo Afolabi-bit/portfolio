@@ -6,6 +6,7 @@ import {
 } from "react-icons/pi";
 import { MdEmail } from "react-icons/md";
 import { Link } from "react-router-dom";
+import { GlowingEffect } from "@/components/ui/glowing-effect";
 
 export const Socials = ({ width }) => {
   return (
@@ -87,9 +88,20 @@ export const Card = ({ data, screen }) => {
       className={
         screen != "desktop"
           ? `card bg-[var(--dark-bg-minimal)]  w-full h-[220px]  px-[20px] pt-[30px] pb-[50px] flex flex-col justify-between lg:h-[260px] lg:px-[30px]`
-          : "card bg-transparent border border-[var(--dark-text-alt)]  w-full  px-[40px] pt-[40px] pb-[50px] flex flex-col justify-between h-[270px] hover:scale-105 hover:border-white transition-all"
+          : "card relative bg-transparent border border-[var(--dark-text-alt)] rounded-xl w-full px-[40px] pt-[40px] pb-[50px] flex flex-col justify-between h-[270px] transition-all"
       }
     >
+      {screen === "desktop" && (
+        <GlowingEffect
+          spread={50}
+          glow={true}
+          disabled={false}
+          proximity={80}
+          inactiveZone={0.1}
+          borderWidth={2}
+          movementDuration={1.5}
+        />
+      )}
       <div className="pointer-events-none">
         <h4 className="text-white text-[23px] font-[600] jakarta lg:text-[20px] lg:font-[700] 4xl:text-[26px]">
           {data.name}

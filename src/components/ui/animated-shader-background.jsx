@@ -59,23 +59,23 @@ const AnimatedShaderBackground = () => {
         }
 
         void main() {
-          vec2 shake = vec2(sin(iTime * 1.2) * 0.005, cos(iTime * 2.1) * 0.005);
+          vec2 shake = vec2(sin(iTime * 0.8) * 0.008, cos(iTime * 1.2) * 0.008);
           vec2 p = ((gl_FragCoord.xy + shake * iResolution.xy) - iResolution.xy * 0.5) / iResolution.y * mat2(6.0, -4.0, 4.0, 6.0);
           vec2 v;
           vec4 o = vec4(0.0);
 
-          float f = 2.0 + fbm(p + vec2(iTime * 5.0, 0.0)) * 0.5;
+          float f = 2.0 + fbm(p + vec2(iTime * 4.0, 0.0)) * 0.5;
 
           for (float i = 0.0; i < 35.0; i++) {
-            v = p + cos(i * i + (iTime + p.x * 0.08) * 0.025 + i * vec2(13.0, 11.0)) * 3.5 + vec2(sin(iTime * 3.0 + i) * 0.003, cos(iTime * 3.5 - i) * 0.003);
-            float tailNoise = fbm(v + vec2(iTime * 0.5, i)) * 0.3 * (1.0 - (i / 35.0));
+            v = p + cos(i * i + (iTime + p.x * 0.08) * 0.035 + i * vec2(13.0, 11.0)) * 3.5 + vec2(sin(iTime * 3.0 + i) * 0.004, cos(iTime * 3.0 - i) * 0.004);
+            float tailNoise = fbm(v + vec2(iTime * 0.6, i)) * 0.3 * (1.0 - (i / 35.0));
             vec4 auroraColors = vec4(
-              0.1 + 0.3 * sin(i * 0.2 + iTime * 0.4),
+              0.1 + 0.3 * sin(i * 0.2 + iTime * 0.45),
               0.3 + 0.5 * cos(i * 0.3 + iTime * 0.5),
-              0.7 + 0.3 * sin(i * 0.4 + iTime * 0.3),
+              0.7 + 0.3 * sin(i * 0.4 + iTime * 0.4),
               1.0
             );
-            vec4 currentContribution = auroraColors * exp(sin(i * i + iTime * 0.8)) / length(max(v, vec2(v.x * f * 0.015, v.y * 1.5)));
+            vec4 currentContribution = auroraColors * exp(sin(i * i + iTime * 0.9)) / length(max(v, vec2(v.x * f * 0.015, v.y * 1.5)));
             float thinnessFactor = smoothstep(0.0, 1.0, i / 35.0) * 0.6;
             o += currentContribution * (1.0 + tailNoise * 0.8) * thinnessFactor;
           }

@@ -4,6 +4,7 @@ import { Card, PageNavigationButtons } from "../components/utilities";
 import data from "../data";
 import { FaCode, FaEye } from "react-icons/fa";
 import { redirect, useNavigate } from "react-router-dom";
+import { GlowingEffect } from "@/components/ui/glowing-effect";
 
 const Projects = () => {
   const navigateTo = useNavigate();
@@ -79,7 +80,7 @@ export const DesktopProjects = () => {
         {/* Cards wrapper for most recent */}
         <div
           id="most-recent-wrapper"
-          className="flex flex-col gap-[5px] relative"
+          className="flex flex-col gap-[8px] relative"
         >
           {mostRecent.map((card, index) => {
             return (
@@ -87,8 +88,17 @@ export const DesktopProjects = () => {
                 onMouseOver={(e) => overlay(e)}
                 onMouseLeave={(e) => removeOverlay(e)}
                 key={index}
-                className="big-card bg-transparent border border-[var(--dark-text-alt)] h-[200px] p-[40px] flex flex-col justify-between hover:scale-105 hover:border-white transition-all relative 4xl:h-[280px] 4xl:p-[60px]"
+                className="big-card relative bg-transparent border border-[var(--dark-text-alt)] rounded-xl h-[200px] p-[40px] flex flex-col justify-between transition-all 4xl:h-[280px] 4xl:p-[60px]"
               >
+                <GlowingEffect
+                  spread={50}
+                  glow={true}
+                  disabled={false}
+                  proximity={80}
+                  inactiveZone={0.1}
+                  borderWidth={2}
+                  movementDuration={1.5}
+                />
                 <div className="pointer-events-none">
                   <h2 className="text-[20px] text-white font-[700] 4xl:text-[30px] 4xl:mb-[10px]">
                     {card.name}
@@ -149,10 +159,10 @@ export const DesktopProjects = () => {
         {/* Cards wrapper for other projects */}
         <div
           id="other-projects-wrapper"
-          className="flex gap-[4px] w-full relative"
+          className="flex gap-[8px] w-full relative"
         >
           {/* left column */}
-          <div className="w-1/2 flex flex-col gap-[4px]">
+          <div className="w-1/2 flex flex-col gap-[8px]">
             {otherProjects.map((project, index) => {
               if (!(index % 2)) {
                 return <Card data={project} screen={"desktop"} key={index} />;
@@ -161,7 +171,7 @@ export const DesktopProjects = () => {
           </div>
 
           {/* right column */}
-          <div className="w-1/2 flex flex-col gap-[4px] mt-[40px]">
+          <div className="w-1/2 flex flex-col gap-[8px] mt-[40px]">
             {otherProjects.map((project, index) => {
               if (index % 2) {
                 return <Card data={project} screen={"desktop"} key={index} />;
