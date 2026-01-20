@@ -10,10 +10,10 @@
     "preview": "vite preview"
   },
   "dependencies": {
+    "lucide-react": "^0.562.0",
     "motion": "^12.23.12",
     "prismjs": "^1.30.0",
     "react": "^18.2.0",
-    "react-animated-cursor": "^2.11.2",
     "react-dom": "^18.2.0",
     "react-icons": "^5.0.1",
     "react-markdown": "^10.1.0",
@@ -22,7 +22,8 @@
     "rehype-pretty-code": "^0.14.1",
     "rehype-prism-plus": "^2.0.1",
     "remark-breaks": "^4.0.0",
-    "remark-gfm": "^4.0.1"
+    "remark-gfm": "^4.0.1",
+    "three": "^0.182.0"
   },
   "devDependencies": {
     "@types/react": "^18.2.43",
