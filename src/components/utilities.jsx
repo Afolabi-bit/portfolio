@@ -7,6 +7,7 @@ import {
 import { MdEmail } from "react-icons/md";
 import { Link } from "react-router-dom";
 import { GlowingEffect } from "@/components/ui/glowing-effect";
+import { TechStack } from "@/components/ui/tech-icon";
 
 export const Socials = ({ width }) => {
   return (
@@ -80,29 +81,13 @@ export const Card = ({ data, screen }) => {
         <h4 className="text-white text-[23px] font-[600] jakarta lg:text-[20px] lg:font-[700] 4xl:text-[26px]">
           {data.name}
         </h4>
-        <h5 className="flex my-[5px] text-[var(--dark-text)] items-baseline">
-          {data.stack.map((tool, index) => {
-            if (index === data.stack.length - 1) {
-              return (
-                <span
-                  key={index}
-                  className=" text-[12px] font-[700] tracking-wide 4xl:text-[16px] "
-                >
-                  {" "}
-                  {tool}
-                </span>
-              );
-            }
-            return (
-              <span
-                key={index}
-                className="text-[12px]  font-[700] tracking-wide mr-[5px] "
-              >
-                {tool},
-              </span>
-            );
-          })}
-        </h5>
+        <div className="my-[8px]">
+          <TechStack
+            stack={data.stack}
+            size="w-4 h-4 lg:w-5 lg:h-5 4xl:w-6 4xl:h-6"
+            gap="gap-2 lg:gap-3"
+          />
+        </div>
         {data.description && (
           <p className="text-[var(--dark-text-alt)] text-[12px] lg:text-[12px] 4xl:text-[16px]">
             {data.description}

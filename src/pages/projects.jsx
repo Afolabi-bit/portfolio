@@ -5,6 +5,7 @@ import data from "../data";
 import { FaCode, FaEye } from "react-icons/fa";
 import { redirect, useNavigate } from "react-router-dom";
 import { GlowingEffect } from "@/components/ui/glowing-effect";
+import { TechStack } from "@/components/ui/tech-icon";
 
 const Projects = () => {
   const navigateTo = useNavigate();
@@ -77,29 +78,13 @@ export const DesktopProjects = () => {
                   <h2 className="text-[20px] text-white font-[700] 4xl:text-[30px] 4xl:mb-[10px]">
                     {card.name}
                   </h2>
-                  <h5 className="flex jakarta my-[5px] text-[var(--dark-text)] items-baseline ">
-                    {card.stack.map((tool, index) => {
-                      if (index === card.stack.length - 1) {
-                        return (
-                          <span
-                            key={index}
-                            className=" text-[12px] font-[700] tracking-wide 4xl:text-[15px] "
-                          >
-                            {" "}
-                            {tool}
-                          </span>
-                        );
-                      }
-                      return (
-                        <span
-                          key={index}
-                          className="text-[12px]  font-[700] tracking-wide mr-[5px] "
-                        >
-                          {tool},
-                        </span>
-                      );
-                    })}
-                  </h5>
+                  <div className="my-[8px]">
+                    <TechStack
+                      stack={card.stack}
+                      size="w-5 h-5 4xl:w-6 4xl:h-6"
+                      gap="gap-3"
+                    />
+                  </div>
                   <p className="text-[var(--dark-text-alt)] text-[12px] 4xl:text-[14px]">
                     {card.description}
                   </p>
