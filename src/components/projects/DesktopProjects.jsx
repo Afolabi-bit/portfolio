@@ -1,18 +1,22 @@
+import { useMemo } from "react";
 import { Card } from "../utilities";
 import data from "../../data";
 import FeaturedProjectCard from "./FeaturedProjectCard";
 
 const DesktopProjects = () => {
-  const mostRecent = data.filter((project) => project.time == "recent");
-  const otherProjects = data.filter((project) => project.time != "recent");
+  const { mostRecent, leftColumnProjects, rightColumnProjects } =
+    useMemo(() => {
+      const mostRecent = data.filter((project) => project.time == "recent");
+      const otherProjects = data.filter((project) => project.time != "recent");
 
-  // Split projects for 2 - column layout
-  const leftColumnProjects = otherProjects.filter(
-    (_, index) => index % 2 === 0,
-  );
-  const rightColumnProjects = otherProjects.filter(
-    (_, index) => index % 2 !== 0,
-  );
+      const leftColumnProjects = otherProjects.filter(
+        (_, index) => index % 2 === 0,
+      );
+      const rightColumnProjects = otherProjects.filter(
+        (_, index) => index % 2 !== 0,
+      );
+      return { mostRecent, leftColumnProjects, rightColumnProjects };
+    }, []);
 
   return (
     <section className="w-full pt-[80px] pb-[60px] pr-[85px] 4xl:py-[150px] 4xl:pr-[150px]">

@@ -18,6 +18,24 @@ const GlowingEffect = memo(
     const containerRef = useRef(null);
     const lastPosition = useRef({ x: 0, y: 0 });
     const animationFrameRef = useRef(0);
+    const bounds = useRef({ top: 0, left: 0, width: 0, height: 0 });
+
+    const updateBounds = useCallback(() => {
+      if (!containerRef.current) return;
+      const rect = containerRef.current.getBoundingClientRect();
+      bounds.current = {
+        top: rect.top + window.scrollY,
+        left: rect.left + window.scrollX,
+        width: rect.width,
+        height: rect.height,
+      };
+    }, []);
+
+    useEffect(() => {
+      updateBounds();
+      window.addEventListener("resize", updateBounds);
+      return () => window.removeEventListener("resize", updateBounds);
+    }, [updateBounds]);
 
     const handleMove = useCallback(
       (e) => {
@@ -31,7 +49,10 @@ const GlowingEffect = memo(
           const element = containerRef.current;
           if (!element) return;
 
-          const { left, top, width, height } = element.getBoundingClientRect();
+          const { top, left, width, height } = bounds.current;
+          const viewportTop = top - window.scrollY;
+          const viewportLeft = left - window.scrollX;
+
           const mouseX = e?.x ?? lastPosition.current.x;
           const mouseY = e?.y ?? lastPosition.current.y;
 
@@ -39,7 +60,10 @@ const GlowingEffect = memo(
             lastPosition.current = { x: mouseX, y: mouseY };
           }
 
-          const center = [left + width * 0.5, top + height * 0.5];
+          const center = [
+            viewportLeft + width * 0.5,
+            viewportTop + height * 0.5,
+          ];
           const distanceFromCenter = Math.hypot(
             mouseX - center[0],
             mouseY - center[1],
@@ -52,10 +76,10 @@ const GlowingEffect = memo(
           }
 
           const isActive =
-            mouseX > left - proximity &&
-            mouseX < left + width + proximity &&
-            mouseY > top - proximity &&
-            mouseY < top + height + proximity;
+            mouseX > viewportLeft - proximity &&
+            mouseX < viewportLeft + width + proximity &&
+            mouseY > viewportTop - proximity &&
+            mouseY < viewportTop + height + proximity;
 
           element.style.setProperty("--active", isActive ? "1" : "0");
 
@@ -84,10 +108,33 @@ const GlowingEffect = memo(
     );
 
     useEffect(() => {
-      if (disabled) return;
+      const element = containerRef.current;
+      if (!element || disabled) return;
 
-      const handleScroll = () => handleMove();
-      const handlePointerMove = (e) => handleMove(e);
+      let isVisible = false;
+
+      const handleScroll = () => {
+        if (isVisible) handleMove();
+      };
+
+      const handlePointerMove = (e) => {
+        if (isVisible) handleMove(e);
+      };
+
+      const observer = new IntersectionObserver(
+        (entries) => {
+          entries.forEach((entry) => {
+            isVisible = entry.isIntersecting;
+            if (!isVisible && animationFrameRef.current) {
+              cancelAnimationFrame(animationFrameRef.current);
+              animationFrameRef.current = 0;
+            }
+          });
+        },
+        { threshold: 0 },
+      );
+
+      observer.observe(element);
 
       window.addEventListener("scroll", handleScroll, { passive: true });
       document.body.addEventListener("pointermove", handlePointerMove, {
@@ -98,6 +145,7 @@ const GlowingEffect = memo(
         if (animationFrameRef.current) {
           cancelAnimationFrame(animationFrameRef.current);
         }
+        observer.disconnect();
         window.removeEventListener("scroll", handleScroll);
         document.body.removeEventListener("pointermove", handlePointerMove);
       };
@@ -161,6 +209,7 @@ const GlowingEffect = memo(
               "after:[mask-clip:padding-box,border-box]",
               "after:[mask-composite:intersect]",
               "after:[mask-image:linear-gradient(#0000,#0000),conic-gradient(from_calc((var(--start)-var(--spread))*1deg),#00000000_0deg,#fff,#00000000_calc(var(--spread)*2deg))]",
+              "will-change-[opacity]",
             )}
           />
         </div>

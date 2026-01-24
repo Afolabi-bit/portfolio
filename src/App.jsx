@@ -4,7 +4,6 @@ import Projects from "./pages/projects";
 import Blog from "./pages/articles";
 import ArticlesDetails from "./pages/ArticlesDetails";
 import { ArticlesProvider } from "./context/articlesContext";
-import { DemoOne } from "./components/ui/demo";
 
 function App() {
   return (
@@ -15,7 +14,7 @@ function App() {
 
           <Route path="projects" element={<Projects />} />
 
-          <Route path="blog" element={<DemoOne />} />
+          <Route path="blog" element={<Blog />} />
           <Route path="blog/:title" element={<ArticlesDetails />} />
         </Routes>
       </Router>
