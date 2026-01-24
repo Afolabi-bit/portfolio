@@ -38,8 +38,8 @@ body {
 }
 
 #mobile-container {
-  height: 100vh;
-  height: 100svh !important;
+  min-height: 100vh;
+  min-height: 100svh !important;
 }
 
 /* hand waving animation */
