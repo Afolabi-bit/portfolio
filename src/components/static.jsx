@@ -11,17 +11,11 @@ const Static = () => {
     >
       {/* Hero section */}
       <div>
-        <div className=" relative">
-          <h1 className="text-white text-[40px]  font-[600] 3xl:text-[50px] 4xl:text-[80px] 4xl:mb-[30px]">
-            <span>Hey there,</span> <br className="" />
-            <span>I'm Afolabi Joseph.</span>
+        <div className="relative mb-8">
+          <h1 className="text-white text-4xl font-semibold tracking-tight leading-tight 3xl:text-5xl 4xl:text-7xl 4xl:mb-8">
+            <span>Hey there,</span> <br />
+            <span className="text-[var(--dark-text)]">I'm Afolabi Joseph.</span>
           </h1>
-          <img
-            src="https://res.cloudinary.com/dkpoealta/image/upload/v1705073703/wave_wqkqvu.webp"
-            alt="a waving hand"
-            id="waving-hand"
-            className="w-[120px] h-[120px]  absolute top-0 right-[0px] 2xl:top-[-15px] 2xl:right-[120px] 3xl:right-[150px] 4xl:right-[400px] 4xl:top-[05px] 4xl:scale-[1.5]"
-          />
         </div>
         <div>
           <HeroParagraph />
