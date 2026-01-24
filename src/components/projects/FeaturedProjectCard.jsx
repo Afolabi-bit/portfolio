@@ -4,7 +4,7 @@ import { TechStack } from "@/components/ui/tech-icon";
 
 const FeaturedProjectCard = ({ data }) => {
   return (
-    <div className="big-card relative bg-transparent border border-[var(--dark-text-alt)] rounded-xl h-[200px] p-[40px] flex flex-col justify-between transition-all 4xl:h-[280px] 4xl:p-[60px]">
+    <div className="big-card relative bg-transparent border border-[var(--dark-text-alt)] rounded-xl h-[270px] px-[40px] pt-[40px] pb-[50px] flex flex-col justify-between transition-all 4xl:h-[280px] 4xl:p-[60px]">
       <GlowingEffect
         spread={50}
         glow={true}

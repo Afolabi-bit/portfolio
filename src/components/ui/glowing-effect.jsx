@@ -18,24 +18,6 @@ const GlowingEffect = memo(
     const containerRef = useRef(null);
     const lastPosition = useRef({ x: 0, y: 0 });
     const animationFrameRef = useRef(0);
-    const bounds = useRef({ top: 0, left: 0, width: 0, height: 0 });
-
-    const updateBounds = useCallback(() => {
-      if (!containerRef.current) return;
-      const rect = containerRef.current.getBoundingClientRect();
-      bounds.current = {
-        top: rect.top + window.scrollY,
-        left: rect.left + window.scrollX,
-        width: rect.width,
-        height: rect.height,
-      };
-    }, []);
-
-    useEffect(() => {
-      updateBounds();
-      window.addEventListener("resize", updateBounds);
-      return () => window.removeEventListener("resize", updateBounds);
-    }, [updateBounds]);
 
     const handleMove = useCallback(
       (e) => {
@@ -49,10 +31,7 @@ const GlowingEffect = memo(
           const element = containerRef.current;
           if (!element) return;
 
-          const { top, left, width, height } = bounds.current;
-          const viewportTop = top - window.scrollY;
-          const viewportLeft = left - window.scrollX;
-
+          const { left, top, width, height } = element.getBoundingClientRect();
           const mouseX = e?.x ?? lastPosition.current.x;
           const mouseY = e?.y ?? lastPosition.current.y;
 
@@ -60,10 +39,7 @@ const GlowingEffect = memo(
             lastPosition.current = { x: mouseX, y: mouseY };
           }
 
-          const center = [
-            viewportLeft + width * 0.5,
-            viewportTop + height * 0.5,
-          ];
+          const center = [left + width * 0.5, top + height * 0.5];
           const distanceFromCenter = Math.hypot(
             mouseX - center[0],
             mouseY - center[1],
@@ -76,10 +52,10 @@ const GlowingEffect = memo(
           }
 
           const isActive =
-            mouseX > viewportLeft - proximity &&
-            mouseX < viewportLeft + width + proximity &&
-            mouseY > viewportTop - proximity &&
-            mouseY < viewportTop + height + proximity;
+            mouseX > left - proximity &&
+            mouseX < left + width + proximity &&
+            mouseY > top - proximity &&
+            mouseY < top + height + proximity;
 
           element.style.setProperty("--active", isActive ? "1" : "0");
 
