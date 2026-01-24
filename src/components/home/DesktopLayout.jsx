@@ -1,5 +1,5 @@
 import Static from "../../components/static";
-import { DesktopProjects } from "../../pages/projects";
+import DesktopProjects from "../../components/projects/DesktopProjects";
 import AnimatedShaderBackground from "../../components/ui/animated-shader-background";
 
 const DesktopLayout = () => {

@@ -154,8 +154,7 @@ export const PageNavigationButtons = ({ page }) => {
 export const HeroParagraph = () => {
   return (
     <p className="text-sm text-[var(--dark-text)] leading-relaxed md:text-base md:max-w-[85%] md:mx-auto xl:max-w-none xl:mx-0 2xl:text-lg 3xl:text-xl 4xl:text-2xl font-normal tracking-wide">
-      I'm a{" "}
-      <span className="text-white font-medium">junior software engineer </span>
+      I'm a <span className="text-white font-medium">software engineer </span>
       keen on{" "}
       <span className="text-white font-medium">providing solutions </span>
       using{" "}
