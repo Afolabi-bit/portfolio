@@ -1,5 +1,5 @@
 import { DesktopFooter } from "./footer";
-import { HeroParagraph, LinkGroup } from "./utilities";
+import { HeroParagraph, DesktopLinkGroup } from "./utilities";
 
 const Static = () => {
   return (
@@ -23,7 +23,7 @@ const Static = () => {
       </div>
 
       {/* Page Links */}
-      <LinkGroup page={"home"} />
+      <DesktopLinkGroup page={"home"} />
 
       {/* Footer */}
       <DesktopFooter />

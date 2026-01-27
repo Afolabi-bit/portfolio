@@ -17,7 +17,7 @@ const Hero = () => {
         </div>
       </div>
 
-      <div className="text-center  my-[30px]">
+      <div className="text-center my-[30px]">
         <Link
           to={"/projects"}
           className="bg-[--dark-bg-optimal] text-white py-[7px] pl-[37px] pr-[28px] inline-flex items-center border border-[--dark-bg-optimal] transition hover:border-white lg:pl-[47px] lg:pr-[38px] lg:py-[10px]"
