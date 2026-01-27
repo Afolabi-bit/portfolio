@@ -1,6 +1,6 @@
 import { Link } from "react-router-dom";
 import { MdArrowRight } from "react-icons/md";
-import { HeroParagraph } from "./utilities";
+import { HeroParagraph } from "./HeroParagraph";
 
 const Hero = () => {
   return (

@@ -1,6 +1,7 @@
 import Navbar from "../components/navbar";
 import Footer from "../components/footer";
-import { Card, PageNavigationButtons } from "../components/utilities";
+import { Card } from "../components/Card";
+import { PageNavigationButtons } from "../components/PageNavigationButtons";
 import data from "../data";
 import { useNavigate } from "react-router-dom";
 import { useEffect } from "react";

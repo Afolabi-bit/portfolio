@@ -1,5 +1,5 @@
 import { useMemo } from "react";
-import { Card } from "../utilities";
+import { Card } from "../Card";
 import data from "../../data";
 import FeaturedProjectCard from "./FeaturedProjectCard";
 

@@ -1,5 +1,6 @@
 import { DesktopFooter } from "./footer";
-import { HeroParagraph, DesktopLinkGroup } from "./utilities";
+import { HeroParagraph } from "./HeroParagraph";
+import { DesktopLinkGroup } from "./DesktopLinkGroup";
 
 const Static = () => {
   return (
