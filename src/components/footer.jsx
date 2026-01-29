@@ -1,7 +1,7 @@
 import { Citation } from "./Citation";
 import { Socials } from "./Socials";
 import { RiExternalLinkLine } from "react-icons/ri";
-import { FaGithub, FaWhatsapp, MdEmail } from "react-icons/fa";
+import { FaGithub, FaWhatsapp } from "react-icons/fa";
 
 const Footer = () => {
   return (
@@ -40,7 +40,7 @@ export const DesktopFooter = () => {
           className=" text-[var(--dark-text)] transition w-fit flex gap-[5px]   items-center hover:text-white "
         >
           {" "}
-          <MdEmail className="w-10px[] h-[10px] 4xl:w-[30px] 4xl:h-[30px]" />
+          {/* <MdEmail className="w-10px[] h-[10px] 4xl:w-[30px] 4xl:h-[30px]" /> */}
           <span className="text-[10px] text-white 4xl:text-[16px]">Email</span>
           <RiExternalLinkLine className="w-[10px] 4xl:w-[30px]" />
         </a>
