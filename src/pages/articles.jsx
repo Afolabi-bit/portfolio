@@ -2,20 +2,9 @@ import Navbar from "../components/navbar";
 import ArticleCard from "../components/ArticleCard";
 import { useArticles } from "../context/articlesContext";
 import { useEffect } from "react";
-import { useNavigate } from "react-router-dom";
 
 function Blog() {
   const { fetching, articles, refresh, error } = useArticles();
-  const navigateTo = useNavigate();
-
-  useEffect(() => {
-    function handleResize() {
-      if (window.innerWidth >= 1280) navigateTo("/");
-    }
-    handleResize();
-    window.addEventListener("resize", handleResize);
-    return () => window.removeEventListener("resize", handleResize);
-  }, [navigateTo]);
 
   useEffect(() => {
     if (articles.length === 0 && !fetching) {
