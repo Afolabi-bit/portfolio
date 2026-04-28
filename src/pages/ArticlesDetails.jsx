@@ -1,7 +1,7 @@
 import { useParams } from "react-router-dom";
 import { useArticles } from "../context/articlesContext";
 import ReactMarkdown from "react-markdown";
-import { memo } from "react";
+import { memo, useEffect } from "react";
 import remarkGfm from "remark-gfm";
 import rehypePrism from "rehype-prism-plus";
 import "prismjs/themes/prism-tomorrow.css";
@@ -45,12 +45,17 @@ const ArticlesDetails = () => {
   const { articles, refresh } = useArticles();
   const { title } = useParams();
 
+  useEffect(() => {
+    if (articles.length === 0) {
+      refresh();
+    }
+  }, [title]);
+
   const article = Array.isArray(articles)
     ? articles.find((a) => a.slug === title)
     : null;
 
   if (!article) {
-    refresh();
     return (
       <main className="w-screen h-screen bg-[var(--dark-bg-primary)] flex items-center justify-center">
         <p className="text-white">Article loading...</p>
@@ -72,7 +77,7 @@ const ArticlesDetails = () => {
   } = article;
 
   return (
-    <main className="w-screen min-h-screen flex justify-center px-4 py-10 bg-">
+    <main className="w-screen min-h-screen flex justify-center px-4 py-10 bg- xl:hidden">
       <article className="prose prose-invert lg:prose-xl max-w-3xl w-full whitespace-pre-line">
         <img
           src={image}

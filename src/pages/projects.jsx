@@ -10,30 +10,31 @@ const Projects = () => {
   const navigateTo = useNavigate();
 
   useEffect(() => {
-    const screen = window.innerWidth;
-    if (screen > 1024) {
-      navigateTo("/");
+    function handleResize() {
+      if (window.innerWidth >= 1280) navigateTo("/");
     }
+    handleResize();
+    window.addEventListener("resize", handleResize);
+    return () => window.removeEventListener("resize", handleResize);
   }, [navigateTo]);
 
   return (
     <>
       <main
         id="projects-page"
-        className="bg-[var(--dark-bg-primary)] w-full min-h-screen pt-[100px] xl:hidden "
+        className="bg-[var(--dark-bg-primary)] w-full min-h-screen pt-[100px] xl:hidden"
       >
         <Navbar />
         <section className="px-[30px] mb-[50px]">
-          <h5 className="text-[var(--dark-text)] font-[800]  text-[13px] jakart"></h5>
+          <h5 className="text-[var(--dark-text)] font-[800] text-[13px] jakart"></h5>
           <div
             id="cards-wrapper"
             className="flex flex-col gap-[30px] md:grid md:grid-cols-2 md:gap-1 lg:gap-2"
           >
-            {data.map((project, index) => {
-              return <Card key={index} data={project} />;
-            })}
+            {data.map((project, index) => (
+              <Card key={index} data={project} screen="mobile" />
+            ))}
           </div>
-
           <PageNavigationButtons page={"projects"} />
         </section>
         <Footer />

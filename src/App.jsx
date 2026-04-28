@@ -9,7 +9,20 @@ const ArticlesDetails = lazy(() => import("./pages/ArticlesDetails"));
 
 const LoadingFallback = () => (
   <div className="flex items-center justify-center h-screen bg-[var(--dark-bg-primary)]">
-    <span className="loader"></span>
+    <div className="flex gap-2">
+      <div
+        className="w-3 h-3 bg-white rounded-full animate-bounce"
+        style={{ animationDelay: "0s" }}
+      ></div>
+      <div
+        className="w-3 h-3 bg-white rounded-full animate-bounce"
+        style={{ animationDelay: "0.2s" }}
+      ></div>
+      <div
+        className="w-3 h-3 bg-white rounded-full animate-bounce"
+        style={{ animationDelay: "0.4s" }}
+      ></div>
+    </div>
   </div>
 );
 

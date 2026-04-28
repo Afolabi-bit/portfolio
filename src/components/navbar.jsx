@@ -8,13 +8,14 @@ const Navbar = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
   function toggleMenu() {
-    document.getElementById("navbar").classList.toggle("open-menu");
-    setIsMenuOpen((isMenuOpen) => !isMenuOpen);
+    setIsMenuOpen((prev) => !prev);
   }
+
   return (
     <nav
-      id="navbar"
-      className="w-[100%] h-[70px] overflow-hidden fixed top-0 left-0 right-0 z-30 bg-[var(--dark-bg-primary)] md:px-[50px] lg:px-[70px]"
+      className={`w-full fixed top-0 left-0 right-0 z-30 bg-[var(--dark-bg-primary)] md:px-[50px] lg:px-[70px] transition-all duration-300 ${
+        isMenuOpen ? "h-screen" : "h-[70px] overflow-hidden"
+      }`}
     >
       {/* Logo and menu toggle button */}
       <div className="w-full h-[70px] flex items-center justify-between px-[10px] md:pl-[20px] md:pr-0">
@@ -22,83 +23,89 @@ const Navbar = () => {
           to={"/"}
           className="jakarta text-white font-[600] text-[20px] tracking-[4px]"
         >
-          <span className="letter hover:text-[var(--dark-text)] transition-colors">
-            F
-          </span>
-          <span className="letter hover:text-[var(--dark-text)] transition-colors">
-            E
-          </span>
-          <span className="letter hover:text-[var(--dark-text)] transition-colors">
-            N
-          </span>
-          <span className="letter hover:text-[var(--dark-text)] transition-colors">
-            I
-          </span>
-          <span className="letter hover:text-[var(--dark-text)] transition-colors">
-            G
-          </span>
-          <span className="letter hover:text-[var(--dark-text)] transition-colors">
-            M
-          </span>
-          <span className="letter hover:text-[var(--dark-text)] transition-colors">
-            A
-          </span>
+          {"FENIGMA".split("").map((letter, i) => (
+            <span
+              key={i}
+              className="letter hover:text-[var(--dark-text)] transition-colors"
+            >
+              {letter}
+            </span>
+          ))}
+        </Link>
+
+        {/* Desktop Navigation */}
+        <Link
+          to={"/"}
+          className="hidden xl:block text-white font-[500] text-[16px] hover:text-[var(--dark-text)] transition-colors"
+        >
+          Back to Home
         </Link>
 
         <button
           onClick={toggleMenu}
-          className="cursor-pointer pl-[25px] h-[70px] md:px-[20px]"
+          aria-label={isMenuOpen ? "Close menu" : "Open menu"}
+          aria-expanded={isMenuOpen}
+          className="cursor-pointer pl-[25px] h-[70px] md:px-[20px] block xl:hidden"
         >
           {isMenuOpen ? (
-            <IoClose className=" size-[35px] pointer-events-none text-[gray]" />
+            <IoClose className="size-[35px] pointer-events-none text-[gray]" />
           ) : (
-            <CgMenuRight className=" size-[35px] pointer-events-none text-[gray]" />
+            <CgMenuRight className="size-[35px] pointer-events-none text-[gray]" />
           )}
         </button>
       </div>
 
-      {/* Nav Links */}
-      <div
-        id="nav-links"
-        className="py-[60px] text-[--dark-text] w-screen h-screen  z-20 opacity-0"
-      >
-        {/* Wrapper - for a micro animation */}
-        <div id="nav-links-wrapper" className="translate-y-[-40px] h-full">
-          {/* Route links for pages */}
-          <div className="flex flex-col items-center h-1/3 justify-between">
-            <Link
-              to={"/"}
-              className="text-[18px] transition-all hover:text-white hover:tracking-[1px]"
-            >
-              Home
-            </Link>
-            <Link
-              to={"/projects"}
-              className="text-[18px] transition-all hover:text-white hover:tracking-[1px]"
-            >
-              Projects
-            </Link>
-            <Link
-              to={"/blog"}
-              className="text-[18px] transition-all hover:text-white hover:tracking-[1px]"
-            >
-              Blog
-            </Link>
-            <a
-              href="#"
-              className="text-[18px] transition-all hover:text-white hover:tracking-[1px]"
-            >
-              LinkedIn
-            </a>
-          </div>
+      {/* Mobile Nav Links */}
+      {isMenuOpen && (
+        <div
+          className="py-[60px] text-[--dark-text] z-20 flex justify-center
+          w-full md:-mx-[50px] md:w-[calc(100%+100px)] lg:-mx-[70px] lg:w-[calc(100%+140px)]
+          h-[calc(100vh-70px)]"
+        >
+          <div className="h-full w-full flex flex-col items-center">
+            {/* Route links */}
+            <div className="flex flex-col items-center h-1/3 justify-between w-full">
+              <Link
+                to={"/"}
+                onClick={toggleMenu}
+                className="text-[18px] transition-all hover:text-white hover:tracking-[1px]"
+              >
+                Home
+              </Link>
+              <Link
+                to={"/projects"}
+                onClick={toggleMenu}
+                className="text-[18px] transition-all hover:text-white hover:tracking-[1px]"
+              >
+                Projects
+              </Link>
+              <Link
+                to={"/blog"}
+                onClick={toggleMenu}
+                className="text-[18px] transition-all hover:text-white hover:tracking-[1px]"
+              >
+                Blog
+              </Link>
+              {/* <a
+                href="https://linkedin.com/in/your-profil"
+                target="_blank"
+                rel="noreferrer"
+                className="text-[18px] transition-all hover:text-white hover:tracking-[1px]"
+              >
+                LinkedIn
+              </a> */}
+            </div>
 
-          {/* Social links */}
-          <div className="flex flex-col items-center pt-[50px]">
-            <p className="text-white text-[20px] font-[600]">Reach Out to Me</p>
-            <Socials width={"190px"} />
+            {/* Social links */}
+            <div className="flex flex-col items-center pt-[50px] w-full">
+              <p className="text-white text-[20px] font-[600]">
+                Reach Out to Me
+              </p>
+              <Socials width={"190px"} />
+            </div>
           </div>
         </div>
-      </div>
+      )}
     </nav>
   );
 };

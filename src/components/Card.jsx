@@ -7,7 +7,7 @@ export const Card = ({ data, screen }) => {
     <div
       className={
         screen != "desktop"
-          ? `card bg-[var(--dark-bg-minimal)]  w-full h-[220px]  px-[20px] pt-[30px] pb-[50px] flex flex-col justify-between lg:h-[260px] lg:px-[30px]`
+          ? `card bg-[var(--dark-bg-minimal)] border border-white/10 shadow-lg rounded-xl w-full h-[220px] px-[20px] pt-[30px] pb-[50px] flex flex-col justify-between lg:h-[260px] lg:px-[30px]`
           : "card relative bg-transparent border border-[var(--dark-text-alt)] rounded-xl w-full px-[40px] pt-[40px] pb-[50px] flex flex-col justify-between h-[270px] transition-all"
       }
     >
@@ -43,7 +43,7 @@ export const Card = ({ data, screen }) => {
       <div className="text-white flex gap-[20px]">
         {data.code && (
           <a href={data.code} className="flex items-center gap-2">
-            <FaCode className="lg:scale-[1.2] 4xl:scale-[1.3]" />{" "}
+            <FaCode className="lg:scale-[1.2] 4xl:scale-[1.3]" />
             <span className="text-[12px] lg:text-[13px] 4xl:text-[14px]">
               Code
             </span>
@@ -54,7 +54,7 @@ export const Card = ({ data, screen }) => {
             href={data.live}
             className="flex items-center gap-2 4xl:scale-[1.2]"
           >
-            <FaEye className="lg:scale-[1.2]" />{" "}
+            <FaEye className="lg:scale-[1.2]" />
             <span className="text-[12px] lg:text-[13px] 4xl:text-[14px]">
               Live
             </span>
