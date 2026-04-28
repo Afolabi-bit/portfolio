@@ -11,7 +11,7 @@ const Projects = () => {
 
   useEffect(() => {
     function handleResize() {
-      if (window.innerWidth >= 1280) navigateTo("/");
+      if (window.innerWidth >= 1024) navigateTo("/");
     }
     handleResize();
     window.addEventListener("resize", handleResize);
