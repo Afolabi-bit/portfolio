@@ -42,7 +42,12 @@ export const Card = ({ data, screen }) => {
 
       <div className="text-white flex gap-[20px]">
         {data.code && (
-          <a href={data.code} className="flex items-center gap-2">
+          <a
+            href={data.code}
+            target="_blank"
+            rel="noreferrer"
+            className="flex items-center gap-2"
+          >
             <FaCode className="lg:scale-[1.2] 4xl:scale-[1.3]" />
             <span className="text-[12px] lg:text-[13px] 4xl:text-[14px]">
               Code
@@ -52,6 +57,8 @@ export const Card = ({ data, screen }) => {
         {data.live && (
           <a
             href={data.live}
+            target="_blank"
+            rel="noreferrer"
             className="flex items-center gap-2 4xl:scale-[1.2]"
           >
             <FaEye className="lg:scale-[1.2]" />
