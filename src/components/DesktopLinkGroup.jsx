@@ -43,9 +43,9 @@ export const DesktopLinkGroup = ({ page }) => {
         >
           <PiLinkedinLogoLight className=" w-[20px] h-[20px] 3xl:w-[25px] 3xl:h-[25px] 4xl:w-[45px] 4xl:h-[45px]" />
           <span className="w-[50px] h-[2px] bg-[var(--dark-text)] rounded-md items-center gap-[20px]  "></span>
-          <span className="text-[12px] 2xl:text-[13px] 4xl:text-[18px]">
+          {/* <span className="text-[12px] 2xl:text-[13px] 4xl:text-[18px]">
             LinkedIn
-          </span>
+          </span> */}
         </a>
       </div>
     </div>
