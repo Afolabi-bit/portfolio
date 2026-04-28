@@ -8,7 +8,7 @@ export const Card = ({ data, screen }) => {
       className={
         screen != "desktop"
           ? `card bg-[var(--dark-bg-minimal)] border border-white/10 shadow-lg rounded-xl w-full h-[220px] px-[20px] pt-[30px] pb-[50px] flex flex-col justify-between lg:h-[260px] lg:px-[30px]`
-          : "card relative bg-transparent border border-[var(--dark-text-alt)] rounded-xl w-full px-[40px] pt-[40px] pb-[50px] flex flex-col justify-between h-[270px] transition-all"
+          : "card relative bg-transparent border border-[var(--dark-text-alt)] rounded-xl w-full px-[40px] pt-[40px] pb-[50px] flex flex-col justify-between min-h-[270px] transition-all"
       }
     >
       {screen === "desktop" && (
