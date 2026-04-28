@@ -3,7 +3,6 @@ const projects = [
     name: "IZZYLENZ",
     description:
       "A photgraphy website. (This is a design demo, not a fully functional website).",
-    // code: "https://github.com/Afolabi-bit/flickrly",
     live: "https://izzy-lenz.vercel.app/",
     stack: ["NextJs", "TypeScript", "TailwindCSS"],
     time: "recent",
