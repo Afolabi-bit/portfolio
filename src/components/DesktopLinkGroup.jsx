@@ -1,12 +1,8 @@
-import {
-  PiGitCommitDuotone,
-  PiArticleMediumThin,
-  PiLinkedinLogoLight,
-} from "react-icons/pi";
+import { PiGitCommitDuotone, PiArticleMediumThin } from "react-icons/pi";
 import { Link } from "react-router-dom";
 import handleResumeDownload from "../utils/handleResumeDownload";
 
-export const DesktopLinkGroup = ({ page }) => {
+export const DesktopLinkGroup = () => {
   return (
     <div>
       <div
@@ -37,7 +33,7 @@ export const DesktopLinkGroup = ({ page }) => {
         </Link>
         {/*  */}
         {/*  */}
-        <a
+        {/* <a
           href="#"
           className="text-[var(--dark-text)] flex items-center gap-[20px] w-fit"
         >
@@ -45,8 +41,8 @@ export const DesktopLinkGroup = ({ page }) => {
           <span className="w-[50px] h-[2px] bg-[var(--dark-text)] rounded-md items-center gap-[20px]  "></span>
           {/* <span className="text-[12px] 2xl:text-[13px] 4xl:text-[18px]">
             LinkedIn
-          </span> */}
-        </a>
+          </span>
+        </a> */}
       </div>
     </div>
   );
