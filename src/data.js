@@ -66,48 +66,6 @@ const projects = [
     stack: ["ReactJS", "TailwindCSS", "LeafLet"],
     time: "old",
   },
-  // {
-  //   name: "Sales Company Dashboard",
-  //   description: "Charts and order-tracking information",
-  //   code: "https://github.com/Afolabi-bit/sales_company_dashboard",
-  //   live: "https://sales-company-dashboard.vercel.app/",
-  //   stack: ["ReactJS", "TailwindCSS"],
-  //   time: "old",
-  // },
-  // {
-  //   name: "MovieTrailer",
-  //   description: "Watch movie trailers of  most popular movies and shows",
-  //   code: "https://github.com/Afolabi-bit/movie-api/tree/master/client",
-  //   live: "https://fenigmamovieapi.vercel.app/",
-  //   stack: ["ReactJS", "Firebase"],
-  //   time: "old",
-  // },
-
-  // {
-  //   name: "Wrds",
-  //   description: "Online dictionary. Uses the Dictionary API",
-  //   code: "https://github.com/Afolabi-bit/wrds",
-  //   live: "https://wrds-beryl.vercel.app/",
-  //   stack: ["ReactJS", "TailwindCSS"],
-  //   time: "old",
-  // },
-  // {
-  //   name: "Space",
-  //   description: "An exploration of planets in our solar system.",
-  //   code: "https://github.com/Afolabi-bit/space/tree/main",
-  //   live: "https://fenigmaspace.vercel.app/",
-  //   stack: ["ReactJS", "TailwindCSS"],
-  //   time: "old",
-  // },
-
-  // {
-  //   name: "Countries",
-  //   description: "Information about the 250 countries on earth",
-  //   code: "https://github.com/Afolabi-bit/REST-Countries_API",
-  //   live: "",
-  //   stack: ["HTML", "CSS", "JS"],
-  //   time: "old",
-  // },
 ];
 
 export default projects;
