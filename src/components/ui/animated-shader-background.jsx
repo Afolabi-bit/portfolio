@@ -3,13 +3,18 @@ import * as THREE from "three";
 
 const AnimatedShaderBackground = () => {
   const containerRef = useRef(null);
+  const animationIdRef = useRef(null);
 
   useEffect(() => {
     const container = containerRef.current;
     const scene = new THREE.Scene();
     const camera = new THREE.OrthographicCamera(-1, 1, 1, -1, 0, 1);
-    const renderer = new THREE.WebGLRenderer({ antialias: true });
+    const renderer = new THREE.WebGLRenderer({
+      antialias: false,
+      powerPreference: "low-power",
+    });
     renderer.setSize(window.innerWidth, window.innerHeight);
+    renderer.setPixelRatio(Math.min(window.devicePixelRatio, 2));
     container.appendChild(renderer.domElement);
 
     const material = new THREE.ShaderMaterial({
@@ -91,11 +96,30 @@ const AnimatedShaderBackground = () => {
     scene.add(mesh);
 
     let frameId;
-    const animate = () => {
-      material.uniforms.iTime.value += 0.016;
-      renderer.render(scene, camera);
+    let isVisible = true;
+    let lastTime = 0;
+
+    const animate = (currentTime) => {
+      if (isVisible) {
+        // Throttle to 30fps for better performance
+        if (currentTime - lastTime > 33) {
+          material.uniforms.iTime.value += 0.016;
+          renderer.render(scene, camera);
+          lastTime = currentTime;
+        }
+      }
       frameId = requestAnimationFrame(animate);
     };
+
+    // Use Intersection Observer to pause animation when not visible
+    const observer = new IntersectionObserver(
+      (entries) => {
+        isVisible = entries[0].isIntersecting;
+      },
+      { threshold: 0.1 },
+    );
+    observer.observe(container);
+
     animate();
 
     const handleResize = () => {
@@ -109,6 +133,7 @@ const AnimatedShaderBackground = () => {
 
     return () => {
       cancelAnimationFrame(frameId);
+      observer.disconnect();
       window.removeEventListener("resize", handleResize);
       container.removeChild(renderer.domElement);
       geometry.dispose();

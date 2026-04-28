@@ -1,5 +1,14 @@
 const projects = [
   {
+    name: "IZZYLENZ",
+    description:
+      "A photgraphy website. (This is a design demo, not a fully functional website).",
+    // code: "https://github.com/Afolabi-bit/flickrly",
+    live: "https://izzy-lenz.vercel.app/",
+    stack: ["NextJs", "TypeScript", "TailwindCSS"],
+    time: "recent",
+  },
+  {
     name: "Flickrly",
     description:
       "A full-stack movie discovery platform featuring trailer streaming, real-time user reviews, and personalized watchlists.",
@@ -29,7 +38,7 @@ const projects = [
       "Kinde",
       "PostgreSQL",
     ],
-    time: "recent",
+    time: "old",
   },
   {
     name: "Shortly",

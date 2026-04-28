@@ -1,49 +1,63 @@
-import { createContext, useEffect, useMemo, useContext, useState } from "react";
+import {
+  createContext,
+  useCallback,
+  useMemo,
+  useContext,
+  useState,
+} from "react";
 
-const ArticlesContext = createContext({ articles: [] });
+const ArticlesContext = createContext({
+  articles: [],
+  fetching: false,
+  refresh: () => {},
+});
 
 export function ArticlesProvider({ children }) {
-	const [articles, setArticles] = useState([]);
-	const [fetching, setFetching] = useState(false);
+  const [articles, setArticles] = useState([]);
+  const [fetching, setFetching] = useState(false);
+  const [hasAttemptedFetch, setHasAttemptedFetch] = useState(false);
 
-	const getArticles = async () => {
-		try {
-			const res = await fetch(
-				"https://portfolio-backend-0e49.onrender.com/my-articles",
-			);
+  const getArticles = useCallback(async () => {
+    if (fetching) return;
+    try {
+      setFetching(true);
+      const res = await fetch(
+        "https://portfolio-backend-0e49.onrender.com/my-articles",
+      );
 
-			const data = await res.json();
-			return data;
-		} catch (err) {
-			console.error("Error fetching articles:", err);
-		}
-	};
+      const data = await res.json();
+      setArticles(data);
+      setHasAttemptedFetch(true);
+      return data;
+    } catch (err) {
+      console.error("Error fetching articles:", err);
+      setHasAttemptedFetch(true);
+    } finally {
+      setFetching(false);
+    }
+  }, [fetching]);
 
-	useEffect(() => {
-		const fetchAndSetArticles = async () => {
-			setFetching(true);
-			const data = await getArticles();
-			setArticles(data);
-			setFetching(false);
-		};
-		fetchAndSetArticles();
-	}, []);
+  const refresh = useCallback(() => {
+    if (!hasAttemptedFetch && !fetching) {
+      getArticles();
+    }
+  }, [hasAttemptedFetch, fetching, getArticles]);
 
-	const values = useMemo(
-		() => ({ fetching, articles, refresh: () => getArticles }),
-		[articles, fetching],
-	);
+  const values = useMemo(
+    () => ({ fetching, articles, refresh }),
+    [articles, fetching, refresh],
+  );
 
-	return (
-		<ArticlesContext.Provider value={values}>
-			{children}
-		</ArticlesContext.Provider>
-	);
+  return (
+    <ArticlesContext.Provider value={values}>
+      {children}
+    </ArticlesContext.Provider>
+  );
 }
 
 // Custom hook
 export function useArticles() {
-	return useContext(ArticlesContext);
+  return useContext(ArticlesContext);
 }
 
 export default ArticlesContext;
