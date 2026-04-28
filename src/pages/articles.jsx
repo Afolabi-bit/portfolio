@@ -13,7 +13,7 @@ function Blog() {
   }, []);
 
   return (
-    <main className="bg-[var(--dark-bg-primary)] w-screen min-h-screen md:px-[50px] lg:px-[70px] xl:hidden">
+    <main className="bg-[var(--dark-bg-primary)] w-screen min-h-screen md:px-[50px] lg:px-[70px]">
       <Navbar />
       <section className="px-[20px] pt-[130px] pb-[60px]">
         {/* Loading state */}
