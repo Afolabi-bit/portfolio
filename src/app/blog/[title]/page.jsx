@@ -25,18 +25,18 @@ const MemoizedMarkdown = memo(({ body }) => (
         const match = /language-(\w+)/.exec(className || "");
 
         return match ? (
+          <pre className="rounded-xl w-full overflow-x-auto bg-[var(--dark-bg-minimal)] text-white border border-white/5 p-4 my-4">
+            <code className={className} {...props}>
+              {children}
+            </code>
+          </pre>
+        ) : (
           <code
-            className="bg-gray-200 text-gray-800 px-1.5 py-0.5 rounded text-sm inline-block"
+            className="bg-[var(--dark-bg-minimal)] text-white px-1.5 py-0.5 rounded text-sm inline-block"
             {...props}
           >
             {children}
           </code>
-        ) : (
-          <pre className="rounded-xl w-full overflow-x-auto bg-gray-200 text-black p-4 my-4">
-            <code className=" text-black px-1.5 py-0.5 rounded" {...props}>
-              {children}
-            </code>
-          </pre>
         );
       },
     }}
@@ -83,7 +83,7 @@ export default function ArticlesDetails() {
 
   return (
     <PageTransition>
-      <main className="w-screen min-h-screen flex justify-center px-4 py-10 bg- xl:hidden">
+      <main className="w-screen min-h-screen flex justify-center px-4 py-10 bg-[var(--dark-bg-primary)]">
       <article className="prose prose-invert lg:prose-xl max-w-3xl w-full whitespace-pre-line">
         <div className="relative w-full h-[300px] rounded-[10px] mb-[20px] md:h-[400px] overflow-hidden">
           <Image
@@ -95,25 +95,25 @@ export default function ArticlesDetails() {
             sizes="(max-width: 768px) 100vw, 768px"
           />
         </div>
-        <h1 className="mb-[10px] font-bold text-[30px] md:text-[40px]">
+        <h1 className="mb-[10px] font-bold text-[30px] md:text-[40px] text-white">
           {heading}
         </h1>
-        <p className="text-[16px] md:text-[20px]">
+        <p className="text-[var(--dark-text)] text-[16px] md:text-[20px]">
           Read time: {reading_time} mins
         </p>
         <div className="flex justify-between">
           <div className="flex justify-between h-[30px] mt-[10px] w-full mb-[30px]">
             <a href={url} className="flex gap-[10px] items-center px-[20px]">
               <IoMdHeart className="text-red-600 text-[28px]" />
-              <span className="text-black">{likes}</span>
+              <span className="text-[var(--dark-text)]">{likes}</span>
             </a>
             <a href={url} className="flex gap-[10px] items-center px-[20px]">
               <FaComment className="text-[#a1a1a1] text-[25px]" />
-              <span className="text-black">{comments}</span>
+              <span className="text-[var(--dark-text)]">{comments}</span>
             </a>
             <a href={url} className="flex gap-[10px] items-center px-[20px]">
               <BiSolidBarChartAlt2 className="text-gray-700 text-[25px]" />
-              <span className="text-black">{views}</span>
+              <span className="text-[var(--dark-text)]">{views}</span>
             </a>
           </div>
         </div>

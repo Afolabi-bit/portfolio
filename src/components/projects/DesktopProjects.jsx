@@ -21,7 +21,7 @@ const DesktopProjects = () => {
   return (
     <section className="w-full pt-[80px] pb-[60px] pr-[35px] 2xl:pr-[85px] 4xl:py-[150px] 4xl:pr-[150px]">
       <div id="most-recent">
-        <h3 className="text-[--dark-text-alt] jakarta uppercase font-[800] text-[13px] mb-[30px] 4xl:text-[20px]">
+        <h3 className="text-[var(--dark-text-alt)] jakarta uppercase font-[800] text-[13px] mb-[30px] 4xl:text-[20px]">
           most recent
         </h3>
 
@@ -37,7 +37,7 @@ const DesktopProjects = () => {
       </div>
 
       <div id="other-projects" className="h-fit mt-[50px] ">
-        <h3 className="text-[--dark-text-alt] jakarta uppercase font-[800] text-[13px] mb-[30px] 4xl:text-[20px]">
+        <h3 className="text-[var(--dark-text-alt)] jakarta uppercase font-[800] text-[13px] mb-[30px] 4xl:text-[20px]">
           other projects
         </h3>
 

@@ -1,6 +1,13 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
+@import "tailwindcss";
+@plugin "@tailwindcss/typography";
+
+@theme {
+  --breakpoint-lg: 850px;
+  --breakpoint-xl: 1024px;
+  --breakpoint-2xl: 1280px;
+  --breakpoint-3xl: 1440px;
+  --breakpoint-4xl: 2500px;
+}
 
 :root {
   font-synthesis: none;
@@ -149,4 +156,20 @@ body {
   50% {
     transform: translateY(-10px);
   }
+}
+
+/* Custom scrollbars for WebKit browsers */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+::-webkit-scrollbar-thumb {
+  background: var(--dark-text-alt);
+  border-radius: 3px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: var(--dark-text);
 }
