@@ -2,7 +2,7 @@ import { IoMdHeart } from "react-icons/io";
 import { FaComment } from "react-icons/fa6";
 import { BiSolidBarChartAlt2 } from "react-icons/bi";
 import { IoBook } from "react-icons/io5";
-import { Link } from "react-router-dom";
+import Link from "next/link";
 
 const ArticleCard = ({ article }) => {
 	const {
@@ -20,7 +20,7 @@ const ArticleCard = ({ article }) => {
 
 	return (
 		<Link
-			to={`${slug}`}
+			href={`/blog/${slug}`}
 			className="bg-[var(--dark-bg-minimal)] w-full min-h-[320px] rounded-[10px] p-[20px] block relative md:w-[375px]"
 		>
 			<span className="absolute right-[30px] top-[30px] w-[100px] h-[25px] bg-black bg-opacity-60 text-white flex items-center gap-[7px] justify-center ">

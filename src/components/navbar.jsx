@@ -1,7 +1,9 @@
+"use client";
+
 import { useState } from "react";
 import { CgMenuRight } from "react-icons/cg";
 import { IoClose } from "react-icons/io5";
-import { Link } from "react-router-dom";
+import Link from "next/link";
 import { Socials } from "./Socials";
 
 const Navbar = () => {
@@ -20,7 +22,7 @@ const Navbar = () => {
       {/* Logo and menu toggle button */}
       <div className="w-full h-[70px] flex items-center justify-between px-[10px] md:pl-[20px] md:pr-0">
         <Link
-          to={"/"}
+          href={"/"}
           className="jakarta text-white font-[600] text-[20px] tracking-[4px]"
         >
           {"FENIGMA".split("").map((letter, i) => (
@@ -35,7 +37,7 @@ const Navbar = () => {
 
         {/* Desktop Navigation */}
         <Link
-          to={"/"}
+          href={"/"}
           className="hidden xl:block text-white font-[500] text-[16px] hover:text-[var(--dark-text)] transition-colors"
         >
           Back to Home
@@ -66,21 +68,21 @@ const Navbar = () => {
             {/* Route links */}
             <div className="flex flex-col items-center h-1/3 justify-between w-full">
               <Link
-                to={"/"}
+                href={"/"}
                 onClick={toggleMenu}
                 className="text-[18px] transition-all hover:text-white hover:tracking-[1px]"
               >
                 Home
               </Link>
               <Link
-                to={"/projects"}
+                href={"/projects"}
                 onClick={toggleMenu}
                 className="text-[18px] transition-all hover:text-white hover:tracking-[1px]"
               >
                 Projects
               </Link>
               <Link
-                to={"/blog"}
+                href={"/blog"}
                 onClick={toggleMenu}
                 className="text-[18px] transition-all hover:text-white hover:tracking-[1px]"
               >

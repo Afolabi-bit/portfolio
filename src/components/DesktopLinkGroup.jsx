@@ -1,5 +1,7 @@
+"use client";
+
 import { PiGitCommitDuotone, PiArticleMediumThin } from "react-icons/pi";
-import { Link } from "react-router-dom";
+import Link from "next/link";
 import handleResumeDownload from "../utils/handleResumeDownload";
 
 export const DesktopLinkGroup = () => {
@@ -22,7 +24,7 @@ export const DesktopLinkGroup = () => {
         {/*  */}
         {/*  */}
         <Link
-          to={"/blog"}
+          href={"/blog"}
           className="text-[var(--dark-text)] flex items-center gap-[20px] w-fit ml-[30px]"
         >
           <PiArticleMediumThin className=" w-[20px] h-[20px] 3xl:w-[25px] 3xl:h-[25px] 4xl:w-[45px] 4xl:h-[45px]" />

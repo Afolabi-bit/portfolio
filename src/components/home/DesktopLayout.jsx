@@ -1,20 +1,22 @@
+"use client";
+
 import { useEffect } from "react";
-import { useNavigate } from "react-router-dom";
+import { useRouter } from "next/navigation";
 import Static from "../../components/static";
 import DesktopProjects from "../../components/projects/DesktopProjects";
 import AnimatedShaderBackground from "../../components/ui/animated-shader-background";
 
 const DesktopLayout = () => {
-  const navigateTo = useNavigate();
+  const router = useRouter();
 
   useEffect(() => {
     function handleResize() {
-      if (window.innerWidth < 1280) navigateTo("/");
+      if (window.innerWidth < 1280) router.push("/");
     }
     handleResize();
     window.addEventListener("resize", handleResize);
     return () => window.removeEventListener("resize", handleResize);
-  }, [navigateTo]);
+  }, [router]);
 
   return (
     <main

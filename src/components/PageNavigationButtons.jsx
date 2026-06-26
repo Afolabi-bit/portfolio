@@ -1,11 +1,11 @@
-import { Link } from "react-router-dom";
+import Link from "next/link";
 
 export const PageNavigationButtons = ({ page }) => {
   return (
     <div className="w-full  flex justify-center gap-[10px] mt-[50px] ">
       {page != "home" && (
         <Link
-          to={"/"}
+          href={"/"}
           className="w-[130px] text-white text-center text-[12px] py-[10px] bg-[var(--dark-bg-minimal)]  border border-[var(--dark-bg-minimal)] transition-colors hover:border-white"
         >
           Home
@@ -13,7 +13,7 @@ export const PageNavigationButtons = ({ page }) => {
       )}
       {page != "projects" && (
         <Link
-          to={"/projects"}
+          href={"/projects"}
           className="w-[130px] text-white text-center text-[12px] py-[10px] bg-[var(--dark-bg-minimal)]  border border-[var(--dark-bg-minimal)] transition-colors hover:border-white"
         >
           Projects
@@ -21,7 +21,7 @@ export const PageNavigationButtons = ({ page }) => {
       )}
       {page != "blog" && (
         <Link
-          to={"/blog"}
+          href={"/blog"}
           className="w-[130px] text-white text-center text-[12px] py-[10px] bg-[var(--dark-bg-minimal)]  border border-[var(--dark-bg-minimal)] transition-colors hover:border-white"
         >
           Articles
