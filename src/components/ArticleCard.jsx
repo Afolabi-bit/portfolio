@@ -3,6 +3,7 @@ import { FaComment } from "react-icons/fa6";
 import { BiSolidBarChartAlt2 } from "react-icons/bi";
 import { IoBook } from "react-icons/io5";
 import Link from "next/link";
+import Image from "next/image";
 
 const ArticleCard = ({ article }) => {
 	const {
@@ -23,16 +24,19 @@ const ArticleCard = ({ article }) => {
 			href={`/blog/${slug}`}
 			className="bg-[var(--dark-bg-minimal)] w-full min-h-[320px] rounded-[10px] p-[20px] block relative md:w-[375px]"
 		>
-			<span className="absolute right-[30px] top-[30px] w-[100px] h-[25px] bg-black bg-opacity-60 text-white flex items-center gap-[7px] justify-center ">
+			<span className="absolute right-[30px] top-[30px] w-[100px] h-[25px] bg-black bg-opacity-60 text-white flex items-center gap-[7px] justify-center z-10">
 				<IoBook />
 				{reading_time} mins
 			</span>
-			<img
-				className="rounded-[10px] object-cover object-center w-full h-[150px]"
-				src={image}
-				alt="article cover image"
-				loading="lazy"
-			/>
+			<div className="relative rounded-[10px] overflow-hidden w-full h-[150px]">
+				<Image
+					className="object-cover object-center"
+					src={image}
+					alt="article cover image"
+					fill
+					sizes="(max-width: 768px) 100vw, 375px"
+				/>
+			</div>
 
 			<div className="pt-[10px]">
 				<h1 className="text-white text-[23px] font-[600] jakarta  mb-[10px] lg:text-[20px] lg:font-[700] 4xl:text-[26px]">

@@ -14,10 +14,10 @@ const ArticlesContext = createContext({
   refresh: () => {},
 });
 
-export function ArticlesProvider({ children }) {
-  const [articles, setArticles] = useState([]);
+export function ArticlesProvider({ children, initialArticles = [] }) {
+  const [articles, setArticles] = useState(initialArticles);
   const [fetching, setFetching] = useState(false);
-  const [hasAttemptedFetch, setHasAttemptedFetch] = useState(false);
+  const [hasAttemptedFetch, setHasAttemptedFetch] = useState(initialArticles.length > 0);
 
   const getArticles = useCallback(async () => {
     if (fetching) return;

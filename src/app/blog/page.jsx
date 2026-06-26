@@ -3,6 +3,7 @@
 import Navbar from "@/components/navbar";
 import ArticleCard from "@/components/ArticleCard";
 import { useArticles } from "@/context/articlesContext";
+import PageTransition from "@/components/ui/PageTransition";
 import { useEffect } from "react";
 
 export default function Blog() {
@@ -15,9 +16,10 @@ export default function Blog() {
   }, []);
 
   return (
-    <main className="bg-[var(--dark-bg-primary)] w-screen min-h-screen md:px-[50px] lg:px-[70px]">
-      <Navbar />
-      <section className="px-[20px] pt-[130px] pb-[60px]">
+    <PageTransition>
+      <main className="bg-[var(--dark-bg-primary)] w-screen min-h-screen md:px-[50px] lg:px-[70px]">
+        <Navbar />
+        <section className="px-[20px] pt-[130px] pb-[60px]">
         {/* Loading state */}
         {fetching && articles.length === 0 && (
           <div className="w-full h-[400px] flex justify-center flex-col items-center gap-4">
@@ -69,5 +71,6 @@ export default function Blog() {
           ))}
       </section>
     </main>
+    </PageTransition>
   );
 }

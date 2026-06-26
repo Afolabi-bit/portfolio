@@ -2,6 +2,7 @@
 
 import MobileLayout from "@/components/home/MobileLayout";
 import DesktopLayout from "@/components/home/DesktopLayout";
+import PageTransition from "@/components/ui/PageTransition";
 import { useEffect, useState } from "react";
 
 export default function Home() {
@@ -37,5 +38,9 @@ export default function Home() {
     );
   }
 
-  return isMobile ? <MobileLayout /> : <DesktopLayout />;
+  return (
+    <PageTransition>
+      {isMobile ? <MobileLayout /> : <DesktopLayout />}
+    </PageTransition>
+  );
 }

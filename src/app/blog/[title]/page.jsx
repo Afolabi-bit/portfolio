@@ -4,6 +4,8 @@ import { useParams } from "next/navigation";
 import { useArticles } from "@/context/articlesContext";
 import ReactMarkdown from "react-markdown";
 import { memo, useEffect } from "react";
+import Image from "next/image";
+import PageTransition from "@/components/ui/PageTransition";
 import remarkGfm from "remark-gfm";
 import rehypePrism from "rehype-prism-plus";
 import "prismjs/themes/prism-tomorrow.css";
@@ -80,13 +82,19 @@ export default function ArticlesDetails() {
   } = article;
 
   return (
-    <main className="w-screen min-h-screen flex justify-center px-4 py-10 bg- xl:hidden">
+    <PageTransition>
+      <main className="w-screen min-h-screen flex justify-center px-4 py-10 bg- xl:hidden">
       <article className="prose prose-invert lg:prose-xl max-w-3xl w-full whitespace-pre-line">
-        <img
-          src={image}
-          alt="article cover image"
-          className="w-full h-[300px] object-fit object-center rounded-[10px] mb-[20px] md:h-[400px]"
-        />
+        <div className="relative w-full h-[300px] rounded-[10px] mb-[20px] md:h-[400px] overflow-hidden">
+          <Image
+            src={image}
+            alt="article cover image"
+            className="object-cover object-center"
+            fill
+            priority
+            sizes="(max-width: 768px) 100vw, 768px"
+          />
+        </div>
         <h1 className="mb-[10px] font-bold text-[30px] md:text-[40px]">
           {heading}
         </h1>
@@ -112,5 +120,6 @@ export default function ArticlesDetails() {
         <MemoizedMarkdown body={body} />
       </article>
     </main>
+    </PageTransition>
   );
 }
