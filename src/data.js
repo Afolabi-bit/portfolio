@@ -16,6 +16,14 @@ const projects = [
     time: "recent",
   },
   {
+    name: "Spawtar",
+    description:
+      "A digital agency platform offering custom web design, booking solutions, e-commerce storefronts, and industrial CMMS consultancy.",
+    live: "https://spawtar.vercel.app/",
+    stack: ["NextJs", "TypeScript", "TailwindCSS"],
+    time: "old",
+  },
+  {
     name: "Flickrly",
     description:
       "A full-stack movie discovery platform featuring trailer streaming, real-time user reviews, and personalized watchlists.",
