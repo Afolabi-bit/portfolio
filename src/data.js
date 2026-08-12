@@ -1,10 +1,18 @@
 const projects = [
   {
-    name: "IZZYLENZ",
+    name: "SusWord",
     description:
-      "A photgraphy website. (This is a design demo, not a fully functional website).",
-    live: "https://izzy-lenz.vercel.app/",
-    stack: ["NextJs", "TypeScript", "TailwindCSS"],
+      "A social deduction imposter word game featuring offline Pass & Play and real-time online room multiplayer.",
+    live: "https://playsusword.vercel.app/",
+    stack: ["NextJs", "TypeScript", "TailwindCSS", "Zustand"],
+    time: "recent",
+  },
+  {
+    name: "Karta",
+    description:
+      "A modern multi-vendor storefront for electronics and gadgets featuring product discovery, cart management, and delivery tracking.",
+    live: "https://shopkarta.vercel.app/",
+    stack: ["NextJs", "TypeScript", "TailwindCSS", "Stripe", "OpenAI"],
     time: "recent",
   },
   {
@@ -55,6 +63,14 @@ const projects = [
     code: "https://github.com/Afolabi-bit/getlinked",
     live: "https://fenigmagetlinked.vercel.app/",
     stack: ["ReactJS", "NPM", "TailwindCSS"],
+    time: "old",
+  },
+  {
+    name: "IZZYLENZ",
+    description:
+      "A photgraphy website. (This is a design demo, not a fully functional website).",
+    live: "https://izzy-lenz.vercel.app/",
+    stack: ["NextJs", "TypeScript", "TailwindCSS"],
     time: "old",
   },
   {

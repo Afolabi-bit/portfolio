@@ -1,22 +1,8 @@
-"use client";
-
-import { useEffect } from "react";
-import { useRouter } from "next/navigation";
 import Static from "../../components/static";
 import DesktopProjects from "../../components/projects/DesktopProjects";
 import AnimatedShaderBackground from "../../components/ui/animated-shader-background";
 
 const DesktopLayout = () => {
-  const router = useRouter();
-
-  useEffect(() => {
-    function handleResize() {
-      if (window.innerWidth < 1280) router.push("/");
-    }
-    handleResize();
-    window.addEventListener("resize", handleResize);
-    return () => window.removeEventListener("resize", handleResize);
-  }, [router]);
 
   return (
     <main

@@ -15,14 +15,10 @@ export default function Projects() {
 
   useEffect(() => {
     setMounted(true);
-    function handleResize() {
-      if (window.innerWidth >= 1024) {
-        router.push("/");
-      }
+    // Redirect only once on initial mount if opened directly on desktop
+    if (window.innerWidth >= 1024) {
+      router.replace("/");
     }
-    handleResize();
-    window.addEventListener("resize", handleResize);
-    return () => window.removeEventListener("resize", handleResize);
   }, [router]);
 
   if (!mounted) {
@@ -33,7 +29,7 @@ export default function Projects() {
     <PageTransition>
       <main
         id="projects-page"
-        className="bg-[var(--dark-bg-primary)] w-full min-h-screen pt-[100px] xl:hidden"
+        className="bg-[var(--dark-bg-primary)] w-full min-h-screen pt-[100px]"
       >
         <Navbar />
         <section className="px-[30px] mb-[50px]">
