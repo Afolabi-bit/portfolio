@@ -29,7 +29,7 @@ const projects = [
       "Kinde",
       "PostgreSQL",
     ],
-    time: "recent",
+    time: "old",
   },
   {
     name: "Bloggr",
