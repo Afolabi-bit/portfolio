@@ -7,7 +7,7 @@ const Footer = () => {
   return (
     <footer
       id="footer"
-      className="fixed bg-[var(--dark-bg-primary)] bottom-0 left-0 w-screen pb-[20px] flex flex-col justify-center items-center lg:pb-[40px]"
+      className="fixed bg-[var(--dark-bg-primary)] bottom-0 left-0 w-screen pb-[20px] flex flex-col justify-center items-center lg:pb-[40px] z-20"
     >
       <Socials width={"250px"} />
       <Citation />

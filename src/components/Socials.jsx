@@ -1,28 +1,30 @@
 import { FaGithub, FaTwitter, FaWhatsapp } from "react-icons/fa";
 import { MdEmail } from "react-icons/md";
 
-export const Socials = ({ width }) => {
+export const Socials = ({ width, onLinkClick }) => {
   return (
     <div
-      style={{ width: `${width}` }}
-      className="flex w-[160px] justify-between pt-[20px]"
+      style={{ width: width ? `${width}` : "160px" }}
+      className="flex justify-between pt-[20px]"
     >
       <a
         href="https://github.com/Afolabi-bit"
         target="_blank"
         rel="noopener noreferrer external"
-        className="size-[35px] text-[25px] text-[var(--dark-text)] transition hover:text-white"
+        aria-label="GitHub Profile"
+        onClick={onLinkClick}
+        className="size-[35px] inline-flex items-center justify-center text-[25px] text-[var(--dark-text)] transition hover:text-white cursor-pointer"
       >
-        {" "}
         <FaGithub />
       </a>
       <a
         href="https://twitter.com/0xFola"
         target="_blank"
         rel="noopener noreferrer external"
-        className="size-[35px] text-[25px] text-[var(--dark-text)] transition hover:text-white"
+        aria-label="Twitter Profile"
+        onClick={onLinkClick}
+        className="size-[35px] inline-flex items-center justify-center text-[25px] text-[var(--dark-text)] transition hover:text-white cursor-pointer"
       >
-        {" "}
         <FaTwitter />
       </a>
 
@@ -30,9 +32,10 @@ export const Socials = ({ width }) => {
         href="mailto:maverickoluwatomisin@gmail.com"
         target="_blank"
         rel="noopener noreferrer external"
-        className="size-[35px] text-[25px] text-[var(--dark-text)] transition hover:text-white"
+        aria-label="Send Email"
+        onClick={onLinkClick}
+        className="size-[35px] inline-flex items-center justify-center text-[25px] text-[var(--dark-text)] transition hover:text-white cursor-pointer"
       >
-        {" "}
         <MdEmail />
       </a>
 
@@ -40,9 +43,10 @@ export const Socials = ({ width }) => {
         href="https://wa.link/wxl5hi"
         target="_blank"
         rel="noopener noreferrer external"
-        className="size-[35px] text-[25px] text-[var(--dark-text)] transition hover:text-white"
+        aria-label="WhatsApp Contact"
+        onClick={onLinkClick}
+        className="size-[35px] inline-flex items-center justify-center text-[25px] text-[var(--dark-text)] transition hover:text-white cursor-pointer"
       >
-        {" "}
         <FaWhatsapp />
       </a>
     </div>

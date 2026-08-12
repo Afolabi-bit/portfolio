@@ -16,7 +16,7 @@ const Navbar = () => {
   return (
     <nav
       className={`w-full fixed top-0 left-0 right-0 z-30 bg-[var(--dark-bg-primary)] md:px-[50px] lg:px-[70px] transition-all duration-300 ${
-        isMenuOpen ? "h-screen" : "h-[70px] overflow-hidden"
+        isMenuOpen ? "h-screen overflow-y-auto" : "h-[70px] overflow-hidden"
       }`}
     >
       {/* Logo and menu toggle button */}
@@ -60,13 +60,13 @@ const Navbar = () => {
       {/* Mobile Nav Links */}
       {isMenuOpen && (
         <div
-          className="py-[60px] text-[--dark-text] z-20 flex justify-center
+          className="py-[40px] text-[--dark-text] z-20 flex justify-center
           w-full md:-mx-[50px] md:w-[calc(100%+100px)] lg:-mx-[70px] lg:w-[calc(100%+140px)]
-          h-[calc(100vh-70px)]"
+          min-h-[calc(100vh-70px)] pb-[60px]"
         >
-          <div className="h-full w-full flex flex-col items-center">
+          <div className="w-full flex flex-col items-center justify-around">
             {/* Route links */}
-            <div className="flex flex-col items-center h-1/3 justify-between w-full">
+            <div className="flex flex-col items-center justify-between w-full gap-6">
               <Link
                 href={"/"}
                 onClick={toggleMenu}
@@ -88,22 +88,14 @@ const Navbar = () => {
               >
                 Blog
               </Link>
-              {/* <a
-                href="https://linkedin.com/in/your-profil"
-                target="_blank"
-                rel="noreferrer"
-                className="text-[18px] transition-all hover:text-white hover:tracking-[1px]"
-              >
-                LinkedIn
-              </a> */}
             </div>
 
             {/* Social links */}
-            <div className="flex flex-col items-center pt-[50px] w-full">
+            <div className="flex flex-col items-center pt-[40px] w-full">
               <p className="text-white text-[20px] font-[600]">
                 Reach Out to Me
               </p>
-              <Socials width={"190px"} />
+              <Socials width={"190px"} onLinkClick={toggleMenu} />
             </div>
           </div>
         </div>
