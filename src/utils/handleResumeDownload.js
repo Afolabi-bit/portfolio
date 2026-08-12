@@ -1,8 +1,8 @@
 export default function handleResumeDownload() {
   const link = document.createElement("a");
 
-  link.href = "/resume/afolabijoseph.pdf";
-  link.setAttribute("download", "AfolabiJoseph.pdf");
+  link.href = "/resume/Afolabi-Joseph.pdf";
+  link.setAttribute("download", "Afolabi-Joseph.pdf");
 
   document.body.appendChild(link);
 
