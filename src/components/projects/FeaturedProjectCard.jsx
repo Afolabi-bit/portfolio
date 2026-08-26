@@ -14,7 +14,7 @@ const FeaturedProjectCard = ({ data }) => {
         borderWidth={2}
         movementDuration={0.3}
       />
-      <div className="pointer-events-none">
+      <div className="relative z-10">
         <h2 className="text-[20px] text-white font-[700] 4xl:text-[30px] 4xl:mb-[10px]">
           {data.name}
         </h2>
@@ -30,15 +30,25 @@ const FeaturedProjectCard = ({ data }) => {
         </p>
       </div>
 
-      <div className="text-white flex gap-[30px]">
+      <div className="relative z-10 text-white flex gap-[30px]">
         {data.code && (
-          <a href={data.code} className="flex items-center gap-2">
+          <a
+            href={data.code}
+            target="_blank"
+            rel="noreferrer"
+            className="flex items-center gap-2 hover:text-white/80 transition-colors"
+          >
             <FaCode className="lg:scale-[1.2] 4xl:scale-[1.5]" />{" "}
             <span className="text-[12px] 4xl:text-[16px]">Code</span>
           </a>
         )}
         {data.live && (
-          <a href={data.live} className="flex items-center gap-2">
+          <a
+            href={data.live}
+            target="_blank"
+            rel="noreferrer"
+            className="flex items-center gap-2 hover:text-white/80 transition-colors"
+          >
             <FaEye className="lg:scale-[1.2] 4xl:scale-[1.5]" />{" "}
             <span className="text-[12px] 4xl:text-[16px]">Live</span>
           </a>

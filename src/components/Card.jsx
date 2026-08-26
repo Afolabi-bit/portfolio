@@ -7,7 +7,7 @@ export const Card = ({ data, screen }) => {
     <div
       className={
         screen != "desktop"
-          ? `card bg-[var(--dark-bg-minimal)] border border-white/10 shadow-lg rounded-xl w-full h-[220px] px-[20px] pt-[30px] pb-[50px] flex flex-col justify-between lg:h-[260px] lg:px-[30px]`
+          ? `card relative bg-[var(--dark-bg-minimal)] border border-white/10 shadow-lg rounded-xl w-full h-[220px] px-[20px] pt-[30px] pb-[50px] flex flex-col justify-between lg:h-[260px] lg:px-[30px]`
           : "card relative bg-transparent border border-[var(--dark-text-alt)] rounded-xl w-full px-[40px] pt-[40px] pb-[50px] flex flex-col justify-between min-h-[270px] transition-all"
       }
     >
@@ -22,7 +22,7 @@ export const Card = ({ data, screen }) => {
           movementDuration={0.3}
         />
       )}
-      <div className="pointer-events-none">
+      <div className="relative z-10">
         <h4 className="text-white text-[23px] font-[600] jakarta lg:text-[20px] lg:font-[700] 4xl:text-[26px]">
           {data.name}
         </h4>
@@ -40,13 +40,13 @@ export const Card = ({ data, screen }) => {
         )}
       </div>
 
-      <div className="text-white flex gap-[20px]">
+      <div className="relative z-10 text-white flex gap-[20px]">
         {data.code && (
           <a
             href={data.code}
             target="_blank"
             rel="noreferrer"
-            className="flex items-center gap-2"
+            className="flex items-center gap-2 hover:text-white/80 transition-colors"
           >
             <FaCode className="lg:scale-[1.2] 4xl:scale-[1.3]" />
             <span className="text-[12px] lg:text-[13px] 4xl:text-[14px]">
@@ -59,7 +59,7 @@ export const Card = ({ data, screen }) => {
             href={data.live}
             target="_blank"
             rel="noreferrer"
-            className="flex items-center gap-2 4xl:scale-[1.2]"
+            className="flex items-center gap-2 4xl:scale-[1.2] hover:text-white/80 transition-colors"
           >
             <FaEye className="lg:scale-[1.2]" />
             <span className="text-[12px] lg:text-[13px] 4xl:text-[14px]">

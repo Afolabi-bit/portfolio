@@ -1,10 +1,21 @@
 const projects = [
   {
-    name: "SusWord",
+    name: "AuditHQ",
     description:
-      "A social deduction imposter word game featuring offline Pass & Play and real-time online room multiplayer.",
-    live: "https://playsusword.vercel.app/",
-    stack: ["NextJs", "TypeScript", "TailwindCSS", "Zustand"],
+      "A web performance engineering console and automated Lighthouse cloud audit platform featuring Core Web Vitals tracking, multi-audit comparisons, and AI-driven remediation powered by Google Gemini.",
+    code: "https://github.com/Afolabi-bit/zynex",
+    live: "https://swiftaudithq.vercel.app/",
+    stack: [
+      "NextJs",
+      "TypeScript",
+      "TailwindCSS",
+      "Prisma ORM",
+      "Kinde",
+      "PostgreSQL",
+      "Lighthouse",
+      "Gemini",
+      "Zustand",
+    ],
     time: "recent",
   },
   {
@@ -14,6 +25,14 @@ const projects = [
     live: "https://shopkarta.vercel.app/",
     stack: ["NextJs", "TypeScript", "TailwindCSS", "Stripe", "OpenAI"],
     time: "recent",
+  },
+  {
+    name: "SusWord",
+    description:
+      "A social deduction imposter word game featuring offline Pass & Play and real-time online room multiplayer.",
+    live: "https://playsusword.vercel.app/",
+    stack: ["NextJs", "TypeScript", "TailwindCSS", "Zustand"],
+    time: "old",
   },
   {
     name: "Spawtar",

@@ -11,6 +11,10 @@ import {
   SiHtml5,
   SiCss3,
   SiJavascript,
+  SiLighthouse,
+  SiStripe,
+  SiOpenai,
+  SiGooglegemini,
 } from "react-icons/si";
 
 // Scalable tech icon mapping
@@ -38,6 +42,22 @@ export const techIcons = {
   ReactJS: { icon: SiReact, color: "var(--dark-text)" },
   React: { icon: SiReact, color: "var(--dark-text)" },
 
+  // Google Gemini AI
+  Gemini: { icon: SiGooglegemini, color: "var(--dark-text)" },
+  "Google Gemini": { icon: SiGooglegemini, color: "var(--dark-text)" },
+  "Google AI": { icon: SiGooglegemini, color: "var(--dark-text)" },
+
+  // Lighthouse
+  Lighthouse: { icon: SiLighthouse, color: "var(--dark-text)" },
+  "Google Lighthouse": { icon: SiLighthouse, color: "var(--dark-text)" },
+
+  // Zustand
+  Zustand: { icon: SiReact, color: "var(--dark-text)" },
+
+  // Stripe & OpenAI
+  Stripe: { icon: SiStripe, color: "var(--dark-text)" },
+  OpenAI: { icon: SiOpenai, color: "var(--dark-text)" },
+
   // Leaflet
   LeafLet: { icon: SiLeaflet, color: "var(--dark-text)" },
   Leaflet: { icon: SiLeaflet, color: "var(--dark-text)" },
@@ -46,27 +66,21 @@ export const techIcons = {
   NPM: { icon: SiNpm, color: "var(--dark-text)" },
   npm: { icon: SiNpm, color: "var(--dark-text)" },
 
-  // Render
-  Render: { icon: SiReact, color: "var(--dark-text)" }, // Using React icon as placeholder
-
-  // Kinde (using a generic icon)
-  Kinde: { icon: SiReact, color: "var(--dark-text)" }, // Using React icon as placeholder
+  // Render & Kinde
+  Render: { icon: SiReact, color: "var(--dark-text)" },
+  Kinde: { icon: SiReact, color: "var(--dark-text)" },
 
   // Firebase
   Firebase: { icon: SiFirebase, color: "var(--dark-text)" },
 
-  // HTML
+  // HTML / CSS / JS
   HTML: { icon: SiHtml5, color: "var(--dark-text)" },
-
-  // CSS
   CSS: { icon: SiCss3, color: "var(--dark-text)" },
-
-  // JavaScript
   JS: { icon: SiJavascript, color: "var(--dark-text)" },
   JavaScript: { icon: SiJavascript, color: "var(--dark-text)" },
 };
 
 // Get icon for a technology
 export const getTechIcon = (techName) => {
-  return techIcons[techName] || { icon: SiReact, color: "var(--dark-text)" }; // Default fallback
+  return techIcons[techName] || { icon: SiReact, color: "var(--dark-text)" };
 };

@@ -29,14 +29,14 @@ export default function Projects() {
     <PageTransition>
       <main
         id="projects-page"
-        className="bg-[var(--dark-bg-primary)] w-full min-h-screen pt-[100px]"
+        className="bg-(--dark-bg-primary) w-full min-h-screen pt-25"
       >
         <Navbar />
-        <section className="px-[30px] mb-[50px]">
-          <h5 className="text-[var(--dark-text)] font-[800] text-[13px] jakart"></h5>
+        <section className="px-7.5 mb-12.5">
+          <h5 className="text-(--dark-text) font-extrabold text-[13px] jakart"></h5>
           <div
             id="cards-wrapper"
-            className="flex flex-col gap-[30px] md:grid md:grid-cols-2 md:gap-1 lg:gap-2"
+            className="flex flex-col gap-7.5 md:grid md:grid-cols-2 md:gap-1 lg:gap-2"
           >
             {data.map((project, index) => (
               <Card key={index} data={project} screen="mobile" />
