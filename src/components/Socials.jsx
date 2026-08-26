@@ -5,7 +5,7 @@ export const Socials = ({ width, onLinkClick }) => {
   return (
     <div
       style={{ width: width ? `${width}` : "160px" }}
-      className="flex justify-between pt-[20px]"
+      className="flex justify-between pt-5"
     >
       <a
         href="https://github.com/Afolabi-bit"
@@ -13,7 +13,7 @@ export const Socials = ({ width, onLinkClick }) => {
         rel="noopener noreferrer external"
         aria-label="GitHub Profile"
         onClick={onLinkClick}
-        className="size-[35px] inline-flex items-center justify-center text-[25px] text-[var(--dark-text)] transition hover:text-white cursor-pointer"
+        className="size-8.75 inline-flex items-center justify-center text-[25px] text-(--dark-text) transition hover:text-white cursor-pointer"
       >
         <FaGithub />
       </a>
@@ -23,7 +23,7 @@ export const Socials = ({ width, onLinkClick }) => {
         rel="noopener noreferrer external"
         aria-label="Twitter Profile"
         onClick={onLinkClick}
-        className="size-[35px] inline-flex items-center justify-center text-[25px] text-[var(--dark-text)] transition hover:text-white cursor-pointer"
+        className="size-8.75 inline-flex items-center justify-center text-[25px] text-(--dark-text) transition hover:text-white cursor-pointer"
       >
         <FaTwitter />
       </a>
@@ -34,7 +34,7 @@ export const Socials = ({ width, onLinkClick }) => {
         rel="noopener noreferrer external"
         aria-label="Send Email"
         onClick={onLinkClick}
-        className="size-[35px] inline-flex items-center justify-center text-[25px] text-[var(--dark-text)] transition hover:text-white cursor-pointer"
+        className="size-8.75 inline-flex items-center justify-center text-[25px] text-(--dark-text) transition hover:text-white cursor-pointer"
       >
         <MdEmail />
       </a>
@@ -45,7 +45,7 @@ export const Socials = ({ width, onLinkClick }) => {
         rel="noopener noreferrer external"
         aria-label="WhatsApp Contact"
         onClick={onLinkClick}
-        className="size-[35px] inline-flex items-center justify-center text-[25px] text-[var(--dark-text)] transition hover:text-white cursor-pointer"
+        className="size-8.75 inline-flex items-center justify-center text-[25px] text-(--dark-text) transition hover:text-white cursor-pointer"
       >
         <FaWhatsapp />
       </a>

@@ -7,7 +7,7 @@ const Footer = () => {
   return (
     <footer
       id="footer"
-      className="fixed bg-[var(--dark-bg-primary)] bottom-0 left-0 w-screen pb-[20px] flex flex-col justify-center items-center lg:pb-[40px] z-20"
+      className="fixed bg-(--dark-bg-primary) bottom-0 left-0 w-screen pb-5 flex flex-col justify-center items-center lg:pb-10 z-20"
     >
       <Socials width={"250px"} />
       <Citation />
@@ -18,18 +18,18 @@ const Footer = () => {
 export const DesktopFooter = () => {
   return (
     <footer>
-      <div className="flex gap-[30px] w-fit  4xl:gap-[80px]">
+      <div className="flex gap-7.5 w-fit 4xl:gap-20">
         {/* Github */}
         <a
           href="https://github.com/Afolabi-bit"
           target="_blank"
           rel="noopener noreferrer external"
-          className=" text-[var(--dark-text)] transition w-fit flex gap-[5px] items-center  hover:text-white 4xl:gap-[15px]"
+          className="text-(--dark-text) transition w-fit flex gap-1.25 items-center hover:text-white 4xl:gap-3.75"
         >
           {" "}
-          <FaGithub className="w-[10px] h-[10px] 4xl:w-[30px] 4xl:h-[30px]" />
+          <FaGithub className="w-2.5 h-2.5 4xl:w-7.5 4xl:h-7.5" />
           <span className="text-[10px] text-white 4xl:text-[16px]">Github</span>
-          <RiExternalLinkLine className="w-[10px] 4xl:w-[30px]" />
+          <RiExternalLinkLine className="w-2.5 4xl:w-7.5" />
         </a>
 
         {/* Email */}
@@ -37,12 +37,12 @@ export const DesktopFooter = () => {
           href="mailto:maverickoluwatomisin@gmail.com"
           target="_blank"
           rel="noopener noreferrer external"
-          className=" text-[var(--dark-text)] transition w-fit flex gap-[5px]   items-center hover:text-white "
+          className="text-(--dark-text) transition w-fit flex gap-1.25 items-center hover:text-white"
         >
           {" "}
-          {/* <MdEmail className="w-10px[] h-[10px] 4xl:w-[30px] 4xl:h-[30px]" /> */}
+          {/* <MdEmail className="w-2.5 h-2.5 4xl:w-7.5 4xl:h-7.5" /> */}
           <span className="text-[10px] text-white 4xl:text-[16px]">Email</span>
-          <RiExternalLinkLine className="w-[10px] 4xl:w-[30px]" />
+          <RiExternalLinkLine className="w-2.5 4xl:w-7.5" />
         </a>
 
         {/* WhatsApp */}
@@ -50,14 +50,14 @@ export const DesktopFooter = () => {
           href="https://wa.link/wxl5hi"
           target="_blank"
           rel="noopener noreferrer external"
-          className=" text-[var(--dark-text)] transition w-fit flex gap-[5px] items-center hover:text-white 4xl:gap-[15px]"
+          className="text-(--dark-text) transition w-fit flex gap-1.25 items-center hover:text-white 4xl:gap-3.75"
         >
           {" "}
-          <FaWhatsapp className="w-[10px] h-[10px] 4xl:h-[30px] 4xl:w-[30px]" />
+          <FaWhatsapp className="w-2.5 h-2.5 4xl:h-7.5 4xl:w-7.5" />
           <span className="text-[10px] text-white 4xl:text-[16px]">
             WhatsApp
           </span>
-          <RiExternalLinkLine className="w-[10px] 4xl:w-[30px]" />
+          <RiExternalLinkLine className="w-2.5 4xl:w-7.5" />
         </a>
       </div>
       <Citation />

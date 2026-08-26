@@ -17,12 +17,12 @@ export default function Blog() {
 
   return (
     <PageTransition>
-      <main className="bg-[var(--dark-bg-primary)] w-screen min-h-screen md:px-[50px] lg:px-[70px]">
+      <main className="bg-(--dark-bg-primary) w-screen min-h-screen md:px-12.5 lg:px-17.5">
         <Navbar />
-        <section className="px-[20px] pt-[130px] pb-[60px]">
+        <section className="px-5 pt-32.5 pb-15">
         {/* Loading state */}
         {fetching && articles.length === 0 && (
-          <div className="w-full h-[400px] flex justify-center flex-col items-center gap-4">
+          <div className="w-full h-100 flex justify-center flex-col items-center gap-4">
             <div className="flex gap-2">
               <div
                 className="w-3 h-3 bg-white rounded-full animate-bounce"
@@ -37,7 +37,7 @@ export default function Blog() {
                 style={{ animationDelay: "0.4s" }}
               ></div>
             </div>
-            <span className="text-white font-[600] text-[15px]">
+            <span className="text-white font-semibold text-[15px]">
               Loading articles...
             </span>
           </div>
@@ -45,7 +45,7 @@ export default function Blog() {
 
         {/* Error state */}
         {error && !fetching && (
-          <div className="w-full h-[400px] flex justify-center flex-col items-center gap-4">
+          <div className="w-full h-100 flex justify-center flex-col items-center gap-4">
             <span className="text-red-400 font-semibold text-[15px]">
               Failed to load articles.
             </span>
@@ -57,7 +57,7 @@ export default function Blog() {
 
         {/* Empty state */}
         {!fetching && !error && articles.length === 0 && (
-          <div className="w-full h-[400px] flex justify-center items-center">
+          <div className="w-full h-100 flex justify-center items-center">
             <span className="text-white font-semibold text-[15px]">
               No articles found.
             </span>

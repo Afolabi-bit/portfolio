@@ -19,7 +19,7 @@ export default function Home() {
 
   if (isMobile === null) {
     return (
-      <main className="flex items-center justify-center min-h-screen bg-[var(--dark-bg-primary)]">
+      <main className="flex items-center justify-center min-h-screen bg-(--dark-bg-primary)">
         <div className="flex gap-2">
           <div
             className="w-3 h-3 bg-white rounded-full animate-bounce"
