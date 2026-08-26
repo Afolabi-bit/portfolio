@@ -19,16 +19,16 @@ const DesktopProjects = () => {
     }, []);
 
   return (
-    <section className="w-full pt-[80px] pb-[60px] pr-[35px] 2xl:pr-[85px] 4xl:py-[150px] 4xl:pr-[150px]">
+    <section className="w-full pt-20 pb-15 pr-8.75 2xl:pr-21.25 4xl:py-37.5 4xl:pr-37.5">
       <div id="most-recent">
-        <h3 className="text-[var(--dark-text-alt)] jakarta uppercase font-[800] text-[13px] mb-[30px] 4xl:text-[20px]">
+        <h3 className="text-(--dark-text-alt) jakarta uppercase font-extrabold text-[13px] mb-7.5 4xl:text-[20px]">
           most recent
         </h3>
 
         {/* Cards wrapper for most recent */}
         <div
           id="most-recent-wrapper"
-          className="flex flex-col gap-[8px] relative"
+          className="flex flex-col gap-4 sm:gap-5 relative"
         >
           {mostRecent.map((project, index) => (
             <FeaturedProjectCard key={index} data={project} />
@@ -36,25 +36,25 @@ const DesktopProjects = () => {
         </div>
       </div>
 
-      <div id="other-projects" className="h-fit mt-[50px] ">
-        <h3 className="text-[var(--dark-text-alt)] jakarta uppercase font-[800] text-[13px] mb-[30px] 4xl:text-[20px]">
+      <div id="other-projects" className="h-fit mt-12.5">
+        <h3 className="text-(--dark-text-alt) jakarta uppercase font-extrabold text-[13px] mb-7.5 4xl:text-[20px]">
           other projects
         </h3>
 
         {/* Cards wrapper for other projects */}
         <div
           id="other-projects-wrapper"
-          className="flex gap-[8px] w-full relative"
+          className="flex gap-4 w-full relative"
         >
           {/* left column */}
-          <div className="w-1/2 flex flex-col gap-[8px]">
+          <div className="w-1/2 flex flex-col gap-4">
             {leftColumnProjects.map((project, index) => (
               <Card data={project} screen={"desktop"} key={`left - ${index}`} />
             ))}
           </div>
 
           {/* right column */}
-          <div className="w-1/2 flex flex-col gap-[8px] mt-[40px]">
+          <div className="w-1/2 flex flex-col gap-4 mt-10">
             {rightColumnProjects.map((project, index) => (
               <Card
                 data={project}

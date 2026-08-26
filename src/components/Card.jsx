@@ -6,9 +6,9 @@ export const Card = ({ data, screen }) => {
   return (
     <div
       className={
-        screen != "desktop"
-          ? `card relative bg-[var(--dark-bg-minimal)] border border-white/10 shadow-lg rounded-xl w-full h-[220px] px-[20px] pt-[30px] pb-[50px] flex flex-col justify-between lg:h-[260px] lg:px-[30px]`
-          : "card relative bg-transparent border border-[var(--dark-text-alt)] rounded-xl w-full px-[40px] pt-[40px] pb-[50px] flex flex-col justify-between min-h-[270px] transition-all"
+        screen !== "desktop"
+          ? `card relative bg-(--dark-bg-minimal) border border-white/10 shadow-lg rounded-xl w-full min-h-[260px] h-auto p-5 pb-6 sm:p-6 sm:pb-7 flex flex-col justify-between gap-4 transition-all`
+          : `card relative bg-transparent border border-(--dark-text-alt) rounded-xl w-full p-8 pb-10 flex flex-col justify-between min-h-[280px] h-auto gap-6 transition-all`
       }
     >
       {screen === "desktop" && (
@@ -22,25 +22,25 @@ export const Card = ({ data, screen }) => {
           movementDuration={0.3}
         />
       )}
-      <div className="relative z-10">
-        <h4 className="text-white text-[23px] font-[600] jakarta lg:text-[20px] lg:font-[700] 4xl:text-[26px]">
+      <div className="relative z-10 space-y-3">
+        <h4 className="text-white text-[22px] font-semibold jakarta lg:text-[20px] lg:font-bold 4xl:text-[26px] leading-tight">
           {data.name}
         </h4>
-        <div className="my-[8px]">
+        <div className="py-0.5">
           <TechStack
             stack={data.stack}
-            size="w-4 h-4 lg:w-5 lg:h-5 4xl:w-6 4xl:h-6"
-            gap="gap-2 lg:gap-3"
+            size="w-4.5 h-4.5 lg:w-5 lg:h-5 4xl:w-6 4xl:h-6"
+            gap="gap-2 sm:gap-2.5"
           />
         </div>
         {data.description && (
-          <p className="text-[var(--dark-text-alt)] text-[12px] lg:text-[12px] 4xl:text-[16px]">
+          <p className="text-(--dark-text-alt) text-[12px] lg:text-[13px] 4xl:text-[16px] leading-relaxed">
             {data.description}
           </p>
         )}
       </div>
 
-      <div className="relative z-10 text-white flex gap-[20px]">
+      <div className="relative z-10 text-white flex gap-5 pt-2">
         {data.code && (
           <a
             href={data.code}
