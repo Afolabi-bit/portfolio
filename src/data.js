@@ -64,16 +64,7 @@ const projects = [
       "A comprehensive blogging platform offering rich text editing, secure user authentication, and dynamic content management.",
     code: "https://github.com/Afolabi-bit/blog",
     live: "https://fengma-blog.vercel.app/",
-    stack: [
-      "NextJs",
-      "TypeScript",
-      "TailwindCSS",
-      "Prisma ORM",
-      "Kinde",
-      "PostgreSQL",
-      "Golang",
-      "MongoDB",
-    ],
+    stack: ["NextJs", "TypeScript", "TailwindCSS", "Golang", "MongoDB"],
     time: "recent",
   },
   {
