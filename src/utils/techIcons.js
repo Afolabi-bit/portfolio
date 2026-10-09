@@ -15,6 +15,9 @@ import {
   SiStripe,
   SiOpenai,
   SiGooglegemini,
+  SiGo,
+  SiMongodb,
+  SiRender,
 } from "react-icons/si";
 
 // Scalable tech icon mapping
@@ -42,6 +45,18 @@ export const techIcons = {
   ReactJS: { icon: SiReact, color: "var(--dark-text)" },
   React: { icon: SiReact, color: "var(--dark-text)" },
 
+  // Go / Golang
+  Golang: { icon: SiGo, color: "var(--dark-text)" },
+  Go: { icon: SiGo, color: "var(--dark-text)" },
+  golang: { icon: SiGo, color: "var(--dark-text)" },
+  go: { icon: SiGo, color: "var(--dark-text)" },
+
+  // MongoDB
+  MongoDB: { icon: SiMongodb, color: "var(--dark-text)" },
+  Mongodb: { icon: SiMongodb, color: "var(--dark-text)" },
+  Mongo: { icon: SiMongodb, color: "var(--dark-text)" },
+  mongodb: { icon: SiMongodb, color: "var(--dark-text)" },
+
   // Google Gemini AI
   Gemini: { icon: SiGooglegemini, color: "var(--dark-text)" },
   "Google Gemini": { icon: SiGooglegemini, color: "var(--dark-text)" },
@@ -67,7 +82,7 @@ export const techIcons = {
   npm: { icon: SiNpm, color: "var(--dark-text)" },
 
   // Render & Kinde
-  Render: { icon: SiReact, color: "var(--dark-text)" },
+  Render: { icon: SiRender, color: "var(--dark-text)" },
   Kinde: { icon: SiReact, color: "var(--dark-text)" },
 
   // Firebase
@@ -82,5 +97,5 @@ export const techIcons = {
 
 // Get icon for a technology
 export const getTechIcon = (techName) => {
-  return techIcons[techName] || { icon: SiReact, color: "var(--dark-text)" };
+  return techIcons[techName] || techIcons[techName?.toLowerCase?.()] || { icon: SiReact, color: "var(--dark-text)" };
 };

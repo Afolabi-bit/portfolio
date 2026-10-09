@@ -24,14 +24,14 @@ const projects = [
       "A modern multi-vendor storefront for electronics and gadgets featuring product discovery, cart management, and delivery tracking.",
     live: "https://shopkarta.vercel.app/",
     stack: ["NextJs", "TypeScript", "TailwindCSS", "Stripe", "OpenAI"],
-    time: "recent",
+    time: "old",
   },
   {
     name: "SusWord",
     description:
       "A social deduction imposter word game featuring offline Pass & Play and real-time online room multiplayer.",
     live: "https://playsusword.vercel.app/",
-    stack: ["NextJs", "TypeScript", "TailwindCSS", "Zustand"],
+    stack: ["NextJs", "TypeScript", "TailwindCSS", "Zustand", "Golang"],
     time: "old",
   },
   {
@@ -59,7 +59,7 @@ const projects = [
     time: "old",
   },
   {
-    name: "Bloggr",
+    name: "Noterverse",
     description:
       "A comprehensive blogging platform offering rich text editing, secure user authentication, and dynamic content management.",
     code: "https://github.com/Afolabi-bit/blog",
@@ -71,8 +71,10 @@ const projects = [
       "Prisma ORM",
       "Kinde",
       "PostgreSQL",
+      "Golang",
+      "MongoDB",
     ],
-    time: "old",
+    time: "recent",
   },
   {
     name: "Shortly",
