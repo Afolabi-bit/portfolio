@@ -63,7 +63,7 @@ const projects = [
     description:
       "A comprehensive blogging platform offering rich text editing, secure user authentication, and dynamic content management.",
     code: "https://github.com/Afolabi-bit/blog",
-    live: "https://fengma-blog.vercel.app/",
+    live: "https://noterverse.vercel.app/",
     stack: ["NextJs", "TypeScript", "TailwindCSS", "Golang", "MongoDB"],
     time: "recent",
   },
