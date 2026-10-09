@@ -27,7 +27,7 @@ const projects = [
     time: "old",
   },
   {
-    name: "SusWord",
+    name: "OddWord",
     description:
       "A social deduction imposter word game featuring offline Pass & Play and real-time online room multiplayer.",
     live: "https://playsusword.vercel.app/",
