@@ -3,12 +3,11 @@ import DesktopProjects from "../../components/projects/DesktopProjects";
 import AnimatedShaderBackground from "../../components/ui/animated-shader-background";
 
 const DesktopLayout = () => {
-
   return (
     <main
       id="desktop-container"
       aria-label="Desktop Layout"
-      className="hidden overflow-hidden bg-[var(--dark-bg-primary)] h-screen w-full justify-center xl:flex relative"
+      className="hidden overflow-hidden bg-(--dark-bg-primary) h-screen w-full justify-center xl:flex relative"
     >
       {/* Shader Background Overlay */}
       <div className="absolute inset-0 z-0 opacity-40 pointer-events-none">
